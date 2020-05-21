@@ -25,3 +25,8 @@ function Problem1(){
   }
   alert("Indeces: " + indexNum1 + ", " + indexNum2);
 }
+
+function Problem2(){
+  var stringToCheck = prompt("Enter a word to check if it's a palidrome:")
+  console.log(stringToCheck);
+}
