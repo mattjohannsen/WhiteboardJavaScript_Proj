@@ -32,34 +32,23 @@ function Problem2(){
   console.log(stringToCheck.length);
   var isPalindrome = true;
   if (stringToCheck.length % 2 === 0) {
-    alert("This is an even string")
     let counter=1;
     for (let i = 0; i < (stringToCheck.length/2); i++) {
       let characterOne = stringToCheck[(stringToCheck.length/2)-counter];
       let characterTwo = stringToCheck[(stringToCheck.length/2)+i];
-      console.log(characterOne + " " + characterTwo);
-      if (characterOne === characterTwo ) {
-        console.log("They match")
-      } else {
-        console.log("They don't match")
+      if (characterOne != characterTwo ) {
         isPalindrome=false;
         break;
       }
       counter++;
     }
   } else {
-    alert("This is an odd string")
     let counter=1;
     let middleIndex = Math.floor(stringToCheck.length/2);
-    console.log(middleIndex);
     for (let i = 0; i < middleIndex; i++) {
       let characterOne = stringToCheck[middleIndex - counter];
       let characterTwo = stringToCheck[middleIndex + counter];
-      console.log(characterOne + " " + characterTwo);
-      if (characterOne === characterTwo ) {
-        console.log("They match")
-      } else {
-        console.log("They don't match")
+      if (characterOne != characterTwo ) {
         isPalindrome=false;
         break;
       }
