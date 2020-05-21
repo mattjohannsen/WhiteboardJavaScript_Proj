@@ -67,4 +67,9 @@ function Problem2(){
     }
   }
   console.log(isPalindrome);
+  if (isPalindrome===true) {
+    alert(stringToCheck + " is a palindrome!");
+  } else {
+    alert("Sorry, " + stringToCheck + " is not a palindrome.");
+  }
 }
