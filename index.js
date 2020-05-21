@@ -62,3 +62,7 @@ function Problem2(){
     alert("Sorry, " + stringToCheck + " is not a palindrome.");
   }
 }
+
+function Problem3(){
+  alert("Problem 3");
+}
