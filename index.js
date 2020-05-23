@@ -64,5 +64,48 @@ function Problem2(){
 }
 
 function Problem3(){
-  alert("Problem 3");
+  var chosenArray = Problem3Menu();
+  chosenArray.sort();
+  var doesArrayIncrement = Problem3DoesListIncrement(chosenArray);
+  alert(doesArrayIncrement);
+}
+
+function Problem3DoesListIncrement(chosenArray){
+  var doesArrayIncrement = true;
+  for (let i = 0; i < chosenArray.length; i++) {
+    console.log(chosenArray[i]);
+    if (i < chosenArray.length - 1) {
+      if(chosenArray[i] + 1 !== (chosenArray[i+1])){
+        doesArrayIncrement = false;
+      }
+    }
+  }
+  return doesArrayIncrement; 
+}
+
+function Problem3Menu(){
+  var menuString = "Select an array to test:";
+  menuString = menuString + "\n 1) [ 5, 7, 3, 8, 6 ]";
+  menuString = menuString + "\n 2) [ 17, 15, 20, 19, 21, 16, 18 ]";
+  var stringToCheck = prompt(menuString);
+  var arrayNumberOne = [5, 7, 3, 8, 6];
+  var arrayNumberTwo = [ 17, 15, 20, 19, 21, 16, 18 ];
+  var selectedArray = [];
+  var invalidInput = true;
+  while (invalidInput) {
+    switch (stringToCheck) {
+      case "1":
+        selectedArray = arrayNumberOne;
+        invalidInput = false;
+        break;
+      case "2":
+        selectedArray = arrayNumberTwo;
+        invalidInput = false;
+        break; 
+      default:
+        prompt("Please select 1 or 2!")
+        break;
+    }
+  }
+  return selectedArray;
 }
