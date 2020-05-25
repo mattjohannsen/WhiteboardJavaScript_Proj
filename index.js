@@ -109,3 +109,34 @@ function Problem3Menu(){
   }
   return selectedArray;
 }
+
+function Problem4(){
+  alert("Our array is [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21]\nWe will return a count of the positive and sum of the negative.");
+  var ourArray = [7, 9, -3, -32, 107, -1, 36, 95, -14, -99, 21];
+  var displayArray = Problem4Solution(ourArray);
+  Problem4Display(displayArray);
+}
+
+function Problem4Solution(inputArray){
+  var positiveCount = 0;
+  var negativeSum = 0;
+  var returnArray = [];
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i]>0) {
+      positiveCount =  positiveCount + 1;
+    } 
+    else if (inputArray[i]<0) {
+      negativeSum = negativeSum + inputArray[i];
+    }
+    ;
+  }
+  returnArray[0]=positiveCount;
+  returnArray[1]=negativeSum;
+  return returnArray;
+}
+
+function Problem4Display(inputArray){
+  var displayText = "The count of the positive numbers is: " + inputArray[0];
+  displayText = displayText + "\n The sum of the negative numbers is: " + inputArray[1];
+  alert(displayText);
+}
