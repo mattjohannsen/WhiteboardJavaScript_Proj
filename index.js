@@ -148,14 +148,11 @@ function Problem5(){
 }
 
 function GetSolution(inputString){
-  var solutionArray = [];
   var solutionString;
-  var workingArray = inputString.split(" ");
-  var lowestNumber = Math.min.apply(Math, workingArray);
-  var highestNumber = Math.max.apply(Math, workingArray);
-  solutionArray[0] = lowestNumber;
-  solutionArray[1] = highestNumber;
-  solutionString = solutionArray[0] + " " + solutionArray[1];
+  var solutionArray = inputString.split(" ");
+  var lowestNumber = Math.min.apply(Math, solutionArray);
+  var highestNumber = Math.max.apply(Math, solutionArray);
+  solutionString = lowestNumber + " " + highestNumber;
   return solutionString;
 }
 
@@ -163,11 +160,10 @@ function GetSolution(inputString){
 //Use case: “3 9 0 1 4 8 10 2”  “0 10”
 //Create a string variable = “3 9 0 1 4 8 10 2”
 //Create a solutionArray variable
-//Create a countOfPositive variable
-//Create a sumofNegative variable
+//Create a lowestNumber variable
+//Create a highestNumber variable
 //Create a solutionString variable
-//Split the string and turn it into an array.
-//Loop through array and add +1 to the positve numbers and add to the sumofNegative variable for negative numbers.
-//Add the countOfPositive to solutionArray[0]
-//Add the sumofNegative to solutionArray[1]
-//solutionString = solutionArray[0] + " " + solutionArray[1]
+//Split the string and turn it into the solutionArray.
+//Find the lowest and highest numbers.
+//Create the solutionString with the lowest and highest numbers
+//return the solutionString
