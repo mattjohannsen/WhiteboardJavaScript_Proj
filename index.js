@@ -156,6 +156,64 @@ function GetSolution(inputString){
   return solutionString;
 }
 
+function Problem6(){
+  //var emailToTest = "mike1@gmail.com";
+  //var emailToTest = "gmail.com";
+  var emailToTest = "t@t.tt";
+  var validationResponse = ValidateEmail(emailToTest);
+  alert("Is " + emailToTest + "a valid email? --> " + validationResponse);
+}
+
+function ValidateEmail(inputString){
+  var indexOfAt;
+  var indexOfDot;
+  var isEmailValid = false;
+  if (inputString.includes("@")) {
+    indexOfAt = inputString.indexOf("@");
+    if (inputString.includes(".")) {
+      indexOfDot = inputString.indexOf(".");
+      if (indexOfAt > 0 && indexOfAt < indexOfDot) {
+        if ((inputString.length - (indexOfDot + 1)) >= 2) {
+          isEmailValid = true;
+        }
+      }
+    }
+  }
+  return isEmailValid;
+}
+
+// Create a string variable for emailToTest xxxxxxxxxxxxxxxxxxxxxxxx
+// Create a variable for index position of @ - indexOfAt xxxxxxxxxxxxxxxxxxxxxxxxxx
+// Create a variable for index position of . - indexOfDot xxxxxxxxxxxxxxxxxxxxxxxxx
+// Create a variable for isEmailValid - set it to false xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// Create a function that takes the string in and returns true or false depending on email vailidation IsEmailVaild xxxxxxxxxxxxxxxxxxxxxxx
+// Check to see if string contains @ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//   If it does then record the index position of At xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//     Check to see if string contains . xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//       If it does then record the index position of . xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//         Check to make sure the indexOfAt is less than the indexOfDot xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//           Check to make sure the indexOfAt is greater than 0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//             Check to make sure the indexOfAt minus indexOfDot is greater than 1 xxxxxxxxxxxxxxxxxx
+//               Check to make sure the emailToTest string length - (indexOfDot+1) is greater than 2
+//   Else return false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Problem 5
 //Create a method that accepts a string of space separated numbers and returns the highest and lowest number as a string
 //Use case: “3 9 0 1 4 8 10 2”  “0 10”
 //Create a string variable = “3 9 0 1 4 8 10 2”
