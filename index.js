@@ -182,6 +182,7 @@ function ValidateEmail(inputString){
   return isEmailValid;
 }
 
+// 5/29/2020 - total time to solve 31 minutes
 // Create a string variable for emailToTest xxxxxxxxxxxxxxxxxxxxxxxx
 // Create a variable for index position of @ - indexOfAt xxxxxxxxxxxxxxxxxxxxxxxxxx
 // Create a variable for index position of . - indexOfDot xxxxxxxxxxxxxxxxxxxxxxxxx
