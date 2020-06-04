@@ -182,7 +182,48 @@ function ValidateEmail(inputString){
   return isEmailValid;
 }
 
-// 5/29/2020 - total time to solve 31 minutes
+function Problem7(){
+  //var stringToTest = "abc";
+  var stringToTest = "coding is fun";
+  alert(GetAlphabetPosition(stringToTest));
+}
+
+function GetAlphabetPosition(inputString){
+  var stringArray = inputString.split('');
+  var solutionArray = [];
+  var solutionString;
+  stringArray = stringArray.filter(e => String(e).trim());
+  var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v","w","x","y","z"];
+  for (let i = 0; i < stringArray.length; i++) {
+    var foundValue;
+    for (let j = 0; j < alphabet.length; j++) {
+      if (stringArray[i]===alphabet[j]) {
+        foundValue = j+1;
+        solutionArray.push(foundValue);
+        break;
+      }
+    }
+  }
+  solutionString = solutionArray.join(" ");
+  return solutionString;
+}
+
+
+// Problem7 6/3/2020 - total time to solve 37 minutes
+// Create a variable for stringToTest
+// Create function GetAlphabetPosition which takes in a string
+// Turn string into an Array with Javascript String split method var res = str.split(" ");
+// filter through array and remove spaces
+// Create alphabet Array with lowercase letters
+// If the the index value of inputString matches the index value of the alphabet array the value = the index position +1
+// Create solutionString variable which equals
+// turn the array into a string with nameOfTheArray.join();
+// return the solutionString/
+
+
+
+
+// Problem6 5/29/2020 - total time to solve 31 minutes
 // Create a string variable for emailToTest xxxxxxxxxxxxxxxxxxxxxxxx
 // Create a variable for index position of @ - indexOfAt xxxxxxxxxxxxxxxxxxxxxxxxxx
 // Create a variable for index position of . - indexOfDot xxxxxxxxxxxxxxxxxxxxxxxxx
