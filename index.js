@@ -208,6 +208,43 @@ function GetAlphabetPosition(inputString){
   return solutionString;
 }
 
+function Problem8(){
+  var currentLock = "3893";
+  var targetLock = "5296";
+  var solution = GetNumberOfTurns(currentLock,targetLock);
+  alert(solution);
+}
+
+function GetNumberOfTurns(currentLock,targetLock){
+  var currentLockArray = currentLock.split('').map(function(item){
+    return parseInt(item, 10);
+  });
+  var targetLockArray = targetLock.split('').map(function(item){
+    return parseInt(item, 10);
+  });
+  var totalTurns = 0;
+  for (let i = 0; i < currentLockArray.length; i++) {
+    var turnUpSolution = 0;
+    var turnDownSolution = 0;
+    if (currentLockArray[i]<targetLockArray[i]) {
+      turnUpSolution = targetLockArray[i]-currentLockArray[i];
+      turnDownSolution = ((10 - targetLockArray[i]) + currentLockArray[i]);
+    }  else {
+      turnUpSolution = ((10 - currentLockArray[i]) + targetLockArray[i]);
+      turnDownSolution = targetLockArray[i]-currentLockArray[i];
+      if (turnDownSolution<0) {
+        turnDownSolution = turnDownSolution * -1;
+      }
+    }
+    if (turnUpSolution < turnDownSolution) {
+      totalTurns = totalTurns + turnUpSolution;
+    } else {
+      totalTurns = totalTurns + turnDownSolution;
+    }
+    
+  }
+  return totalTurns;
+}
 
 // Problem7 6/3/2020 - total time to solve 37 minutes
 // Create a variable for stringToTest
