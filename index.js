@@ -271,6 +271,41 @@ function GetSumOfSquares(inputNumber){
   console.log(sumOfSquares);
   return sumOfSquares;
 }
+
+function Problem10(){
+  var initialNumber = 17;
+  var reversedNumber = GetReverse(initialNumber);
+  var reciprocal = GetReciprocal(reversedNumber);
+  alert("The reverse reciprocal of " + initialNumber + " = " + reciprocal);
+}
+
+function GetReciprocal(inputNumber){
+  var theAnswer =  (1/inputNumber)
+  return theAnswer;
+}
+
+function GetReverse(initialNumber){
+  var intitalArray =  Array.from(String(initialNumber), Number);
+  var reversedArray = [];
+  for (let i = 0; i < intitalArray.length; i++) {
+    reversedArray[i] = intitalArray[(intitalArray.length - 1) - i];
+    console.log(reversedArray[i]);
+  }
+  var arrayToString =  Number(reversedArray.join(''));
+  return arrayToString;
+}
+
+// create a variable called initialNumber = 17
+// create a variable called reversedNumber which is equal to the GetReverse function being passed initialNumber
+//   GetReverse functions, needs to turn the number into an Array which is equal to initialArray
+//   Create a reverseArray and set it equal to reverse equivalent of initialArray
+//   Turn the initialArray into a String and pass it into a variable
+//   create a variable called 
+//   
+
+// 10.	Given a number, return the reciprocal of the reverse of the original number, as a double. 
+// a.	Use case: If given 17, return 0.01408 (1/71)
+
 // Create variable numberToTest= "19"
 // Create function GetSumOfSquares which takes in an number
 // Create an array from the number
