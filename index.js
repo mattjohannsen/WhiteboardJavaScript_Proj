@@ -246,6 +246,49 @@ function GetNumberOfTurns(currentLock,targetLock){
   return totalTurns;
 }
 
+function Problem9(){
+  var numberToTest = "683";
+  var squareSumEqualsOne = false;
+  var solution = GetSumOfSquares(numberToTest);
+  while (squareSumEqualsOne ==false) {
+    
+    if (solution==1) {
+      squareSumEqualsOne = true;
+      alert(numberToTest + " is a happy number.");
+    } else {
+      solution=GetSumOfSquares(solution);
+    }
+  }
+
+  alert(solution);
+}
+
+function GetSumOfSquares(inputNumber){
+  var arrayOfNumber = Array.from(String(inputNumber), Number);
+  var sumOfSquares = 0;
+  for (let i = 0; i < arrayOfNumber.length; i++) {
+    console.log(arrayOfNumber[i]);
+    sumOfSquares += (arrayOfNumber[i]*arrayOfNumber[i]);
+  }
+  console.log(sumOfSquares);
+  return sumOfSquares;
+}
+// Create variable numberToTest= "19"
+// Create function ShowHappiness which takes in an number
+// Create an array from the number
+// Get the sum of each of the array's squared value
+// Test to see if this value equals 1
+// If it does, then this number is happy
+// Else it needs to be turned into an array and the process needs to be repeated.
+
+// 9.	Happy Numbers
+// a.	A happy number is a number defined by the following process: starting with any positive integer, replace the number by 
+// the sum of the squares of its digits, and repeat the process until the number equals 1. 
+// An example of a happy number is 19
+
+
+
+
 // Problem7 6/3/2020 - total time to solve 37 minutes
 // Create a variable for stringToTest
 // Create function GetAlphabetPosition which takes in a string
