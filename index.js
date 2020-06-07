@@ -259,8 +259,6 @@ function Problem9(){
       solution=GetSumOfSquares(solution);
     }
   }
-
-  alert(solution);
 }
 
 function GetSumOfSquares(inputNumber){
@@ -274,7 +272,7 @@ function GetSumOfSquares(inputNumber){
   return sumOfSquares;
 }
 // Create variable numberToTest= "19"
-// Create function ShowHappiness which takes in an number
+// Create function GetSumOfSquares which takes in an number
 // Create an array from the number
 // Get the sum of each of the array's squared value
 // Test to see if this value equals 1
