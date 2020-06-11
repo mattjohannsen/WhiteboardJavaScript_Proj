@@ -308,7 +308,6 @@ function SameCase(inputString){
   var arrayOfString = inputString.split('');
   var firstCharacterIsUpper = IsFirstCharacterUpper(inputString);
   var stringIsSameCase;
-  //alert("The first character is upper case: " + firstCharacterIsUpper);
   for (let i = 0; i < arrayOfString.length; i++) {
     if (firstCharacterIsUpper == true) {
       if (arrayOfString[i].toUpperCase() == arrayOfString[i]) {
