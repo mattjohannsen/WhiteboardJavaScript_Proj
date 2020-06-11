@@ -295,6 +295,77 @@ function GetReverse(initialNumber){
   return arrayToString;
 }
 
+function Problem11(){
+  //var stringToTest = "hello";
+  //var stringToTest = "HELLO";
+  //var stringToTest = "Hello";
+  var stringToTest = "ketcHUp";
+  var stringIsSameCase = SameCase(stringToTest);
+  alert("The string " + stringToTest + " is all the same case: " + stringIsSameCase);
+}
+
+function SameCase(inputString){
+  var arrayOfString = inputString.split('');
+  var firstCharacterIsUpper = IsFirstCharacterUpper(inputString);
+  var stringIsSameCase;
+  //alert("The first character is upper case: " + firstCharacterIsUpper);
+  for (let i = 0; i < arrayOfString.length; i++) {
+    if (firstCharacterIsUpper == true) {
+      if (arrayOfString[i].toUpperCase() == arrayOfString[i]) {
+        stringIsSameCase = true;
+        continue;
+      }
+      else{
+        stringIsSameCase = false;
+        return  stringIsSameCase;
+      }
+    }
+    else{
+      if (arrayOfString[i].toLowerCase() == arrayOfString[i]) {
+        stringIsSameCase = true;
+        continue;
+      }
+      else{
+        stringIsSameCase = false;
+        return  stringIsSameCase;
+      }
+    }
+  }
+  return  stringIsSameCase;
+}
+
+function IsFirstCharacterUpper(inputString){
+  var arrayOfString = inputString.split('');
+  var firstCharacterIsUpper = false;
+  for (let i = 0; i < 1; i++) {
+    if (arrayOfString[i] == arrayOfString[i].toUpperCase()) {
+      firstCharacterIsUpper = true;
+    }
+    if (arrayOfString[i] == arrayOfString[i].toLowerCase()) {
+      firstCharacterIsUpper = false;
+    }
+    return firstCharacterIsUpper;
+  }
+}
+
+// Check if the Same Case
+// Create a function that returns true if an input string contains only uppercase or only lowercase letters.
+// Examples
+// SameCase("hello") --> true
+// SameCase("HELLO") --> true
+// SameCase("Hello") --> false
+// SameCase("ketcHUp") --> false
+// Steps
+// Create a variable solutionAnswer which is equal to the result of the SameCase function
+// The SameCase function takes in a string and returns true or false depending on whether all characters are the same case
+// Create a variable arrayOfString which is made by...
+// Turing the string into an Array
+// Create a variable which holds the value of whether or not the first character in the array is UpperCase or not
+// Let's call this checkForUppers
+// Create a variable called stringIsSameCase which is equal to true by default.
+// Loop through the array and if the next iteration is not equal to the value of checkForUppers
+// then return false;
+
 // create a variable called initialNumber = 17
 // create a variable called reversedNumber which is equal to the GetReverse function being passed initialNumber
 //   GetReverse functions, needs to turn the number into an Array which is equal to initialArray
