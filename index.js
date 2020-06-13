@@ -348,28 +348,23 @@ function IsFirstCharacterUpper(inputString){
 }
 
 function Problem12(){
-  // var firstNumber = 25;
-  // var secondNumber = 21;
-  // var thirdNumber = 125;
-  // var firstNumber = 55;
+  var firstNumber = 25; // This should return true
+  var secondNumber = 21;
+  var thirdNumber = 125;
+  // var firstNumber = 55;  // This should return true
   // var secondNumber = 226;
   // var thirdNumber = 5190;
-  var firstNumber = 12;
-  var secondNumber = 215;
-  var thirdNumber = 2142;
+  // var firstNumber = 12;  // This should return false
+  // var secondNumber = 215;
+  // var thirdNumber = 2142;
   var isItLastDigitUltimate = LastDigitUlitmate(firstNumber, secondNumber, thirdNumber);
   alert(isItLastDigitUltimate);
 
 }
 
 function LastDigitUlitmate(firstNumber, secondNumber, thirdNumber){
-  var lastDigitOfProductOfFirstTwo = GetLastDigit(GetLastDigit(firstNumber)*GetLastDigit(secondNumber));
-  if (lastDigitOfProductOfFirstTwo == GetLastDigit(thirdNumber)) {
-    return true;
-  }else{
-    return false;
-  }
-  //alert(lastDigitOfProductOfFirstTwo);
+  var lastDigitOfProduct = GetLastDigit(GetLastDigit(firstNumber)*GetLastDigit(secondNumber));
+  return (lastDigitOfProduct == GetLastDigit(thirdNumber)) ? true : false;
 }
 
 function GetLastDigit(inputNumber){
