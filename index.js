@@ -357,12 +357,11 @@ function Problem12(){
   // var firstNumber = 12;  // This should return false
   // var secondNumber = 215;
   // var thirdNumber = 2142;
-  var isItLastDigitUltimate = LastDigitUlitmate(firstNumber, secondNumber, thirdNumber);
+  var isItLastDigitUltimate = LastDigitUltimate(firstNumber, secondNumber, thirdNumber);
   alert(isItLastDigitUltimate);
-
 }
 
-function LastDigitUlitmate(firstNumber, secondNumber, thirdNumber){
+function LastDigitUltimate(firstNumber, secondNumber, thirdNumber){
   return ((GetLastDigit(GetLastDigit(firstNumber)*GetLastDigit(secondNumber))) == GetLastDigit(thirdNumber)) ? true : false;
 }
 
