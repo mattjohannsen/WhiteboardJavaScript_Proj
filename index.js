@@ -348,15 +348,15 @@ function IsFirstCharacterUpper(inputString){
 }
 
 function Problem12(){
-  var firstNumber = 25; // This should return true
-  var secondNumber = 21;
-  var thirdNumber = 125;
+  // var firstNumber = 25; // This should return true
+  // var secondNumber = 21;
+  // var thirdNumber = 125;
   // var firstNumber = 55;  // This should return true
   // var secondNumber = 226;
   // var thirdNumber = 5190;
-  // var firstNumber = 12;  // This should return false
-  // var secondNumber = 215;
-  // var thirdNumber = 2142;
+  var firstNumber = 12;  // This should return false
+  var secondNumber = 215;
+  var thirdNumber = 2142;
   var isItLastDigitUltimate = LastDigitUlitmate(firstNumber, secondNumber, thirdNumber);
   alert(isItLastDigitUltimate);
 
@@ -368,12 +368,11 @@ function LastDigitUlitmate(firstNumber, secondNumber, thirdNumber){
 }
 
 function GetLastDigit(inputNumber){
-  var toText = inputNumber.toString();
-  var lastChar = toText.slice(-1);
-  var lastDigit = +(lastChar);
-  return lastDigit;
+  var lastOne = inputNumber.toString().split('').pop();
+  return lastOne;
 }
-//Steps
+
+//Steps for Problem12
 // Create variables for 3 numbers firstNumber, secondNumber, thirdNumber
 // Create function for LastDigitUlitmate and pass in three variables
 // Create helper function for GetLastDigit
