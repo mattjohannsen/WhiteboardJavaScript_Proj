@@ -347,6 +347,65 @@ function IsFirstCharacterUpper(inputString){
   }
 }
 
+function Problem12(){
+  // var firstNumber = 25;
+  // var secondNumber = 21;
+  // var thirdNumber = 125;
+  // var firstNumber = 55;
+  // var secondNumber = 226;
+  // var thirdNumber = 5190;
+  var firstNumber = 12;
+  var secondNumber = 215;
+  var thirdNumber = 2142;
+  var isItLastDigitUltimate = LastDigitUlitmate(firstNumber, secondNumber, thirdNumber);
+  alert(isItLastDigitUltimate);
+
+}
+
+function LastDigitUlitmate(firstNumber, secondNumber, thirdNumber){
+  var lastDigitOfProductOfFirstTwo = GetLastDigit(GetLastDigit(firstNumber)*GetLastDigit(secondNumber));
+  if (lastDigitOfProductOfFirstTwo == GetLastDigit(thirdNumber)) {
+    return true;
+  }else{
+    return false;
+  }
+  //alert(lastDigitOfProductOfFirstTwo);
+}
+
+function GetLastDigit(inputNumber){
+  var toText = inputNumber.toString();
+  var lastChar = toText.slice(-1);
+  var lastDigit = +(lastChar);
+  return lastDigit;
+}
+//Steps
+// Create variables for 3 numbers firstNumber, secondNumber, thirdNumber
+// Create function for LastDigitUlitmate and pass in three variables
+// Create helper function for GetLastDigit
+// If the last digit of the product of the firstNumber and the secondNumber is equal to the last digit of the thirdNumber.
+// If GetLastDigit(GetLastDigit(firstNumber) * GetLastDigit(secondNumber)) is equal to GetLastDigt(thirdNumber)
+// then return true
+// else return false
+//
+
+//Last Digit Ultimate https://edabit.com/challenge/gFiX2TwoCKi6NZz5H
+//Your job is to create a function that takes 3 numbers: a, b, c and returns true if the last digit
+//    of(the last digit of a* the last digit of b) = the last digit of c.Check examples for explanation.
+//last_dig(25, 21, 125) ➞ true
+//// The last digit of 25 is 5, the last digit of 21 is 1, and the last
+//// digit of 125 is 5, and the last digit of 5*1 = 5, which is equal
+//// to the last digit of 125 (5).
+
+//last_dig(55, 226, 5190) ➞ true
+//// The last digit of 55 is 5, the last digit of 226 is 6, and the last
+//// digit of 5190 is 0, and the last digit of 5*6 = 30 is 0, which is
+//// equal to the last digit of 5190 (0).
+
+//last_dig(12, 215, 2142) ➞ false
+//// The last digit of 12 is 2, the last digit of 215 is 5, and the last
+//// digit of 2142 is 2, and the last digit of 2*5 = 10 is 0, which is
+//// not equal to the last digit of 2142 (2).
+
 // Check if the Same Case
 // Create a function that returns true if an input string contains only uppercase or only lowercase letters.
 // Examples
