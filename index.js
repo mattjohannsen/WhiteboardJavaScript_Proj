@@ -378,15 +378,12 @@ function GetHackerSpeak(inputString){
   var replacementArray = [['a','4'], ['e','3'], ['i','1'], ['o','0'], ['s','5']];
   for (let i = 0; i < replacementArray.length; i++) {
     for (let j = 0; j < stringArray.length; j++) {
-      const element = stringArray[j];
       if (stringArray[j] == replacementArray[i][0]) {
         stringArray[j] = replacementArray[i][1];
       }
     }
-    //console.log(stringArray[i]);
   }
-  var returnString = stringArray.join('');
-  return returnString;
+  return stringArray.join('');
 }
 // Steps
 // Create GetHackerSpeak function that takes in a string and returns a string
