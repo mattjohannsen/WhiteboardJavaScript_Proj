@@ -368,6 +368,43 @@ function LastDigitUltimate(firstNumber, secondNumber, thirdNumber){
 function GetLastDigit(inputNumber){
   return inputNumber.toString().split('').pop();
 }
+function Problem13(){
+  var originalString = "javascript is cool";
+  alert(GetHackerSpeak(originalString));
+}
+
+function GetHackerSpeak(inputString){
+  var stringArray = inputString.split('');
+  var replacementArray = [['a','4'], ['e','3'], ['i','1'], ['o','0'], ['s','5']];
+  for (let i = 0; i < replacementArray.length; i++) {
+    for (let j = 0; j < stringArray.length; j++) {
+      const element = stringArray[j];
+      if (stringArray[j] == replacementArray[i][0]) {
+        stringArray[j] = replacementArray[i][1];
+      }
+    }
+    //console.log(stringArray[i]);
+  }
+  var returnString = stringArray.join('');
+  return returnString;
+}
+// Steps
+// Create GetHackerSpeak function that takes in a string and returns a string
+// Create a variable that is equal to the string being made into an array called stringArray
+// Create a variable replacementArray which is equal to the characters needing to be replaced and the characters that will replace them.
+// Loop through the replacementArray and loop through the stringArray and if the element in stringArray is equal to first element of the replacementArray then replace
+// Take this array and turn it into a string and return this value
+
+//Problem13: Hacker Speak https://edabit.com/challenge/7nzfry4P3WrrL7t38
+// Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string.
+// Examples
+// HackerSpeak("javascript is cool") ➞ "j4v45cr1pt 15 c00l"
+// HackerSpeak("programming is fun") ➞ "pr0gr4mm1ng 15 fun"
+// HackerSpeak("become a coder") ➞ "b3c0m3 4 c0d3r"
+// Notes
+// In order to work properly, the function should replace all "a"s with 4, "e"s with 3, "i"s with 1, "o"s with 0, and "s"s with 5.
+
+
 
 //Steps for Problem12
 // Create variables for 3 numbers firstNumber, secondNumber, thirdNumber
