@@ -385,6 +385,36 @@ function GetHackerSpeak(inputString){
   }
   return stringArray.join('');
 }
+
+function Problem14(){
+  var originalString = "String";
+  alert(RepeatLettersOfString(originalString));
+}
+function RepeatLettersOfString(inputString){
+  var stringArray = inputString.split('');
+  var doubleStringArray = [];
+  for (let i = 0; i < stringArray.length; i++) {
+    console.log(stringArray[i]);
+    for (let j = 0; j < 2; j++) {
+      doubleStringArray.push(stringArray[i]);
+    }
+  }
+  var repeatedString = doubleStringArray.join('');
+  return repeatedString;
+}
+// Repeating Letters
+// Create a function that takes a string and returns a string in which each character is repeated once.
+
+// Examples
+// DoubleChar("String") ➞ "SSttrriinngg"
+
+// DoubleChar("Hello World!") ➞ "HHeelllloo  WWoorrlldd!!"
+
+// DoubleChar("1234!_ ") ➞ "11223344!!__  "
+// Notes
+// All test cases contain valid strings. Don't worry about spaces, special characters or numbers. They're all considered valid characters.
+
+
 // Steps
 // Create GetHackerSpeak function that takes in a string and returns a string
 // Create a variable that is equal to the string being made into an array called stringArray
