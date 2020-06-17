@@ -402,7 +402,50 @@ function RepeatLettersOfString(inputString){
   var repeatedString = doubleStringArray.join('');
   return repeatedString;
 }
-// Repeating Letters
+
+function Problem15(){
+  var originalString = "hello";
+  alert(RemoveFirstLast(originalString));
+  var originalString = "maybe";
+  alert(RemoveFirstLast(originalString));
+  var originalString = "benefit";
+  alert(RemoveFirstLast(originalString));
+  var originalString = "a";
+  alert(RemoveFirstLast(originalString));
+}
+
+function RemoveFirstLast(inputString){
+  var stringArray = inputString.split('');
+  var newArray = [];
+  if (stringArray.length<=2) {
+    return inputString;
+  }
+  for (let i = 1; i < stringArray.length - 1; i++) {
+    newArray.push(stringArray[i]);
+  }
+  var returnString = newArray.join('');
+  return returnString;
+}
+// Steps
+// take the inputString and turn it into an Array
+// this array is eqaul to stringArray
+// create a variable called newArray which is eqaul to []
+// loop through the stringArray from 1 to stringArray.length - 1
+// Add the element to the newArray which would look like newArray.push(stringArray[i]);
+// Turn this array into a string
+// return this string;
+//Remove the First and Last Characters
+//Create a function that removes the first and last characters from a string.
+//Examples
+//RemoveFirstLast("hello") ➞ "ell"
+//RemoveFirstLast("maybe") ➞ "ayb"
+//RemoveFirstLast("benefit") ➞ "enefi"
+//RemoveFirstLast("a") ➞ "a"
+//Notes
+//If the string is 2 or fewer characters long, return the string itself(See example #4).
+
+
+// Repeating Letters https://edabit.com/challenge/fKZHLzmR8anBrxgNt
 // Create a function that takes a string and returns a string in which each character is repeated once.
 
 // Examples
