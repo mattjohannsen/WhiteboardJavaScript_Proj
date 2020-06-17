@@ -419,14 +419,14 @@ function RemoveFirstLast(inputString){
   var newArray = [];
   if (stringArray.length<=2) {
     return inputString;
+  } else {
+    for (let i = 1; i < stringArray.length - 1; i++) {
+      newArray.push(stringArray[i]);
+    }
+    return newArray.join('');
   }
-  for (let i = 1; i < stringArray.length - 1; i++) {
-    newArray.push(stringArray[i]);
-  }
-  var returnString = newArray.join('');
-  return returnString;
 }
-// Steps
+// Steps: Remove the First and Last Characters
 // take the inputString and turn it into an Array
 // this array is eqaul to stringArray
 // create a variable called newArray which is eqaul to []
