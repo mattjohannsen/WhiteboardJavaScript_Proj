@@ -426,6 +426,43 @@ function RemoveFirstLast(inputString){
     return newArray.join('');
   }
 }
+function Problem16(){
+  var originalString = "loop";
+  alert(AreThereDoubles(originalString));
+  originalString = "yummy";
+  alert(AreThereDoubles(originalString));
+  originalString = "orange";
+  alert(AreThereDoubles(originalString));
+  originalString = "munchkin";
+  alert(AreThereDoubles(originalString));
+}
+
+function AreThereDoubles(inputString){
+  var stringArray = inputString.split('');
+  var isThereDoubles = false;
+  var previousChar = stringArray[0];
+  for (let i = 0; i < stringArray.length; i++) {
+    console.log(stringArray[i]);
+    if (i!=0) {
+      if (stringArray[i] == previousChar) {
+        isThereDoubles = true;
+        return isThereDoubles;
+      }else{
+      previousChar = stringArray[i];
+      }
+    }
+  }
+  return isThereDoubles;
+}
+// 
+// Double Letters
+// Create a function that takes a word and returns true if the word has two consecutive identical letters.
+// Examples
+// DoubleLetters("loop") --> true
+// DoubleLetters("yummy") --> true
+// DoubleLetters("orange") --> false
+// DoubleLetters("munchkin") --> false
+
 // Steps: Remove the First and Last Characters
 // take the inputString and turn it into an Array
 // this array is eqaul to stringArray
