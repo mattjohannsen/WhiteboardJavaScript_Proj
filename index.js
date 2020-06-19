@@ -439,21 +439,47 @@ function Problem16(){
 
 function AreThereDoubles(inputString){
   var stringArray = inputString.split('');
-  var isThereDoubles = false;
   var previousChar = stringArray[0];
   for (let i = 0; i < stringArray.length; i++) {
     console.log(stringArray[i]);
     if (i!=0) {
       if (stringArray[i] == previousChar) {
-        isThereDoubles = true;
-        return isThereDoubles;
+        return true;
       }else{
       previousChar = stringArray[i];
       }
     }
   }
-  return isThereDoubles;
+  return false;
 }
+function Problem17(){
+  console.log(GetFactorial(5));
+  console.log(GetFactorial(3));
+  console.log(GetFactorial(2));
+}
+
+function GetFactorial(inputNumber){
+  if (inputNumber === 1) {
+    return 1;
+  } else {
+    return inputNumber * GetFactorial(inputNumber-1);
+  }
+}
+// Recursion & Factorials https://edabit.com/challenge/39Gcue6NXfLigSN6k
+// Create a function that gives the factorial of an integer
+// Steps
+// Create a ourInteger variable
+// Create a function that takes in an integer inputInteger and returns an integer theFactorial
+// Take the number and check to see if the number is not equal to 1
+// If it is not, the multiple it by itself -1 and send it to the GetFactorial function to check to see if itself -1 is equal to one.
+// If it is, then return the number
+// Challenge 17: Recursion & Factorials
+// Create a recursive function that gives the factorial of an integer.
+// Examples
+// GetFactorial(5) --> 120
+// GetFactorial(3) --> 3
+// GetFactorial(2) --> 2
+
 // 
 // Double Letters
 // Create a function that takes a word and returns true if the word has two consecutive identical letters.
