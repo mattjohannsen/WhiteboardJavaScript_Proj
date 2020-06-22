@@ -465,6 +465,46 @@ function GetFactorial(inputNumber){
     return inputNumber * GetFactorial(inputNumber-1);
   }
 }
+
+function Problem18(){
+  var originalString = "mice";
+  var nTimes = 5
+  alert(RepeatNTimes(originalString, nTimes));
+}
+
+function RepeatNTimes(inputString, inputNumber){
+  var stringAsArray = inputString.split('');
+  var returnArray = [];
+  for (let i = 0; i < stringAsArray.length; i++) {
+    for (let j = 0; j < inputNumber; j++) {
+      returnArray.push(stringAsArray[i]);
+    }
+  }
+  var returnString = returnArray.join('');
+  return returnString;
+}
+
+//Repeating Letters N Times https://edabit.com/challenge/Lmhmtj3QZw9cF5Zew
+//Create a function that repeats each character in a string n times.
+//Examples
+//Repeat("mice", 5) ➞ "mmmmmiiiiiccccceeeee"
+//Repeat("hello", 3) ➞ "hhheeellllllooo"
+//Repeat("stop", 1) ➞ "stop"
+// Steps
+// create originalString variable
+// create nTimes variable
+// create RepeatNTimes function that takes in originalString, nTimes and returns returnString
+// create a stringAsArray variable and turn the input string into an array
+// create an empty array returnArray
+// create a variable returnString
+// create an i loop that runs the length of stringAsArray
+// create a j loop that runs inputNumber of times and adds the element stringAsArray[i] to the returnArray
+// turn the returnArray into a string
+// return string
+
+
+
+
 // Recursion & Factorials https://edabit.com/challenge/39Gcue6NXfLigSN6k
 // Create a function that gives the factorial of an integer
 // Steps
