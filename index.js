@@ -468,8 +468,14 @@ function GetFactorial(inputNumber){
 
 function Problem18(){
   var originalString = "mice";
-  var nTimes = 5
-  alert(RepeatNTimes(originalString, nTimes));
+  var nTimes = 5;
+  console.log(RepeatNTimes(originalString, nTimes));
+  originalString = "hello";
+  nTimes = 3;
+  console.log(RepeatNTimes(originalString, nTimes));
+  originalString = "stop";
+  nTimes = 1;
+  console.log(RepeatNTimes(originalString, nTimes));
 }
 
 function RepeatNTimes(inputString, inputNumber){
@@ -480,8 +486,7 @@ function RepeatNTimes(inputString, inputNumber){
       returnArray.push(stringAsArray[i]);
     }
   }
-  var returnString = returnArray.join('');
-  return returnString;
+  return returnArray.join('');
 }
 
 //Repeating Letters N Times https://edabit.com/challenge/Lmhmtj3QZw9cF5Zew
