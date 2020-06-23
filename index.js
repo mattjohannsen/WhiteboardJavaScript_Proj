@@ -489,6 +489,41 @@ function RepeatNTimes(inputString, inputNumber){
   return returnArray.join('');
 }
 
+function Problem19(){
+  var ArrayOne = ["Tomato", "Potato", "Pair"];
+  var ArrayTwo = ["Kangaroo", "Bear", "Fox"];
+  var ArrayThree = ["Ryan", "Kieran", "Jason", "Matt"];
+  ShowAnswer(IsFourLetters(ArrayOne));
+  ShowAnswer(IsFourLetters(ArrayTwo));
+  ShowAnswer(IsFourLetters(ArrayThree));
+}
+
+function IsFourLetters(inputArray){
+  var returnArray = [];
+  for (let i = 0; i < inputArray.length; i++) {
+    var stringAsList = inputArray[i].split('');
+    if (stringAsList.length == 4) {
+      returnArray.push(inputArray[i]);
+    }
+  }
+  return returnArray;
+}
+function ShowAnswer(inputArray){
+  for (let i = 0; i < inputArray.length; i++) {
+    console.log(inputArray[i]);
+  }
+}
+// Return the Four Letter Strings https: edabit.com/challenge/W4x4o2M7ny6Cqkfhn
+// Create a function that takes an array of strings and returns the words that are exactly four letters.
+// Examples
+// IsFourLetters(["Tomato", "Potato", "Pair"]) -> ["Pair"]
+// IsFourLetters(["Kangaroo", "Bear", "Fox"]) ->["Bear"]
+// IsFourLetters(["Ryan", "Kieran", "Jason", "Matt"]) -> ["Ryan", "Matt"]
+// Notes
+// You can expect valid strings for all test cases.
+// Steps
+// 
+
 //Repeating Letters N Times https://edabit.com/challenge/Lmhmtj3QZw9cF5Zew
 //Create a function that repeats each character in a string n times.
 //Examples
