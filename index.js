@@ -540,6 +540,47 @@ function ShowArray(inputArray){
   alert(inputArray.toString());
 }
 
+function Problem21(){
+  var arrayOne = [[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]];
+  alert(FindLargest(arrayOne).join());
+  var arrayTwo = [[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]];
+  alert(FindLargest(arrayTwo).join());
+  var arrayThree = [[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]];
+  alert(FindLargest(arrayThree).join());
+}
+function FindLargest(inputArray){
+  var solutionArray = [];
+  for (let i = 0; i < inputArray.length; i++) {
+    //const element = inputArray[i];
+    solutionArray.push(getMaxOfArray(inputArray[i]))
+  }
+  return solutionArray;
+}
+
+function getMaxOfArray(numArray) {
+  return Math.max.apply(null, numArray);
+}
+//Find the Largest Numbers in a Group of Arrays
+//Create a function that takes an array of arrays with numbers.Return a new(single) array with the largest numbers of each.
+//Examples
+//FindLargest([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) --> [7, 90, 2]
+//FindLargest([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]) --> [-34, -2, 7]
+//FindLargest([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]]) --> [0.7634, 9.32, 9]
+//Notes
+//Watch out for negative numbers.
+// Steps
+// create jagged array originalArray
+// create FindLargest function which takes in an inputArray
+// create a solutionArray variable
+// loop through the inputArray and find the largest number in each array
+// by using a function that gets the Max of Array
+// function getMaxOfArray(numArray) {
+//   return Math.max.apply(null, numArray);
+// }
+// Add these numbers to solutionArray.push(largest value);
+// return solutionArray
+// alert(solutionArray.join());
+
 	//Eliminate Odd Numbers within an Array https://edabit.com/challenge/HkKNhhdfEGwxm9Fq6
 	//Create a function that takes an array of numbers and returns only the even values.
 	//Examples
