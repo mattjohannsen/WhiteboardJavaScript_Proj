@@ -559,7 +559,45 @@ function FindLargest(inputArray){
 function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
 }
-//Find the Largest Numbers in a Group of Arrays
+function Problem22(){
+  var stringOne = "Happy Birthday";
+  alert(ReverseCase(stringOne));
+  var stringTwo = "MANY THANKS";
+  alert(ReverseCase(stringTwo));
+  var stringThree = "sPoNtAnEoUs";
+  alert(ReverseCase(stringThree));
+}
+function ReverseCase(inputString){
+  var stringAsArray = inputString.split('');
+  var solutionArray = [];
+  for (let i = 0; i < stringAsArray.length; i++) {
+    //console.log(stringAsArray[i]);
+    if (stringAsArray[i].toUpperCase()==stringAsArray[i]) {
+      solutionArray.push(stringAsArray[i].toLowerCase());
+    } else {
+      solutionArray.push(stringAsArray[i].toUpperCase());
+    }
+  }
+  return solutionArray.join('');
+}
+//Reverse the Case https://edabit.com/challenge/99oN5igrbXddAjHEL
+//Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+//Examples
+//ReverseCase('Happy Birthday') --> 'hAPPY bIRTHDAY'
+//ReverseCase('MANY THANKS') --> 'many thanks'
+//ReverseCase('sPoNtAnEoUs') --> 'SpOnTaNeOuS'
+// Steps
+// create string originalString variable
+// create ReverseCase method which takes an inputString
+// turn the string into a List<char> stringAsList 
+// Create a List<char> solutionList
+// Loop through the string and check to see if ToUpper method of the stringAsList[i] is equal to stringAsList[i] THEN...
+// ToLower the stringAsList[i] add the char to solutionList
+// ELSE you would want to save the stringAsList[i] as ToUpper
+// return the list as a string with  return string.Join("", solutionList);
+
+
+//Find the Largest Numbers in a Group of Arrays https://edabit.com/challenge/nermqxzovZbfFBC9X
 //Create a function that takes an array of arrays with numbers.Return a new(single) array with the largest numbers of each.
 //Examples
 //FindLargest([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) --> [7, 90, 2]
