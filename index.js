@@ -514,18 +514,22 @@ function ShowAnswer(inputArray){
   }
 }
 function Problem20(){
-  //var originalArray = [1, 2, 3, 4, 5, 6, 7, 8];
-  //var originalArray = [43, 65, 23, 89, 53, 9, 6];
-  var originalArray = [718, 991, 449, 644, 380, 440];
-  var solutionArray = NoOdds(originalArray);
-  for (let i = 0; i < solutionArray.length; i++) {
-    console.log(solutionArray[i]);
-  }
+  var arrayOne = [1, 2, 3, 4, 5, 6, 7, 8];
+  ShowArray(NoOdds(arrayOne));
+  var arrayTwo = [43, 65, 23, 89, 53, 9, 6];
+  ShowArray(NoOdds(arrayTwo));
+  var arrayThree = [718, 991, 449, 644, 380, 440];
+  ShowArray(NoOdds(arrayThree));
 }
 
 function NoOdds(inputArray){
-  var returnArray = inputArray.filter(e => e % 2 == 0);
-  return returnArray;
+  return inputArray.filter(e => e % 2 == 0);;
+}
+
+function ShowArray(inputArray){
+  for (let i = 0; i < inputArray.length; i++) {
+    console.log(inputArray[i]);
+  }
 }
 
 	//Eliminate Odd Numbers within an Array https://edabit.com/challenge/HkKNhhdfEGwxm9Fq6
