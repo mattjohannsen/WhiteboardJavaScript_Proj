@@ -513,6 +513,38 @@ function ShowAnswer(inputArray){
     console.log(inputArray[i]);
   }
 }
+function Problem20(){
+  //var originalArray = [1, 2, 3, 4, 5, 6, 7, 8];
+  //var originalArray = [43, 65, 23, 89, 53, 9, 6];
+  var originalArray = [718, 991, 449, 644, 380, 440];
+  var solutionArray = NoOdds(originalArray);
+  for (let i = 0; i < solutionArray.length; i++) {
+    console.log(solutionArray[i]);
+  }
+}
+
+function NoOdds(inputArray){
+  var returnArray = inputArray.filter(e => e % 2 == 0);
+  return returnArray;
+}
+
+	//Eliminate Odd Numbers within an Array https://edabit.com/challenge/HkKNhhdfEGwxm9Fq6
+	//Create a function that takes an array of numbers and returns only the even values.
+	//Examples
+	//NoOdds([1, 2, 3, 4, 5, 6, 7, 8]) --> [2, 4, 6, 8]
+	//NoOdds([43, 65, 23, 89, 53, 9, 6]) --> [6]
+	//NoOdds([718, 991, 449, 644, 380, 440]) --> [718, 644, 380, 440]
+	//Notes
+	//Return all even numbers in the order they were given.
+  //All test cases contain valid numbers ranging from 1 to 3000.
+  // Steps
+  // create an array originalArray = [1, 2, 3, 4, 5, 6, 7, 8]
+  // create a function NoOdds which is passed in originalArray
+  // create an array returnArray
+  // filter the array for only numbers that are number %2 == 0;
+  // return the returnArray
+  
+
 // Return the Four Letter Strings https: edabit.com/challenge/W4x4o2M7ny6Cqkfhn
 // Create a function that takes an array of strings and returns the words that are exactly four letters.
 // Examples

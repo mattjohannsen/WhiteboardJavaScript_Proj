@@ -86,52 +86,46 @@
 			</div>
 			<div>
 				<h3>Problem #12: Last Digit Ultimate</h3>
-				<p>11.	Your job is to create a function that takes 3 numbers: a, b, c and returns true if the last digit of(the last digit of a* the last digit of b) = the last digit of c.</p>
-				<li>Examples:</li>
-				<li>last_dig(25, 21, 125) ➞ true</li>
-				<li>The last digit of 25 is 5, the last digit of 21 is 1, and the last</li>
-				<li>digit of 125 is 5, and the last digit of 5*1 = 5, which is equal</li>
-				<li>to the last digit of 125 (5).</li>
+				<p>12.	Your job is to create a function that takes 3 numbers: a, b, c and returns true if the last digit of(the last digit of a* the last digit of b) = the last digit of c.</p>
 				<button onclick="Problem12()">See Solution</button>
 			</div>
 			<div>
 				<h3>Problem #13: Hacker Speak</h3>
-				<p>11.	Your job is to create a function that takes 3 numbers: a, b, c and returns true if the last digit of(the last digit of a* the last digit of b) = the last digit of c.</p>
-				<li>Examples:</li>
-				<li>last_dig(25, 21, 125) ➞ true</li>
-				<li>The last digit of 25 is 5, the last digit of 21 is 1, and the last</li>
-				<li>digit of 125 is 5, and the last digit of 5*1 = 5, which is equal</li>
-				<li>to the last digit of 125 (5).</li>
+				<p>13.	Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string.</p>
+				<li>HackerSpeak('javascript is cool') --> 'j4v45cr1pt 15 c00l'</li>
+				<li>HackerSpeak('programming is fun') --> 'pr0gr4mm1ng 15 fun'</li>
+				<li>HackerSpeak('become a coder') --> 'b3c0m3 4 c0d3r'</li>
 				<button onclick="Problem13()">See Solution</button>
 			</div>
 			<div>
-				<h3>Problem #14: Hacker Speak</h3>
-				<p>11.	Your job is to create a function that takes 3 numbers: a, b, c and returns true if the last digit of(the last digit of a* the last digit of b) = the last digit of c.</p>
+				<h3>Problem #14: Repeating Letters</h3>
+				<p>14.	Create a function that takes a string and returns a string in which each character is repeated once.</p>
 				<li>Examples:</li>
-				<li>last_dig(25, 21, 125) ➞ true</li>
-				<li>The last digit of 25 is 5, the last digit of 21 is 1, and the last</li>
-				<li>digit of 125 is 5, and the last digit of 5*1 = 5, which is equal</li>
-				<li>to the last digit of 125 (5).</li>
+				<li>DoubleChar('String') ➞ 'SSttrriinngg'/li>
+				<li>DoubleChar('Hello World!') ➞ 'HHeelllloo  WWoorrlldd!!'</li>
+				<li>DoubleChar('1234!_ ') ➞ '11223344!!__  '</li>
 				<button onclick="Problem14()">See Solution</button>
 			</div>
 			<div>
 				<h3>Problem #15: Remove First and Last Character</h3>
-				<p>11.	Your job is to create a function that takes 3 numbers: a, b, c and returns true if the last digit of(the last digit of a* the last digit of b) = the last digit of c.</p>
+				<p>15.	Create a function that removes the first and last characters from a string.</p>
 				<li>Examples:</li>
-				<li>last_dig(25, 21, 125) ➞ true</li>
-				<li>The last digit of 25 is 5, the last digit of 21 is 1, and the last</li>
-				<li>digit of 125 is 5, and the last digit of 5*1 = 5, which is equal</li>
-				<li>to the last digit of 125 (5).</li>
+				<li>RemoveFirstLast('hello') ➞ 'ell'</li>
+				<li>RemoveFirstLast('maybe') ➞ 'ayb'</li>
+				<li>RemoveFirstLast('benefit') ➞ 'enefi'</li>
+				<li>RemoveFirstLast('a') ➞ 'a'</li>
+				<li>Notes</li>
+				<li>If the string is 2 or fewer characters long, return the string itself(See example #4).</li>
 				<button onclick="Problem15()">See Solution</button>
 			</div>
 			<div>
-				<h3>Problem #16: Remove First and Last Character</h3>
-				<p>11.	Your job is to create a function that takes 3 numbers: a, b, c and returns true if the last digit of(the last digit of a* the last digit of b) = the last digit of c.</p>
+				<h3>Problem #16: Double Letters</h3>
+				<p>16.	Create a function that takes a word and returns true if the word has two consecutive identical letters.</p>
 				<li>Examples:</li>
-				<li>last_dig(25, 21, 125) ➞ true</li>
-				<li>The last digit of 25 is 5, the last digit of 21 is 1, and the last</li>
-				<li>digit of 125 is 5, and the last digit of 5*1 = 5, which is equal</li>
-				<li>to the last digit of 125 (5).</li>
+				<li>DoubleLetters('loop') --> True</li>
+				<li>DoubleLetters('yummy') --> True/li>
+				<li>DoubleLetters('orange') --> False</li>
+				<li>DoubleLetters('munchkin') --> False</li>
 				<button onclick="Problem16()">See Solution</button>
 			</div>
 			<div>
@@ -157,10 +151,19 @@
 				<h3>Problem #19: Return the Four Letter Strings </h3>
 				<p>Create a function that repeats each character in a string n times.</p>
 				<li>Examples:</li>
-				<li>Repeat("mice", 5) ➞ "mmmmmiiiiiccccceeeee"</li>
-				<li>Repeat("hello", 3) ➞ "hhheeellllllooo"</li>
-				<li>Repeat("stop", 1) ➞ "stop"</li>
+				<li>IsFourLetters(["Tomato", "Potato", "Pair"]) -> ["Pair"]</li>
+				<li>IsFourLetters(["Kangaroo", "Bear", "Fox"]) -> ["Bear"]</li>
+				<li>IsFourLetters(["Ryan", "Kieran", "Jason", "Matt"]) -> ["Ryan", "Matt"]</li>
 				<button onclick="Problem19()">See Solution</button>
+			</div>
+			<div>
+				<h3>Problem #20: Eliminate Odd Numbers within an Array</h3>
+				<p>Create a function that repeats each character in a string n times.</p>
+				<li>Examples:</li>
+				<li>IsFourLetters(["Tomato", "Potato", "Pair"]) -> ["Pair"]</li>
+				<li>IsFourLetters(["Kangaroo", "Bear", "Fox"]) -> ["Bear"]</li>
+				<li>IsFourLetters(["Ryan", "Kieran", "Jason", "Matt"]) -> ["Ryan", "Matt"]</li>
+				<button onclick="Problem20()">See Solution</button>
 			</div>
 		</body>
 	</html>
