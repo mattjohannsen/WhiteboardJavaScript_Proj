@@ -454,8 +454,11 @@ function AreThereDoubles(inputString){
 }
 function Problem17(){
   console.log(GetFactorial(5));
+  alert(GetFactorial(5));
   console.log(GetFactorial(3));
+  alert(GetFactorial(3));
   console.log(GetFactorial(2));
+  alert(GetFactorial(2));
 }
 
 function GetFactorial(inputNumber){
@@ -467,15 +470,18 @@ function GetFactorial(inputNumber){
 }
 
 function Problem18(){
-  var originalString = "mice";
+  var stringOne = "mice";
   var nTimes = 5;
-  console.log(RepeatNTimes(originalString, nTimes));
-  originalString = "hello";
+  console.log(RepeatNTimes(stringOne, nTimes));
+  alert(RepeatNTimes(stringOne, nTimes));
+  var stringTwo = "hello";
   nTimes = 3;
-  console.log(RepeatNTimes(originalString, nTimes));
-  originalString = "stop";
+  console.log(RepeatNTimes(stringTwo, nTimes));
+  alert(RepeatNTimes(stringTwo, nTimes));
+  var stringThree = "stop";
   nTimes = 1;
-  console.log(RepeatNTimes(originalString, nTimes));
+  console.log(RepeatNTimes(stringThree, nTimes));
+  alert(RepeatNTimes(stringThree, nTimes));
 }
 
 function RepeatNTimes(inputString, inputNumber){
@@ -511,6 +517,7 @@ function IsFourLetters(inputArray){
 function ShowAnswer(inputArray){
   for (let i = 0; i < inputArray.length; i++) {
     console.log(inputArray[i]);
+    alert(inputArray.toString());
   }
 }
 function Problem20(){
@@ -530,6 +537,7 @@ function ShowArray(inputArray){
   for (let i = 0; i < inputArray.length; i++) {
     console.log(inputArray[i]);
   }
+  alert(inputArray.toString());
 }
 
 	//Eliminate Odd Numbers within an Array https://edabit.com/challenge/HkKNhhdfEGwxm9Fq6
