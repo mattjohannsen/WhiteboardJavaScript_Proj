@@ -551,7 +551,6 @@ function Problem21(){
 function FindLargest(inputArray){
   var solutionArray = [];
   for (let i = 0; i < inputArray.length; i++) {
-    //const element = inputArray[i];
     solutionArray.push(getMaxOfArray(inputArray[i]))
   }
   return solutionArray;
