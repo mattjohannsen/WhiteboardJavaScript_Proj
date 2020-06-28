@@ -571,7 +571,6 @@ function ReverseCase(inputString){
   var stringAsArray = inputString.split('');
   var solutionArray = [];
   for (let i = 0; i < stringAsArray.length; i++) {
-    //console.log(stringAsArray[i]);
     if (stringAsArray[i].toUpperCase()==stringAsArray[i]) {
       solutionArray.push(stringAsArray[i].toLowerCase());
     } else {
