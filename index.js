@@ -581,9 +581,11 @@ function ReverseCase(inputString){
 }
 function Problem23(){
   var theAnswer = ArrayOfMultiples(7,5);
-  for (let i = 0; i < theAnswer.length; i++) {
-    console.log(theAnswer[i]);
-  }
+  alert('[' + theAnswer.join(', ') + ']');
+  theAnswer = ArrayOfMultiples(12,10);
+  alert('[' + theAnswer.join(', ') + ']');
+  theAnswer = ArrayOfMultiples(17,6);
+  alert('[' + theAnswer.join(', ') + ']');
 }
 function ArrayOfMultiples(num, length){
   var solutionArray = [];
