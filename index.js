@@ -579,6 +579,35 @@ function ReverseCase(inputString){
   }
   return solutionArray.join('');
 }
+function Problem23(){
+  var theAnswer = ArrayOfMultiples(7,5);
+  for (let i = 0; i < theAnswer.length; i++) {
+    console.log(theAnswer[i]);
+  }
+}
+function ArrayOfMultiples(num, length){
+  var solutionArray = [];
+  for (let i = 0; i < length; i++) {
+    solutionArray.push(num*(i+1));
+  }
+  return solutionArray;
+}
+
+//Array of Multiples https://edabit.com/challenge/2QvnWexKoLfcJkSsc
+//Create a function that takes two numbers as arguments(num, length) and returns an array of multiples of num up to length.
+//Examples
+//ArrayOfMultiples(7, 5) --> [7, 14, 21, 28, 35]
+//ArrayOfMultiples(12, 10) --> [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+//ArrayOfMultiples(17, 6) --> [17, 34, 51, 68, 85, 102]
+//Notes
+//Notice that num is also included in the returned array.
+// Steps
+// Create ArrayOfMultiples function that takes in (num, length)
+// Create a solutionArray variable = []
+// loop through length number of times
+// push the number onto the solutionArray and multiply it by (i+1)
+// return solution Array
+
 //Reverse the Case https://edabit.com/challenge/99oN5igrbXddAjHEL
 //Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
 //Examples
