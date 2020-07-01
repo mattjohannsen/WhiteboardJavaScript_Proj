@@ -594,6 +594,41 @@ function ArrayOfMultiples(num, length){
   }
   return solutionArray;
 }
+function Problem24(){
+  var originalNumber = 100;
+  alert(CountOnes(originalNumber));
+}
+function CountOnes(inputNumber){
+  var binaryCount = 0;
+  var binaryArray = GetBinary(inputNumber).split('');
+  for (let i = 0; i < binaryArray.length; i++) {
+    if ( binaryArray[i] == '1') {
+      binaryCount++;
+    }
+  }
+  return binaryCount;
+}
+function GetBinary(inputNumber){
+  return (inputNumber >>> 0).toString(2);
+}
+
+//Count Ones in Binary Representation of Integer https://edabit.com/challenge/zn3A3AAzoE7vezw7Q
+//Count the amount of ones in the binary representation of an integer.So for example, since 12 is '1100' in binary, the return value should be 2.
+//Examples
+//CountOnes(0) --> 0
+//CountOnes(100) --> 3
+//CountOnes(999) --> 8
+//Notes
+//The input will always be a valid integer(number).
+// Steps
+// Create var originalNumber
+// Create CountOnes which takes in an inputNumber
+// Create a GetBinary function which takes in a number and returns a string of 1's and 0's
+// Turn the string into an array with split
+// create a binaryCount variable initially set to 0
+// for loop which adds 1 to binaryCount for every time there is a 1 in the array
+// return binaryCount
+
 
 //Array of Multiples https://edabit.com/challenge/2QvnWexKoLfcJkSsc
 //Create a function that takes two numbers as arguments(num, length) and returns an array of multiples of num up to length.
