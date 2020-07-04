@@ -661,6 +661,35 @@ function IsPalindrome(inputNumber){
   }
   return isNumberPalindrome;
 }
+function Problem27(){
+  var originalString = "test";
+  var theAnswer = GetMiddle(originalString);
+  alert(theAnswer);
+}
+function GetMiddle(inputString){
+  var stringAsArray = inputString.split('');
+  var startingPoint = Math.round(stringAsArray.length/2);
+  var solutionArray = [];
+  if (stringAsArray.length % 2 == 0) {
+    solutionArray.push(stringAsArray[startingPoint-1]);
+    solutionArray.push(stringAsArray[startingPoint]);
+  } else {
+    solutionArray.push(stringAsArray[startingPoint-1]);
+  }
+  return solutionArray.join('');
+}
+//Return the Middle Character(s) of a String
+//Create a function that takes a string and returns the middle character(s). 
+//If the word's length is odd, return the middle character. 
+//If the word's length is even, return the middle two characters.
+//Examples
+//GetMiddle('test') --> 'es'
+//GetMiddle('testing') --> 't'
+//GetMiddle('middle') --> 'dd'
+//GetMiddle('A') --> 'A'
+//Notes
+//All test cases contain a single word(as a string).
+
 //Check if a Number is a Palindrome
 //Create a function that returns true if a number is a palindrome.
 //Examples
