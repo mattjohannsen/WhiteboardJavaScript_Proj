@@ -636,6 +636,68 @@ function CounterpartCharCode(inputChar){
   return counterpartChar.charCodeAt(0);
 }
 
+function Problem26(){
+  var numberToTest = 838;
+  var theAnswer =IsPalindrome(numberToTest);
+  alert(theAnswer);
+  numberToTest = 4433;
+  theAnswer =IsPalindrome(numberToTest);
+  alert(theAnswer);
+  numberToTest = 443344;
+  theAnswer =IsPalindrome(numberToTest);
+  alert(theAnswer);
+  numberToTest = 1;
+  theAnswer =IsPalindrome(numberToTest);
+  alert(theAnswer);
+}
+function IsPalindrome(inputNumber){
+  var isNumberPalindrome = true;
+  var numberAsArray = inputNumber.toString().split('') ;
+  var startingPoint = Math.round(numberAsArray.length/2);
+  if (numberAsArray.length % 2 == 0) {
+    for (let i = 0; i < startingPoint; i++) {
+      var leftChar = numberAsArray[startingPoint - 1 - i];
+      var rightChar = numberAsArray[startingPoint + i];
+      if (leftChar == rightChar) {
+        continue;
+      } else {
+        return false;
+      }
+    }
+  } else {
+    for (let i = 0; i < startingPoint; i++) {
+      if (numberAsArray[startingPoint - 2 - i] == numberAsArray[startingPoint + i]) {
+        continue;
+      } else {
+        return false;
+      }
+    }
+  }
+  return isNumberPalindrome;
+}
+//Check if a Number is a Palindrome
+//Create a function that returns true if a number is a palindrome.
+//Examples
+//IsPalindrome(838) --> true
+//IsPalindrome(4433) --> false
+//IsPalindrome(443344) --> true
+// Steps
+// create var numberToTest
+// pass numberToTest into IsPalindrome function
+// set var isNumberPalindrome to true;
+// turn the inputNumber of the IsPalindrome into an Array as numberAsArray
+// var startingPoint is equal to the numberAsArray/2 round this number
+// if numberAsArray.length is even
+// loop through numberAsArray startingPoint times
+//    if numberAsArray[i -1] == numberAsArray[startingPoint + i]
+//     continue
+//    else
+//      return false
+// else
+//    if numberAsArray[startingPoint -1 - i] == numberAsArray[startingPoint + i]
+//     continue
+//    else
+//      return false
 
 //Find the Characters Counterpart Char Code
 //Create a function that takes a single character as an argument and returns the char code of its lowercased / uppercased counterpart.
