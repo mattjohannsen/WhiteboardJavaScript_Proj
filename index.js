@@ -664,7 +664,16 @@ function IsPalindrome(inputNumber){
 function Problem27(){
   var originalString = "test";
   var theAnswer = GetMiddle(originalString);
-  alert(theAnswer);
+  alert("Get the middle from " + originalString + " --> " + theAnswer);
+  originalString = "testing";
+  theAnswer = GetMiddle(originalString);
+  alert("Get the middle from " + originalString + " --> " + theAnswer);
+  originalString = "middle";
+  theAnswer = GetMiddle(originalString);
+  alert("Get the middle from " + originalString + " --> " + theAnswer);
+  originalString = "A";
+  theAnswer = GetMiddle(originalString);
+  alert("Get the middle from " + originalString + " --> " + theAnswer);
 }
 function GetMiddle(inputString){
   var stringAsArray = inputString.split('');
