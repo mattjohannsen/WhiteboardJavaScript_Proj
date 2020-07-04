@@ -612,6 +612,44 @@ function GetBinary(inputNumber){
   return (inputNumber >>> 0).toString(2);
 }
 
+function Problem25(){
+  var originalChar = "a";
+  var theAnswer = CounterpartCharCode(originalChar);
+  alert(theAnswer);
+}
+
+function CounterpartCharCode(inputChar){
+  var counterpartChar;
+  if (inputChar == inputChar.toUpperCase()) {
+    counterpartChar = inputChar.toLowerCase();
+  } else if (inputChar == inputChar.toLowerCase()) {
+    counterpartChar = inputChar.toUpperCase();
+  } else {
+    counterpartChar = inputChar;
+  }
+  return counterpartChar.charCodeAt(0);
+}
+
+
+//Find the Characters Counterpart Char Code
+//Create a function that takes a single character as an argument and returns the char code of its lowercased / uppercased counterpart.
+//Examples
+//Given that:
+//  - 'A' char code is: 65
+//  - 'a' char code is: 97
+//CounterpartCharCode('A') -->97
+//CounterpartCharCode('a') --> 65
+//Notes
+//The argument will always be a single character.
+//Not all inputs will have a counterpart(e.g.numbers), in which case return the inputs char code.
+// Steps
+// var originalChar = "A";
+// pass originalChar into function CounterpartCharCode(inputChar);
+// create var counterChar and set equal to GetOppositeCase(inputChar)
+// pass into function GetOppositeCase and pass in inputChar
+// create var counterpartCount and get char code for counterChar
+
+
 //Count Ones in Binary Representation of Integer https://edabit.com/challenge/zn3A3AAzoE7vezw7Q
 //Count the amount of ones in the binary representation of an integer.So for example, since 12 is '1100' in binary, the return value should be 2.
 //Examples
