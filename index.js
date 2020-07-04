@@ -613,9 +613,15 @@ function GetBinary(inputNumber){
 }
 
 function Problem25(){
-  var originalChar = "a";
+  var originalChar = "A";
   var theAnswer = CounterpartCharCode(originalChar);
-  alert(theAnswer);
+  alert("'" + originalChar + "' char code is: " + originalChar.charCodeAt(0) + "\n CounterpartCharCode('" + originalChar + "') --> " + theAnswer);
+  var originalChar = "a";
+  theAnswer = CounterpartCharCode(originalChar);
+  alert("'" + originalChar + "' char code is: " + originalChar.charCodeAt(0) + "\n CounterpartCharCode('" + originalChar + "') --> " + theAnswer);
+  var originalChar = "5";
+  theAnswer = CounterpartCharCode(originalChar);
+  alert("'" + originalChar + "' char code is: " + originalChar.charCodeAt(0) + "\n CounterpartCharCode('" + originalChar + "') --> " + theAnswer);
 }
 
 function CounterpartCharCode(inputChar){
