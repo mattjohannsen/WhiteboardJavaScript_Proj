@@ -639,38 +639,24 @@ function CounterpartCharCode(inputChar){
 function Problem26(){
   var numberToTest = 838;
   var theAnswer =IsPalindrome(numberToTest);
-  alert(theAnswer);
+  alert("Is " + numberToTest + " a palindrome? " + theAnswer);
   numberToTest = 4433;
   theAnswer =IsPalindrome(numberToTest);
-  alert(theAnswer);
+  alert("Is " + numberToTest + " a palindrome? " + theAnswer);
   numberToTest = 443344;
   theAnswer =IsPalindrome(numberToTest);
-  alert(theAnswer);
-  numberToTest = 1;
-  theAnswer =IsPalindrome(numberToTest);
-  alert(theAnswer);
+  alert("Is " + numberToTest + " a palindrome? " + theAnswer);
 }
 function IsPalindrome(inputNumber){
   var isNumberPalindrome = true;
   var numberAsArray = inputNumber.toString().split('') ;
   var startingPoint = Math.round(numberAsArray.length/2);
-  if (numberAsArray.length % 2 == 0) {
-    for (let i = 0; i < startingPoint; i++) {
-      var leftChar = numberAsArray[startingPoint - 1 - i];
-      var rightChar = numberAsArray[startingPoint + i];
-      if (leftChar == rightChar) {
-        continue;
-      } else {
-        return false;
-      }
-    }
-  } else {
-    for (let i = 0; i < startingPoint; i++) {
-      if (numberAsArray[startingPoint - 2 - i] == numberAsArray[startingPoint + i]) {
-        continue;
-      } else {
-        return false;
-      }
+  var oddVsEven = (numberAsArray.length % 2 == 0) ? 1 : 2;
+  for (let i = 0; i < startingPoint; i++) {
+    if (numberAsArray[startingPoint - oddVsEven - i] == numberAsArray[startingPoint + i]) {
+      continue;
+    } else {
+      return false;
     }
   }
   return isNumberPalindrome;
