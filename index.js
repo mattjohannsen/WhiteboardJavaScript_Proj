@@ -690,13 +690,13 @@ function GetMiddle(inputString){
 function Problem28(){
   var numberToTest = 31;
   var theAnswer = isPrime(numberToTest);
-  alert(theAnswer);
+  alert("Is " + numberToTest + " a prime number? --> " + theAnswer);
   numberToTest = 18;
   theAnswer = isPrime(numberToTest);
-  alert(theAnswer);
+  alert("Is " + numberToTest + " a prime number? --> " + theAnswer);
   numberToTest = 11;
   theAnswer = isPrime(numberToTest);
-  alert(theAnswer);
+  alert("Is " + numberToTest + " a prime number? --> " + theAnswer);
 }
 function isPrime(inputNumber){
   var isNumberPrime = true;
@@ -710,14 +710,14 @@ function isPrime(inputNumber){
   return isNumberPrime;
 }
 
-//Check if a Number is Prime https://edabit.com/challenge/aoR4PFS6FfpJs6v79
-//Create a function that outputs true if a number is prime, and false otherwise.
-//Examples
-//isPrime(31) --> true
-//isPrime(18) --> false
-//isPrime(11) --> true
-//Notes
-//A prime number has no other factors except 1 and itself.
+// Check if a Number is Prime https://edabit.com/challenge/aoR4PFS6FfpJs6v79
+// Create a function that outputs true if a number is prime, and false otherwise.
+// Examples
+// isPrime(31) --> true
+// isPrime(18) --> false
+// isPrime(11) --> true
+// Notes
+// A prime number has no other factors except 1 and itself.
 
 //Return the Middle Character(s) of a String
 //Create a function that takes a string and returns the middle character(s). 
