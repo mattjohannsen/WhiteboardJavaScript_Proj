@@ -739,6 +739,29 @@ function GetStartingPoint(inputArray){
     }
   }
 }
+function Problem30(){
+  var originalNumber = 123;
+  alert(ReverseAndNot(originalNumber));
+}
+function ReverseAndNot(inputNumber){
+  var numberAsArray = inputNumber.toString().split('');
+  var reversedArray = numberAsArray.reverse();
+  var combinedArray = reversedArray.concat(numberAsArray);
+  return combinedArray.join('');
+
+}
+//ReverseAndNot https://edabit.com/challenge/YGhgctqPsKQxQQCFS
+//Write a function that takes an integer i and returns a string with the integer backwards followed by the original integer.
+//To illustrate:
+//123
+//We reverse 123 to get 321 and then add 123 to the end, resulting in 321123.
+//Examples
+//ReverseAndNot(123) --> "321123"
+//ReverseAndNot(152) -->"251152"
+//ReverseAndNot(123456789) --> "987654321123456789"
+//Notes
+//i is a non-negative integer.
+
 //Return the Sum of the Two Smallest Numbers
 //Create a function that takes an array of numbers and returns the sum of the two lowest positive numbers.
 //Examples
