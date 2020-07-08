@@ -740,15 +740,12 @@ function GetStartingPoint(inputArray){
   }
 }
 function Problem30(){
-  var originalNumber = 123;
-  alert(ReverseAndNot(originalNumber));
+  alert("ReverseAndNot(123) --> " + ReverseAndNot(123));
+  alert("ReverseAndNot(152) --> " + ReverseAndNot(152));
+  alert("ReverseAndNot(123456789) --> " + ReverseAndNot(123456789));
 }
 function ReverseAndNot(inputNumber){
-  var numberAsArray = inputNumber.toString().split('');
-  var reversedArray = numberAsArray.reverse();
-  var combinedArray = reversedArray.concat(numberAsArray);
-  return combinedArray.join('');
-
+  return (inputNumber.toString().split('')).reverse().concat(inputNumber.toString().split('')).join('');
 }
 //ReverseAndNot https://edabit.com/challenge/YGhgctqPsKQxQQCFS
 //Write a function that takes an integer i and returns a string with the integer backwards followed by the original integer.
