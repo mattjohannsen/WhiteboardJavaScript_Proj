@@ -747,17 +747,7 @@ function Problem30(){
 function ReverseAndNot(inputNumber){
   return (inputNumber.toString().split('')).reverse().concat(inputNumber.toString().split('')).join('');
 }
-function Problem31(){
-  PalindromeTimestamps(2, 12, 22, 4, 35, 10);
-}
-function PalindromeTimestamps(hours1, minutes1, seconds1, hours2, minutes2, seconds2){
-  var dateOne = new Date();
-  var timeOne = dateOne.setUTCHours(hours1, minutes1, seconds1);
-  var dateTwo = new Date();
-  var timeTwo = dateTwo.setUTCHours(hours2, minutes2, seconds2);
-  console.log(timeOne);
-  console.log(timeTwo);
-}
+
 function Problem33(){
   alert(ReversedBinaryInteger(10));
   alert(ReversedBinaryInteger(12));
@@ -767,20 +757,66 @@ function Problem33(){
 function ReversedBinaryInteger(inputNumber){
   return parseInt(inputNumber.toString(2).split('').reverse().join(''), 2);
 }
-// Reversing a Binary String
-// Write a function that takes an integer n, reverses the binary representation of that integer, and returns the new integer from the reversed binary.
-// Examples
-// ReversedBinaryInteger(10)--> 5
-// // 10 = 1010 -> 0101 = 5
-// ReversedBinaryInteger(12) --> 3
-// // 12 = 1100 -> 0011 = 3
-// ReversedBinaryInteger(25) --> 19
-// // 25 = 11001 -> 10011 = 19
-// ReversedBinaryInteger(45) --> 45
-// // 45 = 101101 -> 101101 = 45
-// Notes
-// All values of n will be positive.
-
+function Problem31(){
+  alert(PalindromeTimestamps(2, 12, 22, 4, 35, 10));
+  alert(PalindromeTimestamps(6, 33, 15, 9, 55, 10));
+}
+function PalindromeTimestamps(hours1, minutes1, seconds1, hours2, minutes2, seconds2){
+  var time1String = hours1.toString() + ":" + minutes1.toString() + ":" + seconds1.toString();
+  var time2String = hours2.toString() + ":" + minutes2.toString() + ":" + seconds2.toString();
+  var time1Array = time1String.split(":");
+  var time2Array =time2String.split(":");
+  var timeSpan1=new Date(parseInt("2001",10),(parseInt("01",10))-1,parseInt("01",10),parseInt(time1Array[0],10),parseInt(time1Array[1],10),parseInt(time1Array[2],10));
+  var timeSpan2=new Date(parseInt("2001",10),(parseInt("01",10))-1,parseInt("01",10),parseInt(time2Array[0],10),parseInt(time2Array[1],10),parseInt(time2Array[2],10));
+  var palidromeCounter = 0;
+  while (timeSpan1 < timeSpan2){
+    var timeNumbersOnly = GetHoursString(timeSpan1) + GetMinutesString(timeSpan1) + GetSecondsString(timeSpan1);
+      if (CheckForPalidrome(timeNumbersOnly))
+      {
+          palidromeCounter++;
+      }
+      timeSpan1.setSeconds( timeSpan1.getSeconds() + 1 );
+  }
+  return palidromeCounter;
+}
+function GetHoursString(inputTime){
+  var hours = inputTime.getHours()
+  if (hours <10) {
+    if (hours == 0 || "") {
+      hours = "00";
+    }
+    hours = "0" + hours.toString();
+  }
+  return hours;
+}
+function GetMinutesString(inputTime){
+  var minutes = inputTime.getMinutes()
+  if (minutes <10) {
+    if (minutes == 0 || "") {
+      minutes = "00";
+    }
+    minutes = "0" + minutes.toString();
+  }
+  return minutes;
+}
+function GetSecondsString(inputTime){
+  var seconds = inputTime.getSeconds()
+  if (seconds <10) {
+    if (seconds == 0 || "") {
+      seconds = "00";
+    }
+    seconds = "0" + seconds.toString();
+  }
+  return seconds;
+}
+function CheckForPalidrome(inputString){
+  var reverseString = inputString.split('').reverse().join('');
+  var isPalidrome = false;
+  if (inputString == reverseString) {
+    isPalidrome = true;
+  }
+  return isPalidrome;
+}
 // Palindrome Timestamps https://edabit.com/challenge/asngMFwniLcegJJ7P
 // Create a function that takes two times of day(hours, minutes, seconds) and returns the amount of occurences of palendrome timestamps.
 // A palindrome timestamp should be read the same hours : minutes : seconds as seconds : minutes : hours, keeping in mind the second's and hour's digits will reverse.For example, 02 : 11 : 20 is a palendrome timestamp.
@@ -798,6 +834,22 @@ function ReversedBinaryInteger(inputNumber){
 // Check to see if timeSpan1.ToString() is a palindrome
 // if it is, then add 1 to the palidromeCounter
 // else add 1 to the seconds of timeSpan1 and repeat
+
+// Reversing a Binary String
+// Write a function that takes an integer n, reverses the binary representation of that integer, and returns the new integer from the reversed binary.
+// Examples
+// ReversedBinaryInteger(10)--> 5
+// // 10 = 1010 -> 0101 = 5
+// ReversedBinaryInteger(12) --> 3
+// // 12 = 1100 -> 0011 = 3
+// ReversedBinaryInteger(25) --> 19
+// // 25 = 11001 -> 10011 = 19
+// ReversedBinaryInteger(45) --> 45
+// // 45 = 101101 -> 101101 = 45
+// Notes
+// All values of n will be positive.
+
+
 
 // Area of a Triangle
 // Write a function that takes the base and height of a triangle and return its area.
