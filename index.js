@@ -747,16 +747,6 @@ function Problem30(){
 function ReverseAndNot(inputNumber){
   return (inputNumber.toString().split('')).reverse().concat(inputNumber.toString().split('')).join('');
 }
-
-function Problem33(){
-  alert(ReversedBinaryInteger(10));
-  alert(ReversedBinaryInteger(12));
-  alert(ReversedBinaryInteger(25));
-  alert(ReversedBinaryInteger(45));
-}
-function ReversedBinaryInteger(inputNumber){
-  return parseInt(inputNumber.toString(2).split('').reverse().join(''), 2);
-}
 function Problem31(){
   alert(PalindromeTimestamps(2, 12, 22, 4, 35, 10));
   alert(PalindromeTimestamps(6, 33, 15, 9, 55, 10));
@@ -826,16 +816,10 @@ function Problem32(){
 }
 function PowerRanger(nthPower, firstNumber, secondNumber){
   let powerRangerCount = 0;
-  // let firstStartingPoint = parseInt(Math.pow(firstNumber, 1/nthPower));
-  // let secondStartingPoint = parseInt(Math.pow(secondNumber, 1/nthPower));
-  let firstStartingPoint = GetFirstStartingPoint(nthPower, firstNumber);
-  let secondStartingPoint = GetSecondStartingPoint(nthPower, secondNumber);
-  let loopLength = secondStartingPoint - firstStartingPoint;
+  let loopLength = GetSecondStartingPoint(nthPower, secondNumber) - GetFirstStartingPoint(nthPower, firstNumber);
   for (let i = 0; i <= loopLength; i++) {
     powerRangerCount++;
-    //console.log(parseInt(Math.pow(i, 1/nthPower)));
   }
-  console.log(GetFirstStartingPoint(nthPower, firstNumber));
   return powerRangerCount;
 }
 function GetFirstStartingPoint(nthPower, inputNumber){
@@ -843,7 +827,6 @@ function GetFirstStartingPoint(nthPower, inputNumber){
   if (numberNthRoot % 1 != 0) {
     numberNthRoot = Math.ceil(numberNthRoot);
   }
-  console.log(numberNthRoot);
   return numberNthRoot;
 }
 function GetSecondStartingPoint(nthPower, inputNumber){
@@ -851,8 +834,16 @@ function GetSecondStartingPoint(nthPower, inputNumber){
   if (numberNthRoot % 1 != 0) {
     numberNthRoot = Math.floor(numberNthRoot);
   }
-  console.log(numberNthRoot);
   return numberNthRoot;
+}
+function Problem33(){
+  alert(ReversedBinaryInteger(10));
+  alert(ReversedBinaryInteger(12));
+  alert(ReversedBinaryInteger(25));
+  alert(ReversedBinaryInteger(45));
+}
+function ReversedBinaryInteger(inputNumber){
+  return parseInt(inputNumber.toString(2).split('').reverse().join(''), 2);
 }
 //Power Ranger https://edabit.com/challenge/McGCFZYn8ikn3GSqz
 //Create a function that takes in n, a, b and returns the number of values raised to the nth power that lie in the range[a, b], inclusive.
@@ -868,16 +859,6 @@ function GetSecondStartingPoint(nthPower, inputNumber){
 //Notes
 //Remember that the range is inclusive.
 //a<b will always be true.
-// Steps
-// Create PowerRanger method
-// create a powerRangerCount int
-// How many time should loop run?
-// Take the square root of b and round up
-// 
-// Start a loop with 1 and mulitply it by itself n number of times
-// If this number is >a and < b then add one to powerRangerCount
-// Else continue
-// 
 
 // Palindrome Timestamps https://edabit.com/challenge/asngMFwniLcegJJ7P
 // Create a function that takes two times of day(hours, minutes, seconds) and returns the amount of occurences of palendrome timestamps.
