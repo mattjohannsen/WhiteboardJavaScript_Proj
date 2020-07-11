@@ -817,6 +817,68 @@ function CheckForPalidrome(inputString){
   }
   return isPalidrome;
 }
+function Problem32(){
+  alert(PowerRanger(2, 49, 65));
+  alert(PowerRanger(3, 1, 27));
+  alert(PowerRanger(10, 1, 5));
+  alert(PowerRanger(5, 31, 33));
+  alert(PowerRanger(4, 250, 1300));
+}
+function PowerRanger(nthPower, firstNumber, secondNumber){
+  let powerRangerCount = 0;
+  // let firstStartingPoint = parseInt(Math.pow(firstNumber, 1/nthPower));
+  // let secondStartingPoint = parseInt(Math.pow(secondNumber, 1/nthPower));
+  let firstStartingPoint = GetFirstStartingPoint(nthPower, firstNumber);
+  let secondStartingPoint = GetSecondStartingPoint(nthPower, secondNumber);
+  let loopLength = secondStartingPoint - firstStartingPoint;
+  for (let i = 0; i <= loopLength; i++) {
+    powerRangerCount++;
+    //console.log(parseInt(Math.pow(i, 1/nthPower)));
+  }
+  console.log(GetFirstStartingPoint(nthPower, firstNumber));
+  return powerRangerCount;
+}
+function GetFirstStartingPoint(nthPower, inputNumber){
+  var numberNthRoot = Math.pow(inputNumber, 1/nthPower);
+  if (numberNthRoot % 1 != 0) {
+    numberNthRoot = Math.ceil(numberNthRoot);
+  }
+  console.log(numberNthRoot);
+  return numberNthRoot;
+}
+function GetSecondStartingPoint(nthPower, inputNumber){
+  var numberNthRoot = Math.pow(inputNumber, 1/nthPower);
+  if (numberNthRoot % 1 != 0) {
+    numberNthRoot = Math.floor(numberNthRoot);
+  }
+  console.log(numberNthRoot);
+  return numberNthRoot;
+}
+//Power Ranger https://edabit.com/challenge/McGCFZYn8ikn3GSqz
+//Create a function that takes in n, a, b and returns the number of values raised to the nth power that lie in the range[a, b], inclusive.
+//Examples
+//PowerRanger(2, 49, 65) --> 2
+//// 2 squares (n^2) lie between 48 and 65, 49 (7^2) and 64 (8^2)
+//PowerRanger(3, 1, 27) --> 3
+//// 3 cubes (n^3) lie between 1 and 27, 1 (1^3), 8 (2^3) and 27 (3^3)
+//PowerRanger(10, 1, 5) --> 1
+//// 1 value raised to the 10th power lies between 1 and 5, 1 (1^10)
+//PowerRanger(5, 31, 33) --> 1
+//PowerRanger(4, 250, 1300) --> 3
+//Notes
+//Remember that the range is inclusive.
+//a<b will always be true.
+// Steps
+// Create PowerRanger method
+// create a powerRangerCount int
+// How many time should loop run?
+// Take the square root of b and round up
+// 
+// Start a loop with 1 and mulitply it by itself n number of times
+// If this number is >a and < b then add one to powerRangerCount
+// Else continue
+// 
+
 // Palindrome Timestamps https://edabit.com/challenge/asngMFwniLcegJJ7P
 // Create a function that takes two times of day(hours, minutes, seconds) and returns the amount of occurences of palendrome timestamps.
 // A palindrome timestamp should be read the same hours : minutes : seconds as seconds : minutes : hours, keeping in mind the second's and hour's digits will reverse.For example, 02 : 11 : 20 is a palendrome timestamp.
