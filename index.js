@@ -875,14 +875,14 @@ function GetLastLetter(inputArray){
 function GetFirstLetter(inputArray){
   return inputArray[0];
 }
-//Smooth Sentences
-//Carlos is a huge fan of something he calls smooth sentences.A smooth sentence is one where the last letter of each word is identical to the first letter the following word.
-//To illustrate, the following would be a smooth sentence: "Carlos swam masterfully."
-//Since "Carlos" ends with an "s" and swam begins with an "s" and swam ends with an "m" and masterfully begins with an "m".
-//Examples
-//IsSmooth("Marta appreciated deep perpendicular right trapezoids") --> true
-//IsSmooth("Someone is outside the doorway") --> false
-//IsSmooth("She eats super righteously") --> true
+// Smooth Sentences
+// Carlos is a huge fan of something he calls smooth sentences.A smooth sentence is one where the last letter of each word is identical to the first letter the following word.
+// To illustrate, the following would be a smooth sentence: "Carlos swam masterfully."
+// Since "Carlos" ends with an "s" and swam begins with an "s" and swam ends with an "m" and masterfully begins with an "m".
+// Examples
+// IsSmooth("Marta appreciated deep perpendicular right trapezoids") --> true
+// IsSmooth("Someone is outside the doorway") --> false
+// IsSmooth("She eats super righteously") --> true
 // Steps
 // turn inputString into an Array --> stringAsArray
 // turn array into a jagged array --> arrayWithWordsAsArrays with as many members as stringAsArray.length
