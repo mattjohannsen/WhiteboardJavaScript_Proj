@@ -845,6 +845,55 @@ function Problem33(){
 function ReversedBinaryInteger(inputNumber){
   return parseInt(inputNumber.toString(2).split('').reverse().join(''), 2);
 }
+function Problem34(){
+  alert(IsSmooth("Carlos swam masterfully."));
+  alert(IsSmooth("Marta appreciated deep perpendicular right trapezoids"));
+  alert(IsSmooth("Someone is outside the doorway"));
+  alert(IsSmooth("She eats super righteously"));
+}
+function IsSmooth(inputString){
+  var sentenceIsSmooth = true;
+  var sentenceArray = MakeJaggedArray(inputString);
+  for (let i = 0; i < sentenceArray.length - 1; i++) {
+    if (GetLastLetter(sentenceArray[i]) != GetFirstLetter(sentenceArray[i + 1])) {
+      return false;
+    }
+  }
+  return sentenceIsSmooth;
+}
+function MakeJaggedArray(inputString){
+  var stringAsArray = inputString.split(' ');
+  var arrayWithWordsAsArrays = [];
+  for (let i = 0; i < stringAsArray.length; i++) {
+    arrayWithWordsAsArrays[i] = stringAsArray[i].split('');
+  }
+  return arrayWithWordsAsArrays;
+}
+function GetLastLetter(inputArray){
+  return inputArray[inputArray.length - 1];
+}
+function GetFirstLetter(inputArray){
+  return inputArray[0];
+}
+//Smooth Sentences
+//Carlos is a huge fan of something he calls smooth sentences.A smooth sentence is one where the last letter of each word is identical to the first letter the following word.
+//To illustrate, the following would be a smooth sentence: "Carlos swam masterfully."
+//Since "Carlos" ends with an "s" and swam begins with an "s" and swam ends with an "m" and masterfully begins with an "m".
+//Examples
+//IsSmooth("Marta appreciated deep perpendicular right trapezoids") --> true
+//IsSmooth("Someone is outside the doorway") --> false
+//IsSmooth("She eats super righteously") --> true
+// Steps
+// turn inputString into an Array --> stringAsArray
+// turn array into a jagged array --> arrayWithWordsAsArrays with as many members as stringAsArray.length
+// sentenceIsSmooth = true;
+// Start loop to go through sentence and create arrayWithWordsAsArrays using ToCharArray--> i
+// Now compare arrayWithWordsAsArrays to see if smooth
+// Loop through arrayWithWordsAsArrays to go through words--> i
+//    Loop through arrayWithWordsAsArrays[i] to go through letters
+//    
+// If arrayWithWordsAsArrays[i]
+
 //Power Ranger https://edabit.com/challenge/McGCFZYn8ikn3GSqz
 //Create a function that takes in n, a, b and returns the number of values raised to the nth power that lie in the range[a, b], inclusive.
 //Examples
