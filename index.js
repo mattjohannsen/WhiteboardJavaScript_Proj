@@ -765,12 +765,7 @@ function Problem33(){
   alert(ReversedBinaryInteger(45));
 }
 function ReversedBinaryInteger(inputNumber){
-  var numberAsBinary = inputNumber.toString(2);
-  var numberAsArray = numberAsBinary.split('');
-  var reversedArray = numberAsArray.reverse();
-  var reverseString = reversedArray.join('');
-  var reverseBinaryAsNumber = parseInt(reverseString, 2);
-  return reverseBinaryAsNumber;
+  return parseInt(inputNumber.toString(2).split('').reverse().join(''), 2);
 }
 // Reversing a Binary String
 // Write a function that takes an integer n, reverses the binary representation of that integer, and returns the new integer from the reversed binary.
