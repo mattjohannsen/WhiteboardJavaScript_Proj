@@ -748,13 +748,61 @@ function ReverseAndNot(inputNumber){
   return (inputNumber.toString().split('')).reverse().concat(inputNumber.toString().split('')).join('');
 }
 function Problem31(){
-  alert(triArea(3,2));
-  alert(triArea(7,4));
-  alert(triArea(10,10));
+  PalindromeTimestamps(2, 12, 22, 4, 35, 10);
 }
-function triArea(base, height){
-  return (base * height)/2;
+function PalindromeTimestamps(hours1, minutes1, seconds1, hours2, minutes2, seconds2){
+  var dateOne = new Date();
+  var timeOne = dateOne.setUTCHours(hours1, minutes1, seconds1);
+  var dateTwo = new Date();
+  var timeTwo = dateTwo.setUTCHours(hours2, minutes2, seconds2);
+  console.log(timeOne);
+  console.log(timeTwo);
 }
+function Problem33(){
+  alert(ReversedBinaryInteger(10));
+  alert(ReversedBinaryInteger(12));
+  alert(ReversedBinaryInteger(25));
+  alert(ReversedBinaryInteger(45));
+}
+function ReversedBinaryInteger(inputNumber){
+  var numberAsBinary = inputNumber.toString(2);
+  var numberAsArray = numberAsBinary.split('');
+  var reversedArray = numberAsArray.reverse();
+  var reverseString = reversedArray.join('');
+  var reverseBinaryAsNumber = parseInt(reverseString, 2);
+  return reverseBinaryAsNumber;
+}
+// Reversing a Binary String
+// Write a function that takes an integer n, reverses the binary representation of that integer, and returns the new integer from the reversed binary.
+// Examples
+// ReversedBinaryInteger(10)--> 5
+// // 10 = 1010 -> 0101 = 5
+// ReversedBinaryInteger(12) --> 3
+// // 12 = 1100 -> 0011 = 3
+// ReversedBinaryInteger(25) --> 19
+// // 25 = 11001 -> 10011 = 19
+// ReversedBinaryInteger(45) --> 45
+// // 45 = 101101 -> 101101 = 45
+// Notes
+// All values of n will be positive.
+
+// Palindrome Timestamps https://edabit.com/challenge/asngMFwniLcegJJ7P
+// Create a function that takes two times of day(hours, minutes, seconds) and returns the amount of occurences of palendrome timestamps.
+// A palindrome timestamp should be read the same hours : minutes : seconds as seconds : minutes : hours, keeping in mind the second's and hour's digits will reverse.For example, 02 : 11 : 20 is a palendrome timestamp.
+// Examples
+// PalindromeTimestamps(2, 12, 22, 4, 35, 10) --> 14
+// PalindromeTimestamps(12, 12, 12, 13, 13, 13) --> 6
+// PalindromeTimestamps(6, 33, 15, 9, 55, 10) --> 0
+// Notes
+// Expect military time.
+// Include the given time parameters if they happen to be palindromes.
+// The parameter timestamps are chronological.
+// Steps
+// Create TimeSpan variables for timeSpan1 and timeSpan2 with corresponding hours, minutes, seconds
+// Create int palidromeCounter variable = 0;
+// Check to see if timeSpan1.ToString() is a palindrome
+// if it is, then add 1 to the palidromeCounter
+// else add 1 to the seconds of timeSpan1 and repeat
 
 // Area of a Triangle
 // Write a function that takes the base and height of a triangle and return its area.
