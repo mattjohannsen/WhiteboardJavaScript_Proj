@@ -875,6 +875,43 @@ function GetLastLetter(inputArray){
 function GetFirstLetter(inputArray){
   return inputArray[0];
 }
+function Problem35(){
+  alert(NextPrime(12));
+  alert(NextPrime(29));
+  alert(NextPrime(11));
+}
+function NextPrime(inputNumber){
+  var lookingforNextPrime =  true;
+  if (IsPrime(inputNumber)) {
+    return inputNumber;
+  } else  {
+      
+      while (lookingforNextPrime) {
+        inputNumber++;
+        if (IsPrime(inputNumber)) {
+          lookingforNextPrime = false;
+        }
+      }
+      return inputNumber;
+  }
+}
+function IsPrime(inputNumber){
+  var isNumberPrime = true;
+  for (let i = 2; i < inputNumber/2; i++) {
+    if (inputNumber%i == 0) {
+      return false;
+    }
+    return isNumberPrime;
+  }
+}
+//Next Prime
+//Given an integer, create a function that returns the next prime.If the number is prime, return the number itself.
+//Examples
+//NextPrime(12) --> 13
+//NextPrime(24) --> 29
+//NextPrime(11) --> 11
+//// 11 is a prime, so we return the number itself.
+
 // Smooth Sentences
 // Carlos is a huge fan of something he calls smooth sentences.A smooth sentence is one where the last letter of each word is identical to the first letter the following word.
 // To illustrate, the following would be a smooth sentence: "Carlos swam masterfully."
