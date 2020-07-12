@@ -904,13 +904,13 @@ function IsPrime(inputNumber){
     return isNumberPrime;
   }
 }
-//Next Prime
-//Given an integer, create a function that returns the next prime.If the number is prime, return the number itself.
-//Examples
-//NextPrime(12) --> 13
-//NextPrime(24) --> 29
-//NextPrime(11) --> 11
-//// 11 is a prime, so we return the number itself.
+// Next Prime
+// Given an integer, create a function that returns the next prime.If the number is prime, return the number itself.
+// Examples
+// NextPrime(12) --> 13
+// NextPrime(24) --> 29
+// NextPrime(11) --> 11
+// // 11 is a prime, so we return the number itself.
 
 // Smooth Sentences
 // Carlos is a huge fan of something he calls smooth sentences.A smooth sentence is one where the last letter of each word is identical to the first letter the following word.
