@@ -914,21 +914,20 @@ function RepeatCharNoOfTimes(inputString){
   var solutionString = "";
   var stringAsArray = inputString.split('');
   for (let i = 0; i < stringAsArray.length; i+=2) {
-    var loopCount = stringAsArray[i+1];
-    for (let j = 0; j < loopCount; j++) {
+    for (let j = 0; j < stringAsArray[i+1]; j++) {
       solutionString = solutionString + stringAsArray[i];
     }
   }
   return solutionString;
 }
-//Reverse Coding Challenge #1 https://edabit.com/challenge/bqveyPRgcWZM7XzMQ
-//This is a reverse coding challenge.Normally you're given explicit directions with how to create a function. Here, you must generate your own function to satisfy the relationship between the inputs and outputs.
-//Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
-//Examples
-//A4B5C2 --> AAAABBBBBCC
-//C2F1E5 --> CCFEEEEE
-//T4S2V2 --> TTTTSSVV
-//A1B2C3D4 --> ABBCCCDDDD
+// Reverse Coding Challenge #1 https://edabit.com/challenge/bqveyPRgcWZM7XzMQ
+// This is a reverse coding challenge.Normally you're given explicit directions with how to create a function. Here, you must generate your own function to satisfy the relationship between the inputs and outputs.
+// Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
+// Examples
+// A4B5C2 --> AAAABBBBBCC
+// C2F1E5 --> CCFEEEEE
+// T4S2V2 --> TTTTSSVV
+// A1B2C3D4 --> ABBCCCDDDD
 // Steps
 // Turn input String into a char List stringToList//
 // create solutionString;
