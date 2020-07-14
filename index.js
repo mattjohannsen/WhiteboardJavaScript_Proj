@@ -904,6 +904,41 @@ function IsPrime(inputNumber){
     return isNumberPrime;
   }
 }
+function Problem36(){
+  alert(RepeatCharNoOfTimes("A4B5C2"));
+  alert(RepeatCharNoOfTimes("C2F1E5"));
+  alert(RepeatCharNoOfTimes("T4S2V2"));
+  alert(RepeatCharNoOfTimes("A1B2C3D4"));
+}
+function RepeatCharNoOfTimes(inputString){
+  var solutionString = "";
+  var stringAsArray = inputString.split('');
+  for (let i = 0; i < stringAsArray.length; i+=2) {
+    var loopCount = stringAsArray[i+1];
+    for (let j = 0; j < loopCount; j++) {
+      solutionString = solutionString + stringAsArray[i];
+    }
+  }
+  return solutionString;
+}
+//Reverse Coding Challenge #1 https://edabit.com/challenge/bqveyPRgcWZM7XzMQ
+//This is a reverse coding challenge.Normally you're given explicit directions with how to create a function. Here, you must generate your own function to satisfy the relationship between the inputs and outputs.
+//Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
+//Examples
+//A4B5C2 --> AAAABBBBBCC
+//C2F1E5 --> CCFEEEEE
+//T4S2V2 --> TTTTSSVV
+//A1B2C3D4 --> ABBCCCDDDD
+// Steps
+// Turn input String into a char List stringToList//
+// create solutionString;
+// Loop through stringToList increase by 2
+// string charToAdd = stringToList[i];
+// start new loop j loop is stringToList[i+1]
+// solutionString = solutionString + charToAdd
+// return solutionString
+
+
 // Next Prime
 // Given an integer, create a function that returns the next prime.If the number is prime, return the number itself.
 // Examples
