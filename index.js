@@ -920,6 +920,73 @@ function RepeatCharNoOfTimes(inputString){
   }
   return solutionString;
 }
+function Problem37(){
+  alert(SockPairs("AA"));
+  alert(SockPairs("ABABC"));
+  alert(SockPairs("CABBACCC"));
+}
+function SockPairs(inputString){
+  var sockPairs = 0;
+  var stringAsArray = inputString.split('');
+  var charactersInString = [];
+  for (let i = 0; i < stringAsArray.length; i++) {
+    if (charactersInString.includes(stringAsArray[i])) {
+      continue;
+    } else {
+      charactersInString.push(stringAsArray[i]);
+    }
+  }
+  var numberOfSocks = [];
+  for (let i = 0; i < charactersInString.length; i++) {
+    var count = inputString.split(charactersInString[i]).length-1;
+    numberOfSocks.push(count);
+  }
+  for (let i = 0; i < charactersInString.length; i++) {
+    if (numberOfSocks[i] == 1) {
+      continue;
+    } else if (numberOfSocks[i] % 2 == 0) {
+      sockPairs += (numberOfSocks[i] / 2);
+    } else {
+      sockPairs += ((numberOfSocks[i] - 1) / 2);
+    }
+  }
+  return sockPairs;
+}
+
+//Sock Pairs
+//Joseph is in the middle of packing for a vacation.
+//He's having a bit of trouble finding all of his socks, though. Write a function that returns the number of sock pairs he has. A sock pair consists of two of the same letter, such as 'AA'. The socks are represented as an unordered sequence.
+//Examples
+//SockPairs("AA") --> 1
+//SockPairs("ABABC") --> 2
+//SockPairs("CABBACCC") --> 4
+//Notes
+//If given an empty string (no socks in the drawer), return 0.
+//There can be multiple pairs of the same type of sock, such as two pairs of CC for the last example.
+// Steps
+// Turn inputString into --> stringAsArray
+
+// create array charactersInString;
+
+// Loop through stringAsList --> i loop
+// if (!stringAsList.Contains(stringAsList[i])
+// then charactersInString.Add(stringAsList[i]) 
+// create List<int> numberOfSocks = new List<int>();
+
+// loop through charactersInString
+// var count = mystring.Count(x => x == 'charactersInString[i]')
+// add count to numberOfSocks list
+
+// create int sockPairs = 0
+// loop through charactersInString
+// if numberOfSocks[i] % 2 = 0 then
+// add numberOfSocks[i]/2 to the sockPairs
+// else if numberOfSocks[i] = 1 then
+// continue
+// else
+// add numberOfSocks -1/2 to the sockPairs
+// return sockPairs
+
 // Reverse Coding Challenge #1 https://edabit.com/challenge/bqveyPRgcWZM7XzMQ
 // This is a reverse coding challenge.Normally you're given explicit directions with how to create a function. Here, you must generate your own function to satisfy the relationship between the inputs and outputs.
 // Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
