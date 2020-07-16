@@ -952,6 +952,28 @@ function SockPairs(inputString){
   }
   return sockPairs;
 }
+function Problem38(){
+  alert(ConvertToHex("hello world"));
+  alert(ConvertToHex("Big Boi"));
+  alert(ConvertToHex("Marty Poppinson"));
+}
+function ConvertToHex(inputString){
+  var stringAsArray = inputString.split('');
+  var hexArray = [];
+  for (let i = 0; i < stringAsArray.length; i++) {
+    hexArray[i] = stringAsArray[i].charCodeAt(0).toString(16);
+  }
+  return hexArray.join(' ');;
+}
+//Convert to Hex
+//Create a function that takes a strings characters as ASCII and returns each characters hexadecimal value as a string.
+//Examples
+//ConvertToHex("hello world") --> "68 65 6c 6c 6f 20 77 6f 72 6c 64"
+//ConvertToHex("Big Boi") --> "42 69 67 20 42 6f 69"
+//ConvertToHex("Marty Poppinson") --> "4d 61 72 74 79 20 50 6f 70 70 69 6e 73 6f 6e"
+//Notes
+//Each byte must be seperated by a space.
+//All alpha hex characters must be lowercase.
 
 //Sock Pairs
 //Joseph is in the middle of packing for a vacation.
@@ -963,29 +985,6 @@ function SockPairs(inputString){
 //Notes
 //If given an empty string (no socks in the drawer), return 0.
 //There can be multiple pairs of the same type of sock, such as two pairs of CC for the last example.
-// Steps
-// Turn inputString into --> stringAsArray
-
-// create array charactersInString;
-
-// Loop through stringAsList --> i loop
-// if (!stringAsList.Contains(stringAsList[i])
-// then charactersInString.Add(stringAsList[i]) 
-// create List<int> numberOfSocks = new List<int>();
-
-// loop through charactersInString
-// var count = mystring.Count(x => x == 'charactersInString[i]')
-// add count to numberOfSocks list
-
-// create int sockPairs = 0
-// loop through charactersInString
-// if numberOfSocks[i] % 2 = 0 then
-// add numberOfSocks[i]/2 to the sockPairs
-// else if numberOfSocks[i] = 1 then
-// continue
-// else
-// add numberOfSocks -1/2 to the sockPairs
-// return sockPairs
 
 // Reverse Coding Challenge #1 https://edabit.com/challenge/bqveyPRgcWZM7XzMQ
 // This is a reverse coding challenge.Normally you're given explicit directions with how to create a function. Here, you must generate your own function to satisfy the relationship between the inputs and outputs.
