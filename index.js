@@ -963,8 +963,38 @@ function ConvertToHex(inputString){
   for (let i = 0; i < stringAsArray.length; i++) {
     hexArray[i] = stringAsArray[i].charCodeAt(0).toString(16);
   }
-  return hexArray.join(' ');;
+  return hexArray.join(' ');
 }
+function Problem40(){
+  alert(AlphabetIndex("Wow, does that work?"));
+  alert(AlphabetIndex("The river stole the gods."));
+  alert(AlphabetIndex("We have a lot of rain in June."));
+}
+function AlphabetIndex(inputString){
+  var stringAsArray = inputString.replace(/[^A-Za-z]/g, "").split('');
+  var solutionArray = [];
+  for (let i = 0; i < stringAsArray.length; i++) {
+    solutionArray.push(parseInt(stringAsArray[i], 36) - 9);
+  }
+  return solutionArray.join(' ');
+}
+
+//Replace Letters With Position In Alphabet
+//Create a function that takes a string and replaces each letter with its appropriate position in the alphabet. 'a' is 1, 'b' is 2, 'c' is 3, etc, etc.
+//Examples
+//AlphabetIndex('Wow, does that work?') --> '23 15 23 4 15 5 19 20 8 1 20 23 15 18 11'
+//AlphabetIndex('The river stole the gods.') --> '20 8 5 18 9 22 5 18 19 20 15 12 5 20 8 5 7 15 4 19'
+//AlphabetIndex('We have a lot of rain in June.') --> '23 5 8 1 22 5 1 12 15 20 15 6 18 1 9 14 9 14 10 21 14 5'
+//Notes
+//If any character in the string isn't a letter, ignore it.
+// Steps
+// Turn the string into a char List --> stringAsList
+// Go through char List and remove any items that are not letters in alphabet
+// create solutionList List<int>
+// Begin loop for turning the characters into their respective alphabet index
+// solutionList[i] = char.ToUpper(stringAsList[i]) - 64;
+// string solutionString = string.Join(" ", solutionList);
+
 //Convert to Hex
 //Create a function that takes a strings characters as ASCII and returns each characters hexadecimal value as a string.
 //Examples
