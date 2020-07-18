@@ -978,6 +978,70 @@ function AlphabetIndex(inputString){
   }
   return solutionArray.join(' ');
 }
+function Problem39(){
+  alert(IsValidHexCode("#CD5C5C"));
+  alert(IsValidHexCode("#EAECEE"));
+  alert(IsValidHexCode("#eaecee"));
+  alert(IsValidHexCode("#CD5C58C"));
+  alert(IsValidHexCode("#CD5C58C"));
+  alert(IsValidHexCode("#CD5C&C"));
+  alert(IsValidHexCode("CD5C5C"));
+}
+function IsValidHexCode(inputString){
+  var stringAsArray = inputString.split('');
+  if (stringAsArray[0] != "#" || stringAsArray.length != 7) {
+    return false;
+  } else {
+    for (let i = 1; i < stringAsArray.length; i++) {
+      var theElement = stringAsArray[i];
+      var charToCheck = theElement.charCodeAt(0);
+      var lowerChar = theElement.toLowerCase();
+      var upperChar = theElement.toUpperCase();
+      // Check alphabet letters
+      if (lowerChar != upperChar) {
+        if (charToCheck>=65 && charToCheck<=70){
+          continue;
+        } else if (charToCheck>=97 && charToCheck<=102){
+          continue;
+        } else {
+          return false;
+        }
+      } else if (charToCheck >=48 && charToCheck<=58){
+        continue;
+      } else {
+        var lowerChar = theElement.toLowerCase();
+        var upperChar = theElement.toUpperCase();
+        if (lowerChar == upperChar) {
+          return false;
+        }
+      }
+    }
+  }
+  return true;
+}
+//Valid Hex Code
+//Create a function that determines whether a string is a valid hex code.
+//A hex code must begin with a pound key # and is exactly 6 characters in length. Each character must be a digit from 0-9 or an alphabetic character from A-F. All alphabetic characters may be uppercase or lowercase.
+//Examples
+//IsValidHexCode("#CD5C5C") --> true
+//IsValidHexCode("#EAECEE") --> true
+//IsValidHexCode("#eaecee") --> true
+//IsValidHexCode("#CD5C58C") --> false
+//// Length exceeds 6
+//IsValidHexCode("#CD5C5Z") --> false
+//// Not all alphabetic characters in A-F
+//IsValidHexCode("#CD5C&C") --> false
+//// Contains unacceptable character
+//IsValidHexCode("CD5C5C") --> false
+//// Missing #
+// Steps
+// set variable isValidHexCode = true
+// Turn input string into char[] --> stringAsArray
+// Check if first character is # --> IsNumSignFirst(stringAsArray[0]))
+// Check to see if array has 7 characters --> DoesArrayHave7Members(stringAsArray)
+// Check to see if char are numeric or alphabetic ELSE return false;
+// Check to see if all alphabetic character.ToUpper are between A-F
+// Check to see if all numberic characters are between 0-9
 
 //Replace Letters With Position In Alphabet
 //Create a function that takes a string and replaces each letter with its appropriate position in the alphabet. 'a' is 1, 'b' is 2, 'c' is 3, etc, etc.
@@ -987,13 +1051,6 @@ function AlphabetIndex(inputString){
 //AlphabetIndex('We have a lot of rain in June.') --> '23 5 8 1 22 5 1 12 15 20 15 6 18 1 9 14 9 14 10 21 14 5'
 //Notes
 //If any character in the string isn't a letter, ignore it.
-// Steps
-// Turn the string into a char List --> stringAsList
-// Go through char List and remove any items that are not letters in alphabet
-// create solutionList List<int>
-// Begin loop for turning the characters into their respective alphabet index
-// solutionList[i] = char.ToUpper(stringAsList[i]) - 64;
-// string solutionString = string.Join(" ", solutionList);
 
 //Convert to Hex
 //Create a function that takes a strings characters as ASCII and returns each characters hexadecimal value as a string.
