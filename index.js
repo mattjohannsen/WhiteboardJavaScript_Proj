@@ -965,19 +965,6 @@ function ConvertToHex(inputString){
   }
   return hexArray.join(' ');
 }
-function Problem40(){
-  alert(AlphabetIndex("Wow, does that work?"));
-  alert(AlphabetIndex("The river stole the gods."));
-  alert(AlphabetIndex("We have a lot of rain in June."));
-}
-function AlphabetIndex(inputString){
-  var stringAsArray = inputString.replace(/[^A-Za-z]/g, "").split('');
-  var solutionArray = [];
-  for (let i = 0; i < stringAsArray.length; i++) {
-    solutionArray.push(parseInt(stringAsArray[i], 36) - 9);
-  }
-  return solutionArray.join(' ');
-}
 function Problem39(){
   alert(IsValidHexCode("#CD5C5C"));
   alert(IsValidHexCode("#EAECEE"));
@@ -1010,6 +997,74 @@ function IsValidHexCode(inputString){
   }
   return true;
 }
+function Problem40(){
+  alert(AlphabetIndex("Wow, does that work?"));
+  alert(AlphabetIndex("The river stole the gods."));
+  alert(AlphabetIndex("We have a lot of rain in June."));
+}
+function AlphabetIndex(inputString){
+  var stringAsArray = inputString.replace(/[^A-Za-z]/g, "").split('');
+  var solutionArray = [];
+  for (let i = 0; i < stringAsArray.length; i++) {
+    solutionArray.push(parseInt(stringAsArray[i], 36) - 9);
+  }
+  return solutionArray.join(' ');
+}
+function Problem41(){
+  alert(DuplicateCount("abcde"));
+  alert(DuplicateCount("aabbcde"));
+  alert(DuplicateCount("Indivisibilities"));
+  alert(DuplicateCount("Aa"));
+}
+function DuplicateCount(inputString){
+  var stringAsArray = inputString.split('');
+  var repeatingChars = 0;
+  var alreadyCounted = [];
+  for (let i = 0; i < stringAsArray.length; i++) {
+    if (!alreadyCounted.includes(stringAsArray[i])) {
+      let numberToAdd = HowManyOccurances(stringAsArray[i], stringAsArray);
+      repeatingChars += numberToAdd;
+      alreadyCounted.push(stringAsArray[i]);
+    } else {
+      continue;
+    }
+  }
+  return repeatingChars;
+}
+function HowManyOccurances(inputChar, inputArray){
+  let timesRepeated = 0;
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] == inputChar) {
+      timesRepeated++;
+    }
+  }
+  return (timesRepeated > 1) ? 1 : 0;
+}
+//Count the Number of Duplicate Characters https://edabit.com/challenge/wXCzoLtvvEEYBs3p9
+//Create a function that takes a string and returns the number of alphanumeric characters that occur more than once.
+//Examples
+//DuplicateCount(abcde) --> 0
+//DuplicateCount(aabbcde) --> 2
+//DuplicateCount(Indivisibilities) --> 2
+//DuplicateCount(Aa) --> 0
+//// Case sensitive
+//Notes
+//Duplicate characters are case sensitive.
+//The input string will contain only alphanumeric characters.
+// Steps
+// Create int DuplicateCount(inputString) method
+// create char[] stringAsArray = inputString.ToCharArray
+// create int[] duplicateArray
+// create int alreadyCounted = 0;
+// start i loop going through each index one at a time
+// pass duplicateArray[i] to HowManyOccurances to check for occurances
+// alreadyCounted += HowManyOccurances(char, stringAsArray);
+// return alreadyCounted;
+// HowManyOccurances(char inputChar char inputArray)
+// create int timesRepeated
+// start loop i
+// if inputArray[i]== inputChar then add 1 to timesRepeated
+
 // Valid Hex Code
 // Create a function that determines whether a string is a valid hex code.
 // A hex code must begin with a pound key # and is exactly 6 characters in length. Each character must be a digit from 0-9 or an alphabetic character from A-F. All alphabetic characters may be uppercase or lowercase.
