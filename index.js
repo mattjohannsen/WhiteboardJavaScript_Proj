@@ -995,13 +995,8 @@ function IsValidHexCode(inputString){
     for (let i = 1; i < stringAsArray.length; i++) {
       var theElement = stringAsArray[i];
       var charToCheck = theElement.charCodeAt(0);
-      var lowerChar = theElement.toLowerCase();
-      var upperChar = theElement.toUpperCase();
-      // Check alphabet letters
-      if (lowerChar != upperChar) {
-        if (charToCheck>=65 && charToCheck<=70){
-          continue;
-        } else if (charToCheck>=97 && charToCheck<=102){
+      if (theElement.toLowerCase() != theElement.toUpperCase()) {
+        if (charToCheck>=65 && charToCheck<=70 || charToCheck>=97 && charToCheck<=102){
           continue;
         } else {
           return false;
@@ -1009,31 +1004,27 @@ function IsValidHexCode(inputString){
       } else if (charToCheck >=48 && charToCheck<=58){
         continue;
       } else {
-        var lowerChar = theElement.toLowerCase();
-        var upperChar = theElement.toUpperCase();
-        if (lowerChar == upperChar) {
           return false;
-        }
       }
     }
   }
   return true;
 }
-//Valid Hex Code
-//Create a function that determines whether a string is a valid hex code.
-//A hex code must begin with a pound key # and is exactly 6 characters in length. Each character must be a digit from 0-9 or an alphabetic character from A-F. All alphabetic characters may be uppercase or lowercase.
-//Examples
-//IsValidHexCode("#CD5C5C") --> true
-//IsValidHexCode("#EAECEE") --> true
-//IsValidHexCode("#eaecee") --> true
-//IsValidHexCode("#CD5C58C") --> false
-//// Length exceeds 6
-//IsValidHexCode("#CD5C5Z") --> false
-//// Not all alphabetic characters in A-F
-//IsValidHexCode("#CD5C&C") --> false
-//// Contains unacceptable character
-//IsValidHexCode("CD5C5C") --> false
-//// Missing #
+// Valid Hex Code
+// Create a function that determines whether a string is a valid hex code.
+// A hex code must begin with a pound key # and is exactly 6 characters in length. Each character must be a digit from 0-9 or an alphabetic character from A-F. All alphabetic characters may be uppercase or lowercase.
+// Examples
+// IsValidHexCode("#CD5C5C") --> true
+// IsValidHexCode("#EAECEE") --> true
+// IsValidHexCode("#eaecee") --> true
+// IsValidHexCode("#CD5C58C") --> false
+// // Length exceeds 6
+// IsValidHexCode("#CD5C5Z") --> false
+// // Not all alphabetic characters in A-F
+// IsValidHexCode("#CD5C&C") --> false
+// // Contains unacceptable character
+// IsValidHexCode("CD5C5C") --> false
+// Missing #
 // Steps
 // set variable isValidHexCode = true
 // Turn input string into char[] --> stringAsArray

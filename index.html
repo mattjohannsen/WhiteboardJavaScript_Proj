@@ -380,15 +380,20 @@
 				<button onclick="Problem38()">See Solution</button>
 			</div>
 			<div>
-				<h3>Challenge 39: Convert to Hex</h3>
-				<p>Joseph is in the middle of packing for a vacation. He's having a bit of trouble finding all of his socks, though. Write a function that returns the number of sock pairs he has. A sock pair consists of two of the same letter, such as 'AA'. The socks are represented as an unordered sequence.</p>
+				<h3>Challenge 39: Valid Hex Code</h3>
+				<p>Create a function that determines whether a string is a valid hex code. A hex code must begin with a pound key # and is exactly 6 characters in length. Each character must be a digit from 0-9 or an alphabetic character from A-F. All alphabetic characters may be uppercase or lowercase.</p>
 				<li>Examples</li>
-				<li>SockPairs(AA) --> 1</li>
-				<li>SockPairs(ABABC) --> 2</li>
-				<li>SockPairs(CABBACCC) --> 4</li>
-				<li>Notes</li>
-				<li>If given an empty string (no socks in the drawer), return 0.</li>
-				<li>There can be multiple pairs of the same type of sock, such as two pairs of CC for the last example.</li>
+				<li>IsValidHexCode("#CD5C5C") --> true</li>
+				<li>IsValidHexCode("#EAECEE") --> true</li>
+				<li>IsValidHexCode("#eaecee") --> true</li>
+				<li>IsValidHexCode("#CD5C58C") --> false</li>
+				<li>Length exceeds 6</li>
+				<li>IsValidHexCode("#CD5C5Z") --> false</li>
+				<li>Not all alphabetic characters in A-F</li>
+				<li>IsValidHexCode("#CD5C&C") --> false</li>
+				<li>Contains unacceptable character</li>
+				<li>IsValidHexCode("CD5C5C") --> false</li>
+				<li>Missing #</li>
 				<button onclick="Problem39()">See Solution</button>
 			</div>
 			<div>
@@ -405,7 +410,21 @@
 		</body>
 	</html>
 	
-
+	
+	Create a function that determines whether a string is a valid hex code.
+	A hex code must begin with a pound key # and is exactly 6 characters in length. Each character must be a digit from 0-9 or an alphabetic character from A-F. All alphabetic characters may be uppercase or lowercase.
+	Examples
+	IsValidHexCode("#CD5C5C") --> true
+	IsValidHexCode("#EAECEE") --> true
+	IsValidHexCode("#eaecee") --> true
+	IsValidHexCode("#CD5C58C") --> false
+	// Length exceeds 6
+	IsValidHexCode("#CD5C5Z") --> false
+	// Not all alphabetic characters in A-F
+	IsValidHexCode("#CD5C&C") --> false
+	// Contains unacceptable character
+	IsValidHexCode("CD5C5C") --> false
+	// Missing #
 
 
 
