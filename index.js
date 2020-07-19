@@ -1040,6 +1040,47 @@ function HowManyOccurances(inputChar, inputArray){
   }
   return (timesRepeated > 1) ? 1 : 0;
 }
+function Problem42(){
+  alert(AlmostPalindrome("abcdcbg"));
+  alert(AlmostPalindrome("abccia"));
+  alert(AlmostPalindrome("abcdaaa"));
+  alert(AlmostPalindrome("1234312"));
+}
+function AlmostPalindrome(inputString){
+  var stringAsArray = inputString.split('');
+  var reverseArray = [];
+  reverseArray = inputString.split('').reverse();
+  let differences = 0;
+  for (let i = 0; i < stringAsArray.length; i++) {
+    var forwarChar = stringAsArray[i];
+    var reverseChar = reverseArray[i];
+    if (forwarChar!=reverseChar) {
+      differences++
+    }
+  }
+  return (differences == 2);
+}
+//Almost Palindrome https://edabit.com/challenge/t6R99zCQ7nesR7Rdk
+//A string is an almost-palindrome if, by changing only one character, you can make it a palindrome.Create a function that returns true if a string is an almost-palindrome and false otherwise.
+//Examples
+//AlmostPalindrome('abcdcbg') --> true
+// Transformed to 'abcdcba' by changing 'g' to 'a'.
+//AlmostPalindrome('abccia') --> true
+// Transformed to 'abccba' by changing 'i' to 'b'.
+//AlmostPalindrome('abcdaaa') --> false
+// Can't be transformed to a palindrome in exactly 1 turn.
+//AlmostPalindrome('1234312') --> false
+//Notes
+//Return false if the string is already a palindrome.
+// Steps
+// Create stringAsArray 
+// Reverse stringAsArray --> reverseArray
+// create int differences = equal to 0
+// start i  loop
+// if stringAsrray[1] == is equal to reverseArray[i] then add 1 to differences
+// if differences equals 2 then return true 
+// there will be 2 differences since the difference will be noted on the front half and the back half
+
 //Count the Number of Duplicate Characters https://edabit.com/challenge/wXCzoLtvvEEYBs3p9
 //Create a function that takes a string and returns the number of alphanumeric characters that occur more than once.
 //Examples
