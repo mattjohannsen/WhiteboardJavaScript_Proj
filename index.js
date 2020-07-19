@@ -1048,13 +1048,10 @@ function Problem42(){
 }
 function AlmostPalindrome(inputString){
   var stringAsArray = inputString.split('');
-  var reverseArray = [];
-  reverseArray = inputString.split('').reverse();
+  var reverseArray = inputString.split('').reverse();
   let differences = 0;
   for (let i = 0; i < stringAsArray.length; i++) {
-    var forwarChar = stringAsArray[i];
-    var reverseChar = reverseArray[i];
-    if (forwarChar!=reverseChar) {
+    if (stringAsArray[i]!=reverseArray[i]) {
       differences++
     }
   }
