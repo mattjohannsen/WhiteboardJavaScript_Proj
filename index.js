@@ -1057,6 +1057,53 @@ function AlmostPalindrome(inputString){
   }
   return (differences == 2);
 }
+function Problem43(){
+  alert(LongestCommonEnding("multiplication", "ration"));
+  alert(LongestCommonEnding("potent", "tent"));
+  alert(LongestCommonEnding("skyscraper", "carnivore"));
+}
+function LongestCommonEnding(stringOne, stringTwo){
+  var arrayOne = stringOne.split('');
+  var arrayTwo = stringTwo.split('');
+  arrayOne.reverse();
+  arrayTwo.reverse();
+  var lastIndexTheSame = 0;
+  var shortestArrayLength = Math.min(arrayOne.length, arrayTwo.length);
+  for (let i = 0; i < shortestArrayLength; i++) {
+    if (arrayOne[i] == arrayTwo[i] ) {
+      if (shortestArrayLength == i+1)
+      {
+        lastIndexTheSame = i + 1;
+      }
+      else
+      {
+          continue;
+      }
+    } else {
+      lastIndexTheSame = i;
+      break;
+    }
+  }
+  var solutionArray = [];
+  if (lastIndexTheSame == 0) {
+    return "";
+  } else {
+    for (let i = 0; i < lastIndexTheSame; i++) {
+      solutionArray.push(arrayOne[i]);
+    }
+  }
+  solutionArray.reverse();
+  return solutionArray.join('');
+}
+//Longest Common Ending https://edabit.com/challenge/zRNkYPzy8oviqkrWc
+//Write a function that returns the longest common ending between two strings.
+//Examples
+//LongestCommonEnding("multiplication", "ration") --> "ation"
+//LongestCommonEnding("potent", "tent") --> "tent"
+//LongestCommonEnding("skyscraper", "carnivore") --> ""
+//Notes
+//Return an empty string if there exists no common ending.
+
 //Almost Palindrome https://edabit.com/challenge/t6R99zCQ7nesR7Rdk
 //A string is an almost-palindrome if, by changing only one character, you can make it a palindrome.Create a function that returns true if a string is an almost-palindrome and false otherwise.
 //Examples

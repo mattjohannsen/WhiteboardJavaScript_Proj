@@ -1,0 +1,52 @@
+public class PaymentProcessor()
+{
+  int paymentAmount;
+  string paymentStatus;
+
+  // Methods
+  public void GetPayment(double paymentAmount)
+  {
+    
+  }
+  public string SendStatus()
+  {
+
+  }
+
+
+}
+public class PayPal() : PaymentProcessor
+{
+  public Customer SortAscending(int[] customerTotals) // { 15, 30, 20, 50 , 1}
+  {
+    List<int> sortedCustomers = new List<int>();
+    int startingPoint = customerTotals[0];
+    sortedCustomers.Add(customerTotals[0]);
+    for(i =1; i<customerTotals.Length; i++)
+    {
+        if (customerTotals[i] > startingPoint)
+        {
+          sortedCustomers.Add(customerTotals[i]);
+          startingPoint = customerTotals[i];
+        }
+        else if(customerTotals[i] < startingPoint)
+        {
+          List<int> tempList = sortedCustomers;
+          for(j=1; i<sortedCustomers.Count; i++)
+          {
+              if(sortedCustomers[i]<startingPoint)
+              {
+                  tempList.Add(sortedCustomers[i]);
+              }
+              else if()
+          }
+        }
+    }
+  }
+}
+
+public class CreditCard() : PaymentProcessor
+{
+  
+}
+
