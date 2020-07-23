@@ -1104,9 +1104,7 @@ function Problem44(){
   alert(ReverseSubstrationDifference(149));
 }
 function ReverseSubstrationDifference(inputNumber){
-  var minuend = inputNumber;
-  var subtrahend = ReverseNumber(inputNumber);
-  return (minuend-subtrahend>=0) ? minuend-subtrahend : 0;
+  return (inputNumber-ReverseNumber(inputNumber)>=0) ? inputNumber-ReverseNumber(inputNumber) : 0;
 }
 function ReverseNumber(inputNumber){
   var reversedNumber = parseInt(inputNumber.toString().split("").reverse().join(""));
