@@ -1058,9 +1058,9 @@ function AlmostPalindrome(inputString){
   return (differences == 2);
 }
 function Problem43(){
-  alert(LongestCommonEnding("multiplication", "ration"));
-  alert(LongestCommonEnding("potent", "tent"));
-  alert(LongestCommonEnding("skyscraper", "carnivore"));
+  alert("'" + LongestCommonEnding("multiplication", "ration") + "'");
+  alert("'" + LongestCommonEnding("potent", "tent") + "'");
+  alert("'" + LongestCommonEnding("skyscraper", "carnivore") + "'");
 }
 function LongestCommonEnding(stringOne, stringTwo){
   var arrayOne = stringOne.split('');
@@ -1095,6 +1095,28 @@ function LongestCommonEnding(stringOne, stringTwo){
   solutionArray.reverse();
   return solutionArray.join('');
 }
+//Reverse Coding Challenge #5 https://edabit.com/challenge/RW9MHzMTLMstzjrWG
+//This is a reverse coding challenge.Normally you're given explicit directions 
+//with how to create a function. Here, you must generate your own function to 
+//satisfy the relationship between the inputs and outputs.
+//Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
+//Examples
+//832 --> 594
+//51 --> 36
+//7977 --> 180
+//1 --> 0
+//665 --> 99
+//149 --> 0
+// Steps
+// ReverseSubstrationDifference(int inputNumber)
+// reverse inputNumber by passing it into the ReverseInteger method
+// declare variables
+// minuend = inputNumber
+// subtrahend = ReverseInteger(inputNumber);
+// ReverseInteger
+// Turn the int into a list. Reverse the list. Return the list turned into a string, turned into an Int
+// return minuend - subtrahend;
+
 //Longest Common Ending https://edabit.com/challenge/zRNkYPzy8oviqkrWc
 //Write a function that returns the longest common ending between two strings.
 //Examples
