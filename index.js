@@ -1095,6 +1095,23 @@ function LongestCommonEnding(stringOne, stringTwo){
   solutionArray.reverse();
   return solutionArray.join('');
 }
+function Problem44(){
+  alert(ReverseSubstrationDifference(832));
+  alert(ReverseSubstrationDifference(51));
+  alert(ReverseSubstrationDifference(7977));
+  alert(ReverseSubstrationDifference(1));
+  alert(ReverseSubstrationDifference(665));
+  alert(ReverseSubstrationDifference(149));
+}
+function ReverseSubstrationDifference(inputNumber){
+  var minuend = inputNumber;
+  var subtrahend = ReverseNumber(inputNumber);
+  return (minuend-subtrahend>=0) ? minuend-subtrahend : 0;
+}
+function ReverseNumber(inputNumber){
+  var reversedNumber = parseInt(inputNumber.toString().split("").reverse().join(""));
+  return reversedNumber;
+}
 //Reverse Coding Challenge #5 https://edabit.com/challenge/RW9MHzMTLMstzjrWG
 //This is a reverse coding challenge.Normally you're given explicit directions 
 //with how to create a function. Here, you must generate your own function to 
