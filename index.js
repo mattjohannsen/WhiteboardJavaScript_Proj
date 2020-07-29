@@ -1110,6 +1110,44 @@ function ReverseNumber(inputNumber){
   var reversedNumber = parseInt(inputNumber.toString().split("").reverse().join(""));
   return reversedNumber;
 }
+function Problem45(){
+  alert(Brackets("(a*(b-c)..... )"));
+  alert(Brackets(")(a-b-45/7*(a-34))"));
+  alert(Brackets("sin(90...)+.............cos1)"));
+}
+function Brackets(inputString){
+  var stringAsArray = inputString.split('');
+  var count = 0;
+  for (let i = 0; i < stringAsArray.length; i++) {
+    if (stringAsArray[i] == '(') {
+      var lookForRightsFromThisIndex = i + 1;
+      var nextRightBracket = stringAsArray.indexOf(')', lookForRightsFromThisIndex);
+      if (nextRightBracket == -1){
+        return false;
+      } 
+      count++;
+    }
+    if (stringAsArray[i] == ')') {
+      if (count == 0){
+        return false;
+      } 
+      count--;
+    }
+  }
+  return (count == 0);
+}
+
+//Clear Brackets https://edabit.com/challenge/9y3dJ4kWQ7GxdGNN5
+//Create a function Brackets() that takes a string and checks that the brackets in the math expression are correct.The function should return true or false.
+//Examples
+//Brackets("(a*(b-c)..... )") --> true
+//Brackets(")(a-b-45/7*(a-34))") --> false
+//Brackets("sin(90...)+.............cos1)") --> false
+//Notes
+//The string may not contain brackets, then return true.
+//String may contain spaces.
+//The string may be empty.
+
 //Reverse Coding Challenge #5 https://edabit.com/challenge/RW9MHzMTLMstzjrWG
 //This is a reverse coding challenge.Normally you're given explicit directions 
 //with how to create a function. Here, you must generate your own function to 
