@@ -461,12 +461,25 @@
 			</div>
 			<div>
 				<h3>Challenge 45: Clear Brackets</h3>
+				<p>Create a function Brackets() that takes a string and checks that the brackets in the math expression are correct.The function should return true or false.</p>
+				<li>Examples</li>
+				<li>Brackets("(a*(b-c)..... )") --> true</li>
+				<li>Brackets(")(a-b-45/7*(a-34))") --> false</li>
+				<li>Brackets("sin(90...)+.............cos1)") --> false</li>
+				<li>Notes</li>
+				<li>The string may not contain brackets, then return true.</li>
+				<li>String may contain spaces.</li>
+				<li>The string may be empty.</li>
 				<button onclick="Problem45()">See Solution</button>
+			</div>
+			<div>
+				<h3>Challenge 46: The Day Rob Was Born in Dutch</h3>
+				<p>I was born on the 21st of September in the year of 1970. That was a Monday.Where I was born that weekday is called måndag. Write a method that when passed a date as year/month/ day and returns the date's weekday name in the Dutch culture. The culture identifier to use is 'nl-NL'. Not 'nl-BE'. You can assume the specified date is valid. Looking at the tests and doing a switch statement or similar is considered cheating. System.Globalization.CultureInfo should be used. The method may be used to get the name of the Dutch weekday of other memorable days too, like in the examples below:</p>
+				<li>Examples</li>
+				<li>WeekdayRobWasBornInDutch(new DateTime(1970, 9, 21)) --> 'maandag'</li>
+				<li>WeekdayRobWasBornInDutch(new DateTime(1945, 9, 2)) --> 'zondag'</li>
+				<li>WeekdayRobWasBornInDutch(new DateTime(2001, 9, 11)) --> 'dinsdag'</li>
+				<button onclick="Problem46()">See Solution</button>
 			</div>
 		</body>
 	</html>
-
-
-
-
-

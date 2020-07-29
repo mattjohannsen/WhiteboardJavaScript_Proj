@@ -1136,6 +1136,33 @@ function Brackets(inputString){
   }
   return (count == 0);
 }
+function Problem46(){
+  alert(WeekdayRobWasBornInDutch(new Date('09/21/1970')));
+  alert(WeekdayRobWasBornInDutch(new Date('09/02/1945')));
+  alert(WeekdayRobWasBornInDutch(new Date('09/11/2001')));
+}
+function WeekdayRobWasBornInDutch(inputTime){
+  return inputTime.toLocaleString('nl-NL', {weekday: 'long'});
+}
+//The Day Rob Was Born in Dutch
+//I was born on the 21st of September in the year of 1970. That was a Monday.Where I was born that weekday is called måndag.
+//Write a method that when passed a date as year/month/ day and returns the date's weekday name in the Dutch culture. The culture identifier to use is 'nl-NL'. Not 'nl-BE'.
+//You can assume the specified date is valid.
+//Looking at the tests and doing a switch statement or similar is considered cheating.
+//System.Globalization.CultureInfo should be used.
+//The method may be used to get the name of the Dutch weekday of other memorable days too, like in the examples below:
+//Examples
+//WeekdayRobWasBornInDutch(new DateTime(1970, 9, 21)) --> 'maandag'
+//WeekdayRobWasBornInDutch(new DateTime(1945, 9, 2)) --> 'zondag'
+//WeekdayRobWasBornInDutch(new DateTime(2001, 9, 11)) --> 'dinsdag'
+// Monday — maandag (ma.)
+// Tuesday — dinsdag (di.)
+// Wednesday — woensdag (wo.)
+// Thursday — donderdag (do.)
+// Friday — vrijdag (vr.)
+// Saturday — zaterdag (za.)
+// Sunday — zondag (zo.)
+
 
 //Clear Brackets https://edabit.com/challenge/9y3dJ4kWQ7GxdGNN5
 //Create a function Brackets() that takes a string and checks that the brackets in the math expression are correct.The function should return true or false.
