@@ -1144,6 +1144,57 @@ function Problem46(){
 function WeekdayRobWasBornInDutch(inputTime){
   return inputTime.toLocaleString('nl-NL', {weekday: 'long'});
 }
+function Problem47(){
+  alert(IsParselTongue("Sshe ssselects to eat that apple. "));
+  alert(IsParselTongue("She ssselects to eat that apple. "));
+  alert(IsParselTongue("Beatrice samples lemonade "));
+  alert(IsParselTongue("You ssseldom sssspeak sso boldly, ssso messmerizingly."));
+}
+function IsParselTongue(sentence){
+  var sentenceAsArray = sentence.split(' ');
+  var wordsAsCharArrays =[];
+  for (let i = 0; i < sentenceAsArray.length; i++) {
+    wordsAsCharArrays.push(sentenceAsArray[i].split(''));
+  }
+  for (let i = 0; i < wordsAsCharArrays.length; i++) {
+    if (!IsWordParsel(wordsAsCharArrays[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+function IsWordParsel(inputArray){
+  var sCount = 0;
+  for (let j = 0; j < inputArray.length-1; j++)
+  {
+      if (inputArray[j].toLowerCase() == 's')
+      {
+          sCount++;
+          if (inputArray[j + 1].toLowerCase() == 's')
+          {
+              return true;
+          }
+      }
+  }
+  return (sCount == 0);
+}
+
+//Parseltongue https://edabit.com/challenge/q5GcPcJRibksZBDQX
+//Hermione has come up with a precise formula for determining whether or not a phrase was ssspoken by a parssseltongue(a reference from the Harry Potter universe; the language of ssserpents and those who can converse with them).
+//Each word in a sssentence must contain either:
+//At least 2 instances of the letter "s" (i.e.must be together ss), or...
+//Zero instances of the letter "s".
+//Examples
+//IsParselTongue("Sshe ssselects to eat that apple. ") --> true
+//IsParselTongue("She ssselects to eat that apple. ") --> false
+//// "She" only contains one "s".
+//IsParselTongue("Beatrice samples lemonade") --> false
+//// While "samples" has 2 instances of "s", they are not together.
+//IsParselTongue("You ssseldom sssspeak sso boldly, ssso messmerizingly.") --> true
+//Notes
+//There should be no words with only one instance of the letter "s" (see example #2).
+
+
 //The Day Rob Was Born in Dutch
 //I was born on the 21st of September in the year of 1970. That was a Monday.Where I was born that weekday is called måndag.
 //Write a method that when passed a date as year/month/ day and returns the date's weekday name in the Dutch culture. The culture identifier to use is 'nl-NL'. Not 'nl-BE'.
