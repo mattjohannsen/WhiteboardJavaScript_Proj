@@ -1178,6 +1178,88 @@ function IsWordParsel(inputArray){
   }
   return (sCount == 0);
 }
+function Problem48(){
+  alert(MysteryFunc(3));
+  alert(MysteryFunc(9));
+  alert(MysteryFunc(17)); 
+  alert(MysteryFunc(24));
+}
+function MysteryFunc(inputNumber){
+  var returnString = "";
+  var nCount = 0;
+  for (let i = 1; i <= inputNumber; i++) {
+    if (Math.pow(2, i) < inputNumber) {
+      returnString += "2";
+      nCount++;
+    } else {
+      break;
+    }
+    
+  }
+  for (let j = 1; j < Math.pow(2, (nCount + 1)-1); j++) {
+    if (Math.pow(2, nCount) + j == inputNumber) {
+      returnString += j;
+      break;
+    }
+  }
+  return parseInt(returnString);
+}
+function Problem49(){
+  // alert(ToCamelCase("hello_edabit"));
+  // alert(ToCamelCase("is_modal_open"));
+  alert(ToSnakeCase("helloEdabit"));
+  alert(ToSnakeCase("getColor"));
+}
+function ToCamelCase(inputString){
+  var stringAsArray = inputString.split('_');
+  for (let i = 0; i < stringAsArray.length; i++) {
+    if (i!=0 && stringAsArray[i] == stringAsArray[i].toLowerCase(stringAsArray[i])) {
+      stringAsArray[i] = stringAsArray[i][0].toUpperCase(stringAsArray[i][0]) + stringAsArray[i].substring(1);
+    }
+  }
+  return stringAsArray.join('');
+}
+function ToSnakeCase(inputString){
+  var stringAsArray = inputString.split(/(?=[A-Z])/);
+  for (let i = 0; i < stringAsArray.length; i++) {
+    if (stringAsArray[i].toUpperCase(stringAsArray[i])) {
+      stringAsArray[i] = stringAsArray[i][0].toLowerCase(stringAsArray[i][0]) + stringAsArray[i].substring(1);
+    }
+  }
+  return stringAsArray.join('_');
+}
+
+//camelCase <==> snake_case https://edabit.com/challenge/RBqvKrYLxtM57G5FQ
+//Create two functions ToCamelCase() and ToSnakeCase() that each take a single string and convert it into either camelCase or snake_case.If you're not sure what these terms mean, check the Resources tab above.
+//Examples
+//ToCamelCase(hello_edabit) --> helloEdabit
+//ToSnakeCase(helloEdabit) --> hello_edabit
+//ToCamelCase(is_modal_open) --> isModalOpen
+//ToSnakeCase(getColor") --> get_color
+
+
+//Reverse Coding Challenge #2 https://edabit.com/challenge/PGLjsEXWB5AWdoFGY
+//This is a reverse coding challenge.
+//Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
+//Examples
+//3 --> 21
+//9 --> 2221
+//17 --> 22221
+//24 --> 22228
+//inputNumber = 3
+//2*1
+//Steps
+//make string = returnString = "";
+//inputNumber%2 = lastNumber
+//inputNumber/2 = loopLength
+//start loop at 1, loopLength, i++
+//if i* 2 < inputNumber
+//returnString + "2";
+//else
+//returnString + lastNumber;
+//end loop
+//returnInt = Int32.Parse(returnString );
+//return returnInt;
 
 //Parseltongue https://edabit.com/challenge/q5GcPcJRibksZBDQX
 //Hermione has come up with a precise formula for determining whether or not a phrase was ssspoken by a parssseltongue(a reference from the Harry Potter universe; the language of ssserpents and those who can converse with them).
