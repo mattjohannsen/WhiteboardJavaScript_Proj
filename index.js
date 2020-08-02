@@ -1204,6 +1204,40 @@ function MysteryFunc(inputNumber){
   }
   return parseInt(returnString);
 }
+function Problem49(){
+  // alert(ToCamelCase("hello_edabit"));
+  // alert(ToCamelCase("is_modal_open"));
+  alert(ToSnakeCase("helloEdabit"));
+  alert(ToSnakeCase("getColor"));
+}
+function ToCamelCase(inputString){
+  var stringAsArray = inputString.split('_');
+  for (let i = 0; i < stringAsArray.length; i++) {
+    if (i!=0 && stringAsArray[i] == stringAsArray[i].toLowerCase(stringAsArray[i])) {
+      stringAsArray[i] = stringAsArray[i][0].toUpperCase(stringAsArray[i][0]) + stringAsArray[i].substring(1);
+    }
+  }
+  return stringAsArray.join('');
+}
+function ToSnakeCase(inputString){
+  var stringAsArray = inputString.split(/(?=[A-Z])/);
+  for (let i = 0; i < stringAsArray.length; i++) {
+    if (stringAsArray[i].toUpperCase(stringAsArray[i])) {
+      stringAsArray[i] = stringAsArray[i][0].toLowerCase(stringAsArray[i][0]) + stringAsArray[i].substring(1);
+    }
+  }
+  return stringAsArray.join('_');
+}
+
+//camelCase <==> snake_case https://edabit.com/challenge/RBqvKrYLxtM57G5FQ
+//Create two functions ToCamelCase() and ToSnakeCase() that each take a single string and convert it into either camelCase or snake_case.If you're not sure what these terms mean, check the Resources tab above.
+//Examples
+//ToCamelCase(hello_edabit) --> helloEdabit
+//ToSnakeCase(helloEdabit) --> hello_edabit
+//ToCamelCase(is_modal_open) --> isModalOpen
+//ToSnakeCase(getColor") --> get_color
+
+
 //Reverse Coding Challenge #2 https://edabit.com/challenge/PGLjsEXWB5AWdoFGY
 //This is a reverse coding challenge.
 //Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
