@@ -1256,14 +1256,6 @@ function DoesRhyme(str1, str2){
       }
     }
   }
-
-  var lastWord1 = arr1[arr1.length-1].toLowerCase().replace(/[^0-9a-z]/gi, '').split('').reverse();
-  var lastWord2 = arr2[arr2.length-1].toLowerCase().replace(/[^0-9a-z]/gi, '').split('').reverse();
-  for (let i = 0; i < lastWord1.length; i++) {
-    if (lastWord1[i] == '') {
-      
-    }
-  }
   return true;
 }
 //Rhyme Time
