@@ -1205,9 +1205,9 @@ function MysteryFunc(inputNumber){
   return parseInt(returnString);
 }
 function Problem49(){
-  // alert(ToCamelCase("hello_edabit"));
-  // alert(ToCamelCase("is_modal_open"));
+  alert(ToCamelCase("hello_edabit"));
   alert(ToSnakeCase("helloEdabit"));
+  alert(ToCamelCase("is_modal_open"));
   alert(ToSnakeCase("getColor"));
 }
 function ToCamelCase(inputString){
@@ -1228,6 +1228,56 @@ function ToSnakeCase(inputString){
   }
   return stringAsArray.join('_');
 }
+function Problem50(){
+  alert(DoesRhyme("Sam I am!", "Green eggs and ham."));
+  alert(DoesRhyme("Sam I am!", "Green eggs and HAM."));
+  alert(DoesRhyme("You are off to the races", "a splendid day."));
+  alert(DoesRhyme("and frequently do?", "you gotta move."));
+}
+function DoesRhyme(str1, str2){
+  var arr1 = str1.split(" ");
+  var arr2 = str2.split(" ");
+  var lastWordOne = arr1[arr1.length -1].toLowerCase();
+  var lastWordTwo = arr2[arr2.length -1].toLowerCase();
+  lastWordOne = lastWordOne.replace(/[^0-9a-z]/gi, '');
+  lastWordTwo = lastWordTwo.replace(/[^0-9a-z]/gi, '');
+  var arrayOne = lastWordOne.split('');
+  var arrayTwo = lastWordTwo.split('');
+  arrayOne = arrayOne.reverse();
+  arrayTwo = arrayTwo.reverse();
+  var vowels = "aeiou";
+  var loopCount = Math.min(arrayOne.length, arrayTwo.length);
+  for (let i = 0; i < loopCount; i++) {
+    if (arrayOne[i] != arrayTwo[i]) {
+      return false;
+    } else {
+      if (vowels.includes(arrayOne[i])) {
+        return true;
+      }
+    }
+  }
+
+  var lastWord1 = arr1[arr1.length-1].toLowerCase().replace(/[^0-9a-z]/gi, '').split('').reverse();
+  var lastWord2 = arr2[arr2.length-1].toLowerCase().replace(/[^0-9a-z]/gi, '').split('').reverse();
+  for (let i = 0; i < lastWord1.length; i++) {
+    if (lastWord1[i] == '') {
+      
+    }
+  }
+  return true;
+}
+//Rhyme Time
+//Create a function that returns true if two lines rhyme and false otherwise.For the purposes of this exercise, two lines rhyme if the last word from each sentence contains the same vowels.
+//Examples
+//DoesRhyme("Sam I am!", "Green eggs and ham.") --> true
+//DoesRhyme("Sam I am!", "Green eggs and HAM.") --> true
+//// Capitalization and punctuation should not matter.
+//DoesRhyme("You are off to the races", "a splendid day.") --> false
+//DoesRhyme("and frequently do?", "you gotta move.") -->false
+//Notes
+//Case insensitive.
+//Here we are disregarding cases like "thyme" and "lime".
+//We are also disregarding cases like "away" and "today" (which technically rhyme, even though they contain different vowels).
 
 //camelCase <==> snake_case https://edabit.com/challenge/RBqvKrYLxtM57G5FQ
 //Create two functions ToCamelCase() and ToSnakeCase() that each take a single string and convert it into either camelCase or snake_case.If you're not sure what these terms mean, check the Resources tab above.
