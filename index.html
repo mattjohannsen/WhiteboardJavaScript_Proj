@@ -534,7 +534,37 @@
 			</div>
 			<div>
 				<h3>Challenge 51: Valid JavaScript Comments</h3>
+				<li>In JavaScript, there are two types of comments:</li>
+				<li>Single-line comments start with //</li>
+				<li>Multi-line or inline comments start with /* and end with */</li>
+				<p>The input will be a sequence of //, /* and */. Every /* must have a */ that immediately follows it. To add, there can be no single-line comments in between multi-line comments in between the /* and */.</p>
+				<li>Create a function that returns true if comments are properly formatted, and false otherwise.</li>
+				<li>Examples</li>
+				<li>CommentsCorrect("//////") --> true</li>
+				<li>// 3 single-line comments: ["//", "//", "//"]</li>
+				<li>CommentsCorrect("/**//**////**/") --> true</li>
+				<li>// 3 multi-line comments + 1 single-line comment:</li>
+				<li>// ["/*", "*/", "/*", "*/", "//", "/*", "*/"]</li>
+				<li>CommentsCorrect("///*/**/") --> false</li>
+				<li>// The first /* is missing a */</li>
+				<li>CommentsCorrect("/////") --> false</li>
+				<li>// The 5th / is single, not a double //</li>
 				<button onclick="Problem51()">See Solution</button>
 			</div>
 		</body>
 	</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1258,11 +1258,7 @@ function Problem51(){
   alert(CommentsCorrect("/////"));
 }
 function CommentsCorrect(str){
-  var doubles = "/**/";
-  var single = "//";
-  var stringwithoutdoubles = str.replace(/\/\*\*\//g, '');
-  var stringwithoutsingles = stringwithoutdoubles.replace(/\/\//g, '');
-  return (stringwithoutsingles == "");
+  return (str.replace(/\/\*\*\//g, '').replace(/\/\//g, '') == "");
 }
 //Valid JavaScript Comments
 //In JavaScript, there are two types of comments:
