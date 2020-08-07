@@ -1251,6 +1251,36 @@ function DoesRhyme(str1, str2){
   }
   return true;
 }
+function Problem51(){
+  alert(CommentsCorrect("//////"));
+  alert(CommentsCorrect("/**//**////**/"));
+  alert(CommentsCorrect("///*/**/"));
+  alert(CommentsCorrect("/////"));
+}
+function CommentsCorrect(str){
+  var doubles = "/**/";
+  var single = "//";
+  var stringwithoutdoubles = str.replace(/\/\*\*\//g, '');
+  var stringwithoutsingles = stringwithoutdoubles.replace(/\/\//g, '');
+  return (stringwithoutsingles == "");
+}
+//Valid JavaScript Comments
+//In JavaScript, there are two types of comments:
+//Single-line comments start with //
+//Multi-line or inline comments start with /* and end with */
+//The input will be a sequence of //, /* and */. Every /* must have a */ that immediately follows it. To add, there can be no single-line comments in between multi-line comments in between the /* and */.
+//Create a function that returns true if comments are properly formatted, and false otherwise.
+//Examples
+//CommentsCorrect("//////") --> true
+//// 3 single-line comments: ["//", "//", "//"]
+//CommentsCorrect("/**//**////**/") --> true
+//// 3 multi-line comments + 1 single-line comment:
+//// ["/*", "*/", "/*", "*/", "//", "/*", "*/"]
+//CommentsCorrect("///*/**/") --> false
+//// The first /* is missing a */
+//CommentsCorrect("/////") --> false
+//// The 5th / is single, not a double //
+
 //Rhyme Time
 //Create a function that returns true if two lines rhyme and false otherwise.For the purposes of this exercise, two lines rhyme if the last word from each sentence contains the same vowels.
 //Examples
