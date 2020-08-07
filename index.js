@@ -1237,17 +1237,10 @@ function Problem50(){
 function DoesRhyme(str1, str2){
   var arr1 = str1.split(" ");
   var arr2 = str2.split(" ");
-  var lastWordOne = arr1[arr1.length -1].toLowerCase();
-  var lastWordTwo = arr2[arr2.length -1].toLowerCase();
-  lastWordOne = lastWordOne.replace(/[^0-9a-z]/gi, '');
-  lastWordTwo = lastWordTwo.replace(/[^0-9a-z]/gi, '');
-  var arrayOne = lastWordOne.split('');
-  var arrayTwo = lastWordTwo.split('');
-  arrayOne = arrayOne.reverse();
-  arrayTwo = arrayTwo.reverse();
+  var arrayOne = arr1[arr1.length -1].toLowerCase().replace(/[^0-9a-z]/gi, '').split('').reverse();
+  var arrayTwo = arr2[arr2.length -1].toLowerCase().replace(/[^0-9a-z]/gi, '').split('').reverse();
   var vowels = "aeiou";
-  var loopCount = Math.min(arrayOne.length, arrayTwo.length);
-  for (let i = 0; i < loopCount; i++) {
+  for (let i = 0; i < Math.min(arrayOne.length, arrayTwo.length); i++) {
     if (arrayOne[i] != arrayTwo[i]) {
       return false;
     } else {

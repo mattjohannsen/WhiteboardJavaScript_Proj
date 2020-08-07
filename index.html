@@ -512,12 +512,24 @@
 				<p>Create two functions ToCamelCase() and ToSnakeCase() that each take a single string and convert it into either camelCase or snake_case.If you're not sure what these terms mean, check the Resources tab above.</p>
 				<li>Examples</li>
 				<li>ToCamelCase(hello_edabit) --> helloEdabit</li>
+				<li>ToSnakeCase(helloEdabit") --> hello_edabit</li>
 				<li>ToCamelCase(is_modal_open) --> isModalOpen</li>
 				<li>ToSnakeCase(getColor") --> get_color</li>
 				<button onclick="Problem49()">See Solution</button>
 			</div>
 			<div>
-				<h3>Challenge 50: Rhyme Time"</h3>
+				<h3>Challenge 50: Rhyme Time</h3>
+				<p>Create a function that returns true if two lines rhyme and false otherwise.For the purposes of this exercise, two lines rhyme if the last word from each sentence contains the same vowels.</p>
+				<li>Examples</li>
+				<li>DoesRhyme(Sam I am!, Green eggs and ham.) --> true</li>
+				<li>DoesRhyme(Sam I am!, Green eggs and HAM.) --> true</li>
+				<li>Capitalization and punctuation should not matter.</li>
+				<li>DoesRhyme(You are off to the races, a splendid day.) --> false</li>
+				<li>DoesRhyme(and frequently do?, you gotta move.) -->false</li>
+				<li>Notes</li>
+				<li>Case insensitive.</li>
+				<li>Here we are disregarding cases like "thyme" and "lime".</li>
+				<li>We are also disregarding cases like "away" and "today" (which technically rhyme, even though they contain different vowels).</li>
 				<button onclick="Problem50()">See Solution</button>
 			</div>
 			<div>
