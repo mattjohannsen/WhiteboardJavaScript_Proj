@@ -1268,12 +1268,8 @@ function Problem52(){
   alert(TextToNumberBinary("one one"));
 }
 function TextToNumberBinary(str){
-  str = str.toLowerCase().replace(/one/g, "1");
-  str = str.toLowerCase().replace(/zero/g, "0");
-  str = str.replace(/[^0-1]/g, "");
-  var stringLength = str.length - (str.length % 8);
-  var returnString = str.substring(0, stringLength);
-  return returnString;
+  str = str.toLowerCase().replace(/one/g, "1").toLowerCase().replace(/zero/g, "0").replace(/[^0-1]/g, "");
+  return str.substring(0, str.length - (str.length % 8));;
 }
 //Convert "Zero" and "One" to "1" and "0"
 //Create a function that takes a string as an argument.The function must return a string containing 1s and 0s based on the string argument's words. If any word in the argument is not equal to "zero" or "one" (case insensitive), you should ignore it. The returned string's length should be a multiple of 8, if the string is not a multiple of 8 you should remove the numbers in excess.
