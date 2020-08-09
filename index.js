@@ -1268,7 +1268,7 @@ function Problem52(){
   alert(TextToNumberBinary("one one"));
 }
 function TextToNumberBinary(str){
-  str = str.toLowerCase().replace(/one/g, "1").toLowerCase().replace(/zero/g, "0").replace(/[^0-1]/g, "");
+  str = str.toLowerCase().replace(/one/g, "1").replace(/zero/g, "0").replace(/[^0-1]/g, "");
   return str.substring(0, str.length - (str.length % 8));;
 }
 //Convert "Zero" and "One" to "1" and "0"
