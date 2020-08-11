@@ -1271,6 +1271,28 @@ function TextToNumberBinary(str){
   str = str.toLowerCase().replace(/one/g, "1").replace(/zero/g, "0").replace(/[^0-1]/g, "");
   return str.substring(0, str.length - (str.length % 8));;
 }
+function Problem53(){
+  alert(Trouble(451999277, 41177722899));
+  alert(Trouble(1222345, 12345));
+  alert(Trouble(666789, 12345667));
+  alert(Trouble(33789, 12345337) );
+}
+function Trouble(num1,num2){
+  var searchString = num1.toString() + "," + num2.toString();
+  return /\d*(\d)\1{2}\d*,\d*\1{2}\d*/.test(searchString);
+}
+
+// Triple + Double = So Much Trouble https://edabit.com/challenge/Pf2mK8M6Av6RFcmtY
+// Create a function that takes two integers and returns true if a number repeats three times
+// in a row at any place in num1 AND that same number repeats two times in a row in num2.
+// Examples
+// Trouble(451999277, 41177722899) --> true
+// Trouble(1222345, 12345) --> false
+// Trouble(666789, 12345667) --> true
+// Trouble(33789, 12345337) --> false
+// Notes
+// You can expect every test case to contain exactly two integers.
+
 //Convert "Zero" and "One" to "1" and "0"
 //Create a function that takes a string as an argument.The function must return a string containing 1s and 0s based on the string argument's words. If any word in the argument is not equal to "zero" or "one" (case insensitive), you should ignore it. The returned string's length should be a multiple of 8, if the string is not a multiple of 8 you should remove the numbers in excess.
 //Examples
