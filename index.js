@@ -1281,6 +1281,26 @@ function Trouble(num1,num2){
   var searchString = num1.toString() + "," + num2.toString();
   return /\d*(\d)\1{2}\d*,\d*\1{2}\d*/.test(searchString);
 }
+function Problem54(){
+  alert(AverageWordLength("A B C."));
+  alert(AverageWordLength("What a gorgeous day."));
+  alert(AverageWordLength("Dude, this is so awesome!"));
+}
+function AverageWordLength(str){
+  var arr = str.split(" ");
+  var totalCharacters = 0;
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].replace(/[^0-9a-z]/gi, '');
+    totalCharacters += arr[i].length;
+  }
+  return (totalCharacters/arr.length).toFixed(2);
+}
+//Average Word Length https://edabit.com/challenge/z84RP4x6TqLdW4iva
+//Create a function that takes in a sentence and returns the average length of each word in that sentence.Round your result to two decimal places.
+//Examples
+//AverageWordLength("A B C.") --> 1.00
+//AverageWordLength("What a gorgeous day.") --> 4.00
+//AverageWordLength("Dude, this is so awesome!") --> 3.80
 
 // Triple + Double = So Much Trouble https://edabit.com/challenge/Pf2mK8M6Av6RFcmtY
 // Create a function that takes two integers and returns true if a number repeats three times
