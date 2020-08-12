@@ -1302,11 +1302,7 @@ function Problem55(){
   alert(Encrypt("alpaca"));
 }
 function Encrypt(str){
-  var arr = str.split('');
-  var arr = arr.reverse();
-  var newString = arr.join('');
-  newString = newString.replace(/a/g,"0").replace(/e/g,"1").replace(/i/g,"2").replace(/o/g,"2").replace(/u/g,"3");
-  return newString + "aca";
+  return str.split('').reverse().join('').replace(/a/g,"0").replace(/e/g,"1").replace(/i/g,"2").replace(/o/g,"2").replace(/u/g,"3") + "aca";
 }
 //The Karaca's Encryption Algorithm
 //Make a function that encrypts a given input with these steps:
