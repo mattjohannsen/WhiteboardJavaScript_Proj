@@ -1295,6 +1295,40 @@ function AverageWordLength(str){
   }
   return (totalCharacters/arr.length).toFixed(2);
 }
+function Problem55(){
+  alert(Encrypt("banana"));
+  alert(Encrypt("karaca"));
+  alert(Encrypt("burak"));
+  alert(Encrypt("alpaca"));
+}
+function Encrypt(str){
+  var arr = str.split('');
+  var arr = arr.reverse();
+  var newString = arr.join('');
+  newString = newString.replace(/a/g,"0").replace(/e/g,"1").replace(/i/g,"2").replace(/o/g,"2").replace(/u/g,"3");
+  return newString + "aca";
+}
+//The Karaca's Encryption Algorithm
+//Make a function that encrypts a given input with these steps:
+//Input: "apple"
+//Step 1: Reverse the input: "elppa"
+//Step 2: Replace all vowels using the following chart:
+//a => 0
+//e => 1
+//i => 2
+//o => 2
+//u => 3
+//// "1lpp0"
+//Step 3: Add "aca" to the end of the word: "1lpp0aca"
+//Output: "1lpp0aca"
+//Examples
+//Encrypt("banana") => "0n0n0baca"
+//Encrypt("karaca") => "0c0r0kaca"
+//Encrypt("burak") => "k0r3baca"
+//Encrypt("alpaca") => "0c0pl0aca"
+//Notes
+//All inputs are strings, no uppercases and all output must be strings.
+
 //Average Word Length https://edabit.com/challenge/z84RP4x6TqLdW4iva
 //Create a function that takes in a sentence and returns the average length of each word in that sentence.Round your result to two decimal places.
 //Examples
