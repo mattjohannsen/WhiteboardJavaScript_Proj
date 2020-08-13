@@ -1304,6 +1304,40 @@ function Problem55(){
 function Encrypt(str){
   return str.split('').reverse().join('').replace(/a/g,"0").replace(/e/g,"1").replace(/i/g,"2").replace(/o/g,"2").replace(/u/g,"3") + "aca";
 }
+function Problem56(){
+  alert(CorrectSigns("3 < 7 < 11"));
+  alert(CorrectSigns("13 > 44 > 33 > 1"));
+  alert(CorrectSigns("1 < 2 < 6 < 9 > 3"));
+  alert(CorrectSigns("9 < 9"));
+}
+function CorrectSigns(str){
+  var arr = str.split(' ');
+  for (let i = 0; i <= arr.length-3; i+=2) {
+    if (arr[i+1]=="<" && parseInt(arr[i],10) >= parseInt(arr[i+2],10)) {
+      return false;
+    } else if (arr[i+1]==">" && parseInt(arr[i],10) <= parseInt(arr[i+2],10)) {
+      return false;
+    }
+  }
+  return true;
+}
+//Correct Inequality Signs https://edabit.com/challenge/oh2F7YH25bKe2rwmZ 9 minutes
+//Create a function that returns true if a given inequality expression is correct and false otherwise.
+//Examples
+//CorrectSigns("3 < 7 < 11") --> true
+//CorrectSigns("13 > 44 > 33 > 1") --> false
+//CorrectSigns("1 < 2 < 6 < 9 > 3") --> true
+// Steps
+// split str into an array => arr
+// loop through arr.Length - 3 times
+// if i % 2
+// int leftNumber = arr[i]
+// int rightNumber = arr[i+2]
+// if arr[i+1] == "<" && arr[i] >= arr[i+2]
+// return false;
+// else if (arr[i+1] == ">" && arr[i] <= arr[i+2])
+// return false;
+
 //The Karaca's Encryption Algorithm
 //Make a function that encrypts a given input with these steps:
 //Input: "apple"
