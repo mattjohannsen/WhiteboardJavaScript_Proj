@@ -1321,6 +1321,33 @@ function CorrectSigns(str){
   }
   return true;
 }
+function Problem57(){
+  alert(PossiblePalindrome("acabbaa"));
+  alert(PossiblePalindrome("aacbdbc"));
+  alert(PossiblePalindrome("aacbdb"));
+  alert(PossiblePalindrome("abacbb"));
+}
+function PossiblePalindrome(str){
+  var solution = "";
+  for (let i = 0; i < str.length; i++) {
+    if (solution.includes(str[i])) {
+      solution = solution.replace(str[i], '');
+    } else {
+      solution += str[i];
+    }
+  }
+  return !(solution.length > 1);
+}
+//Possible Palindrome
+//Create a function that determines whether it is possible to build a palindrome from the characters in a string.
+//Examples
+//PossiblePalindrome("acabbaa") --> true
+//// Can make the following palindrome: "aabcbaa"
+//PossiblePalindrome("aacbdbc") --> true
+//// Can make the following palindrome: "abcdcba"
+//PossiblePalindrome("aacbdb") --> false
+//PossiblePalindrome("abacbb") --> false
+
 //Correct Inequality Signs https://edabit.com/challenge/oh2F7YH25bKe2rwmZ 9 minutes
 //Create a function that returns true if a given inequality expression is correct and false otherwise.
 //Examples
