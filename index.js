@@ -1338,6 +1338,43 @@ function PossiblePalindrome(str){
   }
   return !(solution.length > 1);
 }
+function Problem58(){
+  alert(Mangle("Fun times!"));
+  alert(Mangle("The quick brown fox."));
+  alert(Mangle("Omega"));
+}
+function Mangle(str){
+  var arr = str.split('');
+  var vowels = "aeiouAEIOU";
+  for (let i = 0; i < arr.length; i++) {
+    if (!arr[i].toUpperCase().match(/[A-Z]/i)){
+        arr[i] = arr[i];
+    } else if (arr[i] == 'z' || arr[i] == 'Z'){
+        arr[i] = 'A';
+    } else if (arr[i] == ' '){
+        arr[i] = ' ';
+    } else {
+        arr[i] = String.fromCharCode(arr[i].charCodeAt(0) + 1);
+        if (vowels.includes(arr[i]))
+        {
+            arr[i] = arr[i].toUpperCase();
+        }
+    }    
+  }
+  return arr.join('');
+}
+
+
+//Mangle the String
+//Create a function that takes a string and replaces every letter with the letter following it in the alphabet("c" becomes "d", "z" becomes "a", "b" becomes "c", etc). Then capitalize every vowel(a, e, i, o, u) and return the new modified string.
+//Examples
+//Mangle("Fun times!") --> "GvO Ujnft!"
+//Mangle("The quick brown fox.") --> "UIf rvjdl cspxO gpy."
+//Mangle("Omega") --> "Pnfhb"
+//Notes
+//If a letter is already uppercase, return it as uppercase(regardless of being a vowel).
+//"y" is not considered a vowel.
+
 //Possible Palindrome
 //Create a function that determines whether it is possible to build a palindrome from the characters in a string.
 //Examples
