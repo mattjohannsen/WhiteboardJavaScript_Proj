@@ -1363,6 +1363,42 @@ function Mangle(str){
   }
   return arr.join('');
 }
+function Problem59(){
+  alert(RollingCipher("abcd", 1));
+  alert(RollingCipher("abcd", -1));
+  alert(RollingCipher("abcd", 3));
+  alert(RollingCipher("abcd", 26));
+}
+function RollingCipher(str, n){
+  var arr = str.split('');
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  for (let i = 0; i < arr.length; i++)
+  {
+      var startingPoint = alphabet.indexOf(arr[i]) + n;
+      if (startingPoint > 25)
+      {
+          startingPoint -= 26;
+      }
+      else if (startingPoint < 0)
+      {
+          startingPoint += 26;
+      }
+      arr[i] = alphabet[startingPoint];
+  }
+  return arr.join('');
+}
+//Rolling Cipher
+//Write a function that accepts a string and an n and returns a cipher by rolling each character forward(n > 0) or backward(n< 0) n times.
+//Note: Think of the letters as a connected loop, so rolling a backwards once will yield z, and rolling z forward once will yield a. If you roll 26 times in either direction, you should end up back where you started.
+//Examples
+//RollingCipher("abcd", 1) --> "bcde"
+//RollingCipher("abcd", -1) --> "zabc"
+//RollingCipher("abcd", 3) --> "defg"
+//RollingCipher("abcd", 26) --> "abcd"
+//Notes
+//All letters are lower cased.
+//No spacing.
+//Each character is rotated the same number of times.
 
 
 //Mangle the String
