@@ -1401,6 +1401,40 @@ function MinTurns(current, target){
   }
   return total;
 }
+function Problem60(){
+  alert(ConvertTime("12:00 am"));
+  alert(ConvertTime("6:20 pm"));
+  alert(ConvertTime("21:00"));
+  alert(ConvertTime("5:05"));
+}
+function ConvertTime(time){
+  var returnTime = "";
+  if (time.includes('m')) {
+    var arr = time.split(' ');
+    let amPm = arr[1];
+    var hoursMinutes = arr[0].split(':');
+    let hours = hoursMinutes[0];
+    let minutes = hoursMinutes[1];
+    returnTime = (amPm == "am") ? hours.replace("12", "0") + ":" + minutes : parseInt(hours) + 12 + ":" + minutes;
+  } else {
+    var hoursMinutes = time.split(':');
+    let hours = hoursMinutes[0];
+    let minutes = hoursMinutes[1];
+    returnTime = (parseInt(hours) > 12) ? (parseInt(hours) - 12) + ":" + minutes + " pm" : hours + ":" + minutes + " am";
+  }
+  return returnTime;
+}
+//12 vs 24 Hours
+//Create a function that converts 12-hour time to 24-hour time or vice versa.Return the output as a string.
+//Examples
+//ConvertTime("12:00 am") --> "0:00"
+//ConvertTime("6:20 pm") --> "18:20"
+//ConvertTime("21:00") --> "9:00 pm"
+//ConvertTime("5:05") --> "5:05 am"
+//Notes
+//A 12-hour time input will be denoted with an am or pm suffix.
+//A 24-hour input time contains no suffix.
+
 // Briefcase Lock
 // A briefcase has a 4-digit rolling-lock. Each digit is a number from 0-9 that can be rolled either forwards or backwards.
 // Create a function that returns the smallest number of turns it takes to transform the lock from the current combination to the target combination. One turn is equivalent to rolling a number forwards or backwards by one.
