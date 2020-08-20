@@ -1433,28 +1433,17 @@ function Problem62(){
 function Simplify(str){
   var arr = str.split('/').map(x=>+x);
   var fractionIsNotSimplified = true;
-  var testcheck = arr[0] + arr[1];
   do {
     for (let i = 2; i <= arr[0]; i++) {
       if (arr[0] % i == 0 && arr[1] % i == 0) {
-        var left = arr[0];
-        var right = arr[1];
-        var leftReduced = left / i;
-        var rightReduced = right / i;
-        arr[0] = leftReduced;
-        arr[1] = rightReduced;
+        arr[0] = arr[0] / i;
+        arr[1] = arr[1] / i;
       }
     }
     fractionIsNotSimplified = false;
   }
   while (fractionIsNotSimplified);
-  if (arr[0] % arr[1] == 0) {
-    return arr[0] / arr[1];
-  }
-  else {
-    return arr.join("/");
-  }
-
+  return (arr[0] % arr[1] == 0) ? arr[0] / arr[1] : arr.join("/");
 }
 // Simplified Fractions
 // Create a function that returns the simplified version of a fraction.
