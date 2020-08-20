@@ -1401,7 +1401,7 @@ function MinTurns(current, target){
   }
   return total;
 }
-function Problem60(){
+function Problem61(){
   alert(ConvertTime("12:00 am"));
   alert(ConvertTime("6:20 pm"));
   alert(ConvertTime("21:00"));
