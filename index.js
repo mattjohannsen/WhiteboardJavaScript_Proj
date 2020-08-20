@@ -1424,6 +1424,51 @@ function ConvertTime(time){
   }
   return returnTime;
 }
+function Problem62(){
+  alert(Simplify("4/6"));
+  alert(Simplify("10/11"));
+  alert(Simplify("100/400"));
+  alert(Simplify("8/4"));
+}
+function Simplify(str){
+  var arr = str.split('/').map(x=>+x);
+  var fractionIsNotSimplified = true;
+  var testcheck = arr[0] + arr[1];
+  do {
+    for (let i = 2; i <= arr[0]; i++) {
+      if (arr[0] % i == 0 && arr[1] % i == 0) {
+        var left = arr[0];
+        var right = arr[1];
+        var leftReduced = left / i;
+        var rightReduced = right / i;
+        arr[0] = leftReduced;
+        arr[1] = rightReduced;
+      }
+    }
+    fractionIsNotSimplified = false;
+  }
+  while (fractionIsNotSimplified);
+  if (arr[0] % arr[1] == 0) {
+    return arr[0] / arr[1];
+  }
+  else {
+    return arr.join("/");
+  }
+
+}
+// Simplified Fractions
+// Create a function that returns the simplified version of a fraction.
+
+// Examples
+// Simplify("4/6") --> "2/3"
+// Simplify("10/11") --> "10/11"
+// Simplify("100/400") --> "1/4"
+// Simplify("8/4") --> "2"
+// Notes
+// A fraction is simplified if there are no common factors(except 1) between the numerator and 
+// the denominator.For example, 4/6 is not simplified, since 4 and 6 both share 2 as a factor.
+// If improper fractions can be transformed into integers, do so in your code (see example #4).
+
 //12 vs 24 Hours
 //Create a function that converts 12-hour time to 24-hour time or vice versa.Return the output as a string.
 //Examples
