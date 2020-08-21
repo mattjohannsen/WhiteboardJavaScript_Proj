@@ -1465,6 +1465,39 @@ function BreakPoint(num){
   }
   return false;
 }
+function Problem64(){
+  alert(Overlap("ABC", "Ican'tsingmyABC"));
+  alert(Overlap("abc", "Ican'tsingmyABC") );
+  alert(Overlap("Ican'tsingmyABC", "abc"));
+  alert(Overlap("hello world", "hello"));
+  alert(Overlap("+=", "this should work too +="));
+  alert(Overlap("hey", "*********"));
+}
+function Overlap(str1, str2){
+  var arr1 = str1.split("").reverse();
+  var arr2 = str2.split("").reverse();
+  var stringOverlap = Boolean(false);
+  for (let i = 0; i < Math.min(arr1.length, arr2.length); i++) {
+    if (arr1[i] == "*" || arr2[i] == "*" ||  arr1[i].toUpperCase() == arr2[i].toUpperCase()) {
+      stringOverlap = Boolean(true);
+    } else {
+      stringOverlap = Boolean(false);
+      break;
+    }
+  }
+  return stringOverlap;
+}
+//Is One String in the Other?
+//Create a function that takes two strings and returns true if either of the strings appears at the very end of the other string. Return false otherwise.The character * is a wildcard, so it can take the place of any character.
+//Examples
+//Overlap("ABC", "Ican'tsingmyABC") --> true
+//Overlap("abc", "Ican'tsingmyABC") --> true
+//Overlap("Ican'tsingmyABC", "abc") --> true
+//Overlap("hello world", "hello") --> false
+//Overlap("+=", "this should work too +=") --> true
+//Overlap("hey", "*********") --> true
+//Notes
+//Your function should NOT be case sensitive(see example #2).
 
 //Break Point
 //A number has a breakpoint if it can be split in a way where the digits on the left side and the digits on the right side sum to the same number.
