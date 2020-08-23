@@ -1487,6 +1487,76 @@ function Overlap(str1, str2){
   }
   return stringOverlap;
 }
+function Problem65(){
+  alert(EncodeMorse("EDABBIT CHALLENGE")); //". -.. .- -... -... .. -   -.-. .... .- .-.. .-.. . -. --. ."
+  alert(EncodeMorse("HELP ME !")); //".... . .-.. .--.   -- .   -.-.--"
+}
+function EncodeMorse(str){
+  var codeValues = {
+    'a': ".-",
+    'b': "-...",
+    'c': "-.-.",
+    'd': "-..",
+    'e': ".",
+    'f': "..-.",
+    'g': "--.",
+    'h': "....",
+    'i': "..",
+    'j': ".---",
+    'k': "-.-",
+    'l': ".-..",
+    'm': "--",
+    'n': "-.",
+    'o': "---",
+    'p': ".--.",
+    'q': "--.-",
+    'r': ".-.",
+    's': "...",
+    't': "-",
+    'u': "..-",
+    'v': "...-",
+    'w': ".--",
+    'x': "-..-",
+    'y': "-.--",
+    'z': "--..",
+    '0': "-----",
+    '1': ".----",
+    '2': "..---",
+    '3': "...--",
+    '4': "....-",
+    '5': ".....",
+    '6': "-....",
+    '7': "--...",
+    '8': "---..",
+    '9': "----.",
+    ':': "--..--",
+    ':': "---...",
+    '\'': ".----.",
+    '.': ".-.-.-",
+    '?': "..--..",
+    '!': "-.-.--",
+    ' ': " "
+  }
+  var morseCode = [];
+  for (let i = 0; i < str.length; i++) {
+    morseCode.push(codeValues[str[i].toLowerCase()]);
+  }
+  return morseCode.join(' ');
+}
+//Encode Morse
+//Create a function that takes a string as an argument and return a non-encoded, encrypted string.
+//Examples
+//EncodeMorse("EDABBIT CHALLENGE") --> 
+//". -.. .- -... -... .. -   -.-. .... .- .-.. .-.. . -. --. ."
+//". -.. .- -... -... .. -   -.-. .... .- .-.. .-.. . -. --. ."
+//EncodeMorse("HELP ME !") --> 
+//".... . .-.. .--.   -- .   -.-.--"
+//".... . .-.. .--.   -- .   -.-.--"
+//Notes
+//Input value can be lower or upper case.
+//Input string can have digits.
+//Input string can have some special characters (e.g.comma, colon, apostrophe, period, question mark, exclamation mark).
+
 //Is One String in the Other?
 //Create a function that takes two strings and returns true if either of the strings appears at the very end of the other string. Return false otherwise.The character * is a wildcard, so it can take the place of any character.
 //Examples
