@@ -1549,9 +1549,7 @@ function Problem66(){
   alert(FirstIndex("42 6f 72 65 64 20 77 6f 72 6c 64", "Bored"));
 }
 function FirstIndex(hexString, needle){
-  var arr = hexString.split(' ');
-  var theNeedle = needle.charCodeAt(0).toString(16);
-  return arr.indexOf(theNeedle)
+  return hexString.split(' ').indexOf(needle.charCodeAt(0).toString(16))
 }
 
 function Problem38(){
