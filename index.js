@@ -1552,19 +1552,34 @@ function FirstIndex(hexString, needle){
   return hexString.split(' ').indexOf(needle.charCodeAt(0).toString(16))
 }
 
-function Problem38(){
-  alert(ConvertToHex("hello world"));
-  alert(ConvertToHex("Big Boi"));
-  alert(ConvertToHex("Marty Poppinson"));
+function Problem67(){
+  alert(countTrue([true, false, false, true, false]));
+  alert(countTrue([false, false, false, false]));
+  alert(countTrue([]));
 }
-function ConvertToHex(inputString){
-  var stringAsArray = inputString.split('');
-  var hexArray = [];
-  for (let i = 0; i < stringAsArray.length; i++) {
-    hexArray[i] = stringAsArray[i].charCodeAt(0).toString(16);
+function countTrue(arr){
+  let trueCount = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length>0) {
+      return 0;
+    } else {
+      if (arr[i] === true){
+        trueCount ++;
+      }
+    }
   }
-  return hexArray.join(' ');
+  return trueCount;
 }
+
+// How Much is True?
+// Create a function which returns the number of true values there are in an array.
+// Examples
+// countTrue([true, false, false, true, false]) --> 2
+// countTrue([false, false, false, false]) --> 0
+// countTrue([]) --> 0
+// Notes
+// Return 0 if given an empty array.
+// All array items are of the type bool (true or false).
 
 //Needle in a Hex String
 //Find the index of a string within a hex encoded string.
