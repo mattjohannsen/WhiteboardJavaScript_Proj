@@ -1570,7 +1570,30 @@ function countTrue(arr){
   }
   return trueCount;
 }
-//Contact List
+function Problem68(){
+  alert(SortContacts(["John Locke", "Thomas Aquinas", "David Hume", "Rene Descartes"], "ASC"));
+  alert(SortContacts(["Paul Erdos", "Leonhard Euler", "Carl Gauss"], "DESC"));
+}
+function SortContacts(names, sort){
+  for (let j = 0; j < names.length - 1; j++) {
+    for (let i = 0; i < names.length - 1; i++) {
+      let lastNameA = names[i].split(' ')[1];
+      let lastNameB = names[i + 1].split(' ')[1];
+      let sortValue = lastNameA.localeCompare(lastNameB);
+      if (sortValue === 1 && sort === "ASC") {
+        let temp = names[i + 1];
+        names[i + 1] = names[i]
+        names[i] = temp;
+      } else if (sortValue === -1 && sort === "DESC"){
+        let temp = names[i];
+        names[i] = names[i + 1]
+        names[i + 1] = temp;
+      }
+    }
+  }
+  return names;
+}
+//Contact List https://edabit.com/challenge/BxiTHaprzDiTvdSA4
 //Write a sorting function that takes in an array of names and sorts them by last name either alphabetically(ASC) or reverse-alphabetically(DESC).
 //SortContacts(new string[] {
 //  "John Locke",
