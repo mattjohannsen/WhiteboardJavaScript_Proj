@@ -1570,6 +1570,32 @@ function countTrue(arr){
   }
   return trueCount;
 }
+//Contact List
+//Write a sorting function that takes in an array of names and sorts them by last name either alphabetically(ASC) or reverse-alphabetically(DESC).
+//SortContacts(new string[] {
+//  "John Locke",
+//  "Thomas Aquinas",
+//  "David Hume",
+//  "Rene Descartes"
+//}, "ASC") --> {
+//  "Thomas Aquinas",
+//  "Rene Descartes",
+//  "David Hume",
+//  "John Locke"
+//}
+//// Aquinas (A) < Descartes (D) < Hume (H) < Locke (L)
+//SortContacts(new string[] {
+//  "Paul Erdos",
+//  "Leonhard Euler",
+//  "Carl Gauss"
+//}, "DESC") --> {
+//  "Carl Gauss",
+//  "Leonhard Euler",
+//  "Paul Erdos"
+//}
+//// Gauss (G) > Erdos (ER) > Euler (EU)
+//SortContacts([], "DESC") --> {}
+//SortContacts(null, "DESC") --> {}
 
 // How Much is True?
 // Create a function which returns the number of true values there are in an array.
