@@ -1577,9 +1577,7 @@ function Problem68(){
 function SortContacts(names, sort){
   for (let j = 0; j < names.length - 1; j++) {
     for (let i = 0; i < names.length - 1; i++) {
-      let lastNameA = names[i].split(' ')[1];
-      let lastNameB = names[i + 1].split(' ')[1];
-      let sortValue = lastNameA.localeCompare(lastNameB);
+      let sortValue = names[i].split(' ')[1].localeCompare(names[i + 1].split(' ')[1]);
       if (sortValue === 1 && sort === "ASC") {
         let temp = names[i + 1];
         names[i + 1] = names[i]
