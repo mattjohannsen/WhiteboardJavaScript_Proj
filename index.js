@@ -1591,6 +1591,47 @@ function SortContacts(names, sort){
   }
   return names;
 }
+function Problem69(){
+  alert(IsValidIP("1.2.3.4"));
+  alert(IsValidIP("1.2.3"));
+  alert(IsValidIP("1.2.3.4.5"));
+  alert(IsValidIP("123.45.67.89"));
+  alert(IsValidIP("123.456.78.90"));
+  alert(IsValidIP("123.045.067.089"));
+}
+function IsValidIP(ip){
+  var arr = ip.split('.');
+  if (arr.length !=4) {
+    return false;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i][0]=='0' && arr[i].length > 1) {
+      return false;
+    } else if (arr[i] < '0' && arr[i] > '9') {
+      return false;
+    } else if (parseInt(arr[i], 10) < 0 || parseInt(arr[i], 10) > 255) {
+      return false;
+    }
+    
+  }
+  return true;
+}
+//IPv4 Validation
+//Create a function that takes a string (IPv4 address in standard dot-decimal format) and returns true if the IP is valid or false if it's not. For information on IPv4 formatting, please refer to the resources in the Resources tab.
+//Examples
+//IsValidIP("1.2.3.4") --> true
+//IsValidIP("1.2.3") --> false
+//IsValidIP("1.2.3.4.5") --> false
+//IsValidIP("123.45.67.89") --> true
+//IsValidIP("123.456.78.90") --> false
+//IsValidIP("123.045.067.089") --> false
+//Notes
+//IPv6 addresses are not valid.
+//Leading zeros are not valid ("123.045.067.089" should return false).
+//You can expect a single string for every test case.
+//Numbers may only be between 1 and 255.
+//The last digit may not be zero, but any other might.
+
 //Contact List https://edabit.com/challenge/BxiTHaprzDiTvdSA4
 //Write a sorting function that takes in an array of names and sorts them by last name either alphabetically(ASC) or reverse-alphabetically(DESC).
 //SortContacts(new string[] {
