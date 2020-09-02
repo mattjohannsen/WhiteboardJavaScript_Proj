@@ -780,11 +780,23 @@
 				<li>The last digit may not be zero, but any other might.</li>
 				<button onclick="Problem69()">See Solution</button>
 			</div>
+			<div>
+				<h3>Challenge 70: Complete the Word</h3>
+				<p>An input string can be completed if additional letters can be added and no letters need to be taken away to match the word.Furthermore, the order of the letters in the input string must be the same as the order of letters in the final word. Create a function that, given an input string, determines if the word can be completed.</p>
+				<li>Examples</li>
+				<li>CanComplete("butl", "beautiful") --> true</li>
+				<li>We can add "ea" between "b" and "u", and "ifu" between "t" and "l".</li>
+				<li>CanComplete("butlz", "beautiful") --> false</li>
+				<li>"z" does not exist in the word beautiful.</li>
+				<li>CanComplete("tulb", "beautiful") --> false</li>
+				<li>Although "t", "u", "l" and "b" all exist in "beautiful", they are incorrectly ordered.</li>
+				<li>CanComplete("bbutl", "beautiful") --> false</li>
+				<li>Too many "b"s, beautiful has only 1.</li>
+				<li>Notes</li>
+				<li>Both string input and word will be lowercased.</li>
+				<button onclick="Problem70()">See Solution</button>
+			</div>
 		</body>
 	</html>
-	
-
-
-
 
 

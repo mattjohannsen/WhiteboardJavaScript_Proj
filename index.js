@@ -1612,10 +1612,57 @@ function IsValidIP(ip){
     } else if (parseInt(arr[i], 10) < 0 || parseInt(arr[i], 10) > 255) {
       return false;
     }
-    
   }
   return true;
 }
+function Problem70(){
+  alert(CanComplete("butl", "beautiful"));
+  alert(CanComplete("butlz", "beautiful"));
+  alert(CanComplete("tulb", "beautiful"));
+  alert(CanComplete("bbutl", "beautiful"));
+}
+function CanComplete(initial, word){
+  var arr = initial.split('');
+  let startIndex = 0;
+  let characterFoundIndex;
+  for (let i = 0; i < arr.length; i++) {
+    if (word.includes(arr[i]))
+    {
+        characterFoundIndex = word.indexOf(arr[i], startIndex);
+        if (characterFoundIndex == -1)
+        {
+            return false;
+        }
+        else
+        {
+            startIndex = characterFoundIndex + 1;
+        }
+    }
+    else
+    {
+        return false;
+    }
+  }
+  return true;
+}
+
+// Complete the Word
+// An input string can be completed if additional letters can be added and no letters need to be taken away to match the word.Furthermore, the order of the letters in the input string must be the same as the order of letters in the final word.
+
+// Create a function that, given an input string, determines if the word can be completed.
+
+// Examples
+// CanComplete("butl", "beautiful") --> true
+// // We can add "ea" between "b" and "u", and "ifu" between "t" and "l".
+// CanComplete("butlz", "beautiful") --> false
+// // "z" does not exist in the word beautiful.
+// CanComplete("tulb", "beautiful") --> false
+// // Although "t", "u", "l" and "b" all exist in "beautiful", they are incorrectly ordered.
+// CanComplete("bbutl", "beautiful") --> false
+// // Too many "b"s, beautiful has only 1.
+// Notes
+// Both string input and word will be lowercased.
+
 //IPv4 Validation
 //Create a function that takes a string (IPv4 address in standard dot-decimal format) and returns true if the IP is valid or false if it's not. For information on IPv4 formatting, please refer to the resources in the Resources tab.
 //Examples
