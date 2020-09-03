@@ -1656,15 +1656,6 @@ function SmallestTransform(num){
   var arr = Array.from(String(num), Number);
   var uniqueList = Array.from(new Set(arr));
   var solutionArray = [];
-  // foreach (var uniqueNum in uniqueList)
-  // {
-  //     int totalCount = 0;
-  //     for (int i = 0; i < arr.Length; i++)
-  //     {
-  //         totalCount += Math.max(uniqueNum, arr[i]) - Math.Min(uniqueNum, arr[i]);
-  //     }
-  //     solutionList.push(totalCount);
-  // }
   uniqueList.forEach(uniqueNum => {
     let totalCount = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -1674,6 +1665,75 @@ function SmallestTransform(num){
   });
   return Math.min.apply(Math, solutionArray);
 }
+function Problem72(){
+  alert(CannotCapture([ [ 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 1, 0 ], [ 0, 1, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 1, 0, 0, 0 ] ]));
+  alert(CannotCapture([ [ 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 1, 0, 1, 0, 1, 0, 1 ], [ 1, 0, 1, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 1, 0, 1, 0, 1 ], [ 1, 0, 0, 0, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 1 ], [ 1, 0, 1, 0, 1, 0, 1, 0 ], [ 1, 0, 0, 1, 0, 0, 0, 1 ] ]));
+}
+function CannotCapture(board){
+  var horizontalmoves = [ 2, 2, -2, -2, 1, 1, - 1, -1 ];
+  var verticalmoves = [ 1, -1, 1, -1, 2, -2, 2, -2 ];
+  for (let i = 0; i < board.length; i++)
+  {
+      for (let j = 0; j < board[i].length; j++)
+      {
+          if (board[i][j] == 1)
+          {
+              for (let k = 0; k < horizontalmoves.length; k++)
+              {
+                  let row = i + verticalmoves[k];
+                  let column = j + horizontalmoves[k];
+                  if (row < 0 || row > 7 || column < 0 || column > 7)
+                  {
+                      continue;
+                  }
+                  else
+                  {
+                      let boardValue = board[row][column];
+                      if (boardValue == 1)
+                      {
+                          return false;
+                      }
+                  }
+              }
+          }
+      }
+  }
+  return true;
+}
+
+// Knights on a Board
+// Write a function that returns true if the knights are placed on a chessboard such that no 
+// knight can capture another knight.Here, 0s represent empty squares and 1s represent knights.
+
+// Examples
+// CannotCapture(new int[,] {
+//  { 0, 0, 0, 1, 0, 0, 0, 0 },
+//  { 0, 0, 0, 0, 0, 0, 0, 0 },
+//  { 0, 1, 0, 0, 0, 1, 0, 0 },
+//  { 0, 0, 0, 0, 1, 0, 1, 0 },
+//  { 0, 1, 0, 0, 0, 1, 0, 0 },
+//  { 0, 0, 0, 0, 0, 0, 0, 0 },
+//  { 0, 1, 0, 0, 0, 0, 0, 1 },
+//  { 0, 0, 0, 0, 1, 0, 0, 0 }
+// }) ➞ True
+
+// CannotCapture(new int[,] {
+//  {1, 0, 1, 0, 1, 0, 1, 0},
+//  {0, 1, 0, 1, 0, 1, 0, 1},
+//  {1, 0, 1, 0, 1, 0, 1, 0},
+//  {0, 0, 0, 1, 0, 1, 0, 1},
+//  {1, 0, 0, 0, 1, 0, 1, 0},
+//  {0, 0, 0, 0, 0, 1, 0, 1},
+//  {1, 0, 1, 0, 1, 0, 1, 0},
+//  {1, 0, 0, 1, 0, 0, 0, 1} 
+// }) ➞ False
+// Notes
+// Knights can be present in any of the 64 squares.
+// No other pieces except knights exist.
+// Steps
+// There are 8 arrays that are 8 long
+// if knight at arr[0][0] then possible moves are[2][1],[2][-1],[-2][1],[-2][-1], [1][2],[1][-2],[-1][2],[-1][-2]
+
 //Smallest Transform
 //Create a function that returns the smallest number of changes it takes to transform one number into one with identical digits.A step is incrementing or decrementing a digit by one.
 //Examples
