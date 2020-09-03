@@ -1645,6 +1645,47 @@ function CanComplete(initial, word){
   }
   return true;
 }
+function Problem71(){
+  alert(SmallestTransform(399));
+  alert(SmallestTransform(1234));
+  alert(SmallestTransform(153));
+  alert(SmallestTransform(33338));
+  alert(SmallestTransform(7777));
+}
+function SmallestTransform(num){
+  var arr = Array.from(String(num), Number);
+  var uniqueList = Array.from(new Set(arr));
+  var solutionArray = [];
+  // foreach (var uniqueNum in uniqueList)
+  // {
+  //     int totalCount = 0;
+  //     for (int i = 0; i < arr.Length; i++)
+  //     {
+  //         totalCount += Math.max(uniqueNum, arr[i]) - Math.Min(uniqueNum, arr[i]);
+  //     }
+  //     solutionList.push(totalCount);
+  // }
+  uniqueList.forEach(uniqueNum => {
+    let totalCount = 0;
+    for (let i = 0; i < arr.length; i++) {
+      totalCount += Math.max(uniqueNum, arr[i]) - Math.min(uniqueNum, arr[i]);
+    }
+    solutionArray.push(totalCount);
+  });
+  return Math.min.apply(Math, solutionArray);
+}
+//Smallest Transform
+//Create a function that returns the smallest number of changes it takes to transform one number into one with identical digits.A step is incrementing or decrementing a digit by one.
+//Examples
+//SmallestTransform(399) --> 6
+//// 399 transformed to 999 in 6 steps.
+//SmallestTransform(1234) --> 4
+//// 1234 can be transformed to either 2222 or 3333 using 4 steps.
+//SmallestTransform(153) --> 4
+//SmallestTransform(33338) --> 5
+//SmallestTransform(7777) --> 0
+//Notes
+//If a number already has identical digits, return 0.
 
 // Complete the Word
 // An input string can be completed if additional letters can be added and no letters need to be taken away to match the word.Furthermore, the order of the letters in the input string must be the same as the order of letters in the final word.
