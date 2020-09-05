@@ -1700,6 +1700,55 @@ function CannotCapture(board){
   }
   return true;
 }
+function Problem73(){
+  // alert(LCM([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+  // alert(LCM([5]));
+  // alert(LCM([5, 7, 11]));
+  alert(LCM([5, 7, 11, 35, 55, 77])); //--> 385
+  //alert(GetGCF(250, 400));
+}
+function LCM(nums){
+  //nums.sort();
+  var multiplicationFactor = 1;
+  for (let i = 0; i < nums.length; i++){
+    for (let j = 0; j < nums.length; j++){
+      var gcf = GetGCFNow(nums[i], nums[j]);
+      if (nums[j] % gcf == 0 && i != j){
+        multiplicationFactor *= gcf;
+        nums = ReduceWhenPossible(nums, gcf);
+        continue;
+      }
+    }
+  }
+  var lcm = 1;
+  for (let k = 0; k < nums.length; k++){
+      lcm *= nums[k];
+  }
+  return lcm * multiplicationFactor;
+}
+function ReduceWhenPossible(arr, divisor){
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] % divisor == 0){
+    arr[i] /= divisor;
+    }
+  }
+  return arr;
+}
+function GetGCFNow(num1, num2){
+  if (num2 == 0){
+    return num1;
+  }
+  else{
+    return GetGCFNow(num2, num1 % num2);
+  }
+}
+// Least Common Multiple
+// Given a array of integers, create a function that will find the smallest positive integer that is evenly divisible by all the members of the list.In other words, find the least common multiple(LCM).
+// Examples
+// LCM({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }) --> 2520
+// LCM({ 5 }) --> 5
+// LCM({ 5, 7, 11 }) --> 385
+// LCM({ 5, 7, 11, 35, 55, 77 }) --> 385
 
 // Knights on a Board
 // Write a function that returns true if the knights are placed on a chessboard such that no 
