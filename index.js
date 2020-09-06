@@ -1776,6 +1776,23 @@ function GetGCF(x, y) {
   }
   return x;
 }
+function Problem75(){
+  alert(OverlappingRectangles([ 2, 1, 3, 4 ], [ 3, 2, 2, 5 ]));
+  alert(OverlappingRectangles([ 2, -9, 11, 5 ], [ 5, -11, 2, 9 ]));
+  alert(OverlappingRectangles([ -8, -7, 4, 7 ], [ -5, -9, 4, 7 ]));
+}
+function OverlappingRectangles(rect1, rect2){
+  let xOverlap = Math.min(rect1[0] + rect1[2], rect2[0] + rect2[2]) - Math.max(rect1[0], rect2[0]);
+  let yOverlap = Math.min(rect1[1] + rect1[3], rect2[1] + rect2[3]) - Math.max(rect1[1], rect2[1]);
+  return ((xOverlap < 0) ? 0 : xOverlap) * ((yOverlap < 0) ? 0 : yOverlap);
+}
+// Area of Overlapping Rectangles https://edabit.com/challenge/Jj6S7qQgtfAo4L2QR
+// Create a function that returns the area of the overlap between two rectangles.The function will receive two rectangles, each with the coordinates of the lower left corner followed by the width and the height int[] { x, y, width, height }.
+// Examples
+// OverlappingRectangles(new int[] { 2, 1, 3, 4 }, new int[] { 3, 2, 2, 5  }) --> 6
+// OverlappingRectangles(new int[] { 2, -9, 11, 5 }, new int[] { 5, -11, 2, 9 }) --> 10
+// OverlappingRectangles(new int[] { -8, -7, 4, 7 },  new int[] { -5, -9, 4, 7 }) --> 5
+
 //Amount of Unique Fractions
 //Create a function double UniqueFract(), which should sum all irreducible regular fractions between 0 and 1, in the numerator and denominator of which there are only single-digit numbers: 1/2, 1/3, 1/4, ... 2/3, 2/4, ... 8/9.
 
