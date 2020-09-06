@@ -1742,6 +1742,49 @@ function GetGCFNow(num1, num2){
     return GetGCFNow(num2, num1 % num2);
   }
 }
+function Problem74(){
+  alert(UniqueFract());
+}
+function UniqueFract(){
+  var arr = [];
+  for (let i = 1; i < 10; i++){
+      for (let j = 1; j < 10; j++){
+          if (i < j){
+              let gcd = GetGCF(i, j);
+              var arrayToAdd = [i / gcd, j / gcd];
+              arr.push(arrayToAdd);
+          }
+      }
+  }
+  var distinctArray = Array.from((new Map(arr.map((item) => [item.join(), item]))).values());
+  let returnSum = 0;
+  for (let i = 0; i < distinctArray.length; i++)
+  {
+      returnSum += distinctArray[i][0] / distinctArray[i][1];
+  }
+  return returnSum;
+}
+function GetGCF(x, y) {
+  if ((typeof x !== 'number') || (typeof y !== 'number')) 
+    return false;
+  x = Math.abs(x);
+  y = Math.abs(y);
+  while(y) {
+    var t = y;
+    y = x % y;
+    x = t;
+  }
+  return x;
+}
+//Amount of Unique Fractions
+//Create a function double UniqueFract(), which should sum all irreducible regular fractions between 0 and 1, in the numerator and denominator of which there are only single-digit numbers: 1/2, 1/3, 1/4, ... 2/3, 2/4, ... 8/9.
+
+//Task
+//UniqueFract() --> sum
+//Notes
+//Of the fractions 1/2 2/4 3/6 4/8, only 1/2 is included in the sum.
+//Don't include any values >= 1.
+
 // Least Common Multiple
 // Given a array of integers, create a function that will find the smallest positive integer that is evenly divisible by all the members of the list.In other words, find the least common multiple(LCM).
 // Examples
