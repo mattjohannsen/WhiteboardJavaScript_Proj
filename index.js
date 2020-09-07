@@ -1786,6 +1786,55 @@ function OverlappingRectangles(rect1, rect2){
   let yOverlap = Math.min(rect1[1] + rect1[3], rect2[1] + rect2[3]) - Math.max(rect1[1], rect2[1]);
   return ((xOverlap < 0) ? 0 : xOverlap) * ((yOverlap < 0) ? 0 : yOverlap);
 }
+function Problem76(){
+  alert(AnagramStrStr("car", "race"));
+  alert(AnagramStrStr("nod", "done"));
+  alert(AnagramStrStr("bag", "grab"));
+}
+function AnagramStrStr(needle, haystack){
+    var arr = Permutations(needle.split(''));
+    for (let i = 0; i < arr.length; i++){
+        if (haystack.includes(arr[i].join(''))){
+            return true;
+        }
+    }
+    return false;
+}
+function Permutations(inputArr) {
+  var results = [];
+  function Permute(arr, memo) {
+    var cur, memo = memo || [];
+    for (var i = 0; i < arr.length; i++) {
+      cur = arr.splice(i, 1);
+      if (arr.length === 0) {
+        results.push(memo.concat(cur));
+      }
+      Permute(arr.slice(), memo.concat(cur));
+      arr.splice(i, 0, cur[0]);
+    }
+    return results;
+  }
+  return Permute(inputArr);
+}
+//Find an Anagram of a String in Another String
+//Create a function that takes two strings and determines if an anagram of the first string is in the second string. Anagrams of "bag" are "bag", "bga", "abg", "agb", "gab", "gba". Since none of those anagrams are in "grab", the answer is false. A "g", "a", and "b" are in the string "grab", but they're split up by the "r".
+//Examples
+//AnagramStrStr("car", "race") --> true
+//AnagramStrStr("nod", "done") --> true
+//AnagramStrStr("bag", "grab") --> false
+//Notes
+//Inputs will be valid strings in all lowercase letters.
+//There exists a linear time algorithm for this.
+// Steps turn string into array
+// Enter a string into permutations --> abc
+// The string is turned into an array [a,b,c]
+// The first char is frozen
+// if arr-Length - 1 == 2
+// swap arr[1] and arr [2]
+// return array;
+// else
+// create newArray[arr.Length - 1]
+
 // Area of Overlapping Rectangles https://edabit.com/challenge/Jj6S7qQgtfAo4L2QR
 // Create a function that returns the area of the overlap between two rectangles.The function will receive two rectangles, each with the coordinates of the lower left corner followed by the width and the height int[] { x, y, width, height }.
 // Examples
