@@ -1,0 +1,25 @@
+{
+  "name": "WhiteboardJavaScript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^26.4.2",
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattjohannsen/WhiteboardJavaScript_Proj.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattjohannsen/WhiteboardJavaScript_Proj/issues"
+  },
+  "homepage": "https://github.com/mattjohannsen/WhiteboardJavaScript_Proj#readme"
+}
