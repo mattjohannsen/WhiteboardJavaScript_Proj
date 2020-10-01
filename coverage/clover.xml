@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1601513374123" clover="3.2.0">
+  <project timestamp="1601513374124" name="All files">
+    <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="9" coveredelements="9" complexity="0" loc="7" ncloc="7" packages="1" files="2" classes="2"/>
+    <file name="addUp.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\addUp.js">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="4" count="1009" type="stmt"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+    </file>
+    <file name="sum.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\sum.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
