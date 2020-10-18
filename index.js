@@ -1816,6 +1816,14 @@ function Permutations(inputArr) {
   }
   return Permute(inputArr);
 }
+function Problem77(){
+  alert(bitwiseAND(7, 12));
+  alert(bitwiseAND(32, 17));
+  alert(bitwiseAND(13, 19));
+}
+function bitwiseAND(n1, n2) {
+  return n1 & n2;
+}
 //Find an Anagram of a String in Another String
 //Create a function that takes two strings and determines if an anagram of the first string is in the second string. Anagrams of "bag" are "bag", "bga", "abg", "agb", "gab", "gba". Since none of those anagrams are in "grab", the answer is false. A "g", "a", and "b" are in the string "grab", but they're split up by the "r".
 //Examples
