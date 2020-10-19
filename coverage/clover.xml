@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603076566086" clover="3.2.0">
-  <project timestamp="1603076566086" name="All files">
-    <metrics statements="26" coveredstatements="26" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10" elements="40" coveredelements="40" complexity="0" loc="26" ncloc="26" packages="1" files="10" classes="10"/>
+<coverage generated="1603082535315" clover="3.2.0">
+  <project timestamp="1603082535317" name="All files">
+    <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11" elements="43" coveredelements="43" complexity="0" loc="28" ncloc="28" packages="1" files="11" classes="11"/>
     <file name="absolute.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\absolute.js">
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="4" count="6" type="cond" truecount="2" falsecount="0"/>
@@ -19,6 +19,11 @@
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="2" count="5" type="cond" truecount="2" falsecount="0"/>
       <line num="5" count="1" type="stmt"/>
+    </file>
+    <file name="binary.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\binary.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="8" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
     </file>
     <file name="bitwiseAND.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\bitwiseAND.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
