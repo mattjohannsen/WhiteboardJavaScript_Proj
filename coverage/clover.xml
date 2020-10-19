@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603063849710" clover="3.2.0">
-  <project timestamp="1603063849710" name="All files">
-    <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6" elements="24" coveredelements="24" complexity="0" loc="18" ncloc="18" packages="1" files="6" classes="6"/>
+<coverage generated="1603069769008" clover="3.2.0">
+  <project timestamp="1603069769008" name="All files">
+    <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7" elements="29" coveredelements="29" complexity="0" loc="20" ncloc="20" packages="1" files="7" classes="7"/>
     <file name="addUp.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\addUp.js">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="4" type="stmt"/>
@@ -9,6 +9,11 @@
       <line num="4" count="1009" type="stmt"/>
       <line num="6" count="4" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
+    </file>
+    <file name="areaShape.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\areaShape.js">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="2" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="4" count="1" type="stmt"/>
     </file>
     <file name="bitwiseAND.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\bitwiseAND.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
