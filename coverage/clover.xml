@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603082535315" clover="3.2.0">
-  <project timestamp="1603082535317" name="All files">
-    <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11" elements="43" coveredelements="43" complexity="0" loc="28" ncloc="28" packages="1" files="11" classes="11"/>
+<coverage generated="1603409460792" clover="3.2.0">
+  <project timestamp="1603409460792" name="All files">
+    <metrics statements="36" coveredstatements="36" conditionals="6" coveredconditionals="6" methods="15" coveredmethods="15" elements="57" coveredelements="57" complexity="0" loc="36" ncloc="36" packages="1" files="14" classes="14"/>
     <file name="absolute.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\absolute.js">
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="4" count="6" type="cond" truecount="2" falsecount="0"/>
@@ -40,6 +40,18 @@
       <line num="2" count="3" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
     </file>
+    <file name="emotify.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\emotify.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+    </file>
+    <file name="flipBool.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\flipBool.js">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="2" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="4" count="1" type="stmt"/>
+    </file>
     <file name="format.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\format.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="4" count="4" type="stmt"/>
@@ -48,6 +60,11 @@
     <file name="imposterFormula.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\imposterFormula.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="4" count="3" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+    </file>
+    <file name="numberSplit.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\numberSplit.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="8" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
     </file>
     <file name="signYourName.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\signYourName.js">
