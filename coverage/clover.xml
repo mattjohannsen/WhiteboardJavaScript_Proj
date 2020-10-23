@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603409460792" clover="3.2.0">
-  <project timestamp="1603409460792" name="All files">
-    <metrics statements="36" coveredstatements="36" conditionals="6" coveredconditionals="6" methods="15" coveredmethods="15" elements="57" coveredelements="57" complexity="0" loc="36" ncloc="36" packages="1" files="14" classes="14"/>
+<coverage generated="1603411577094" clover="3.2.0">
+  <project timestamp="1603411577094" name="All files">
+    <metrics statements="38" coveredstatements="38" conditionals="6" coveredconditionals="6" methods="16" coveredmethods="16" elements="60" coveredelements="60" complexity="0" loc="38" ncloc="38" packages="1" files="15" classes="15"/>
     <file name="absolute.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\absolute.js">
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="4" count="6" type="cond" truecount="2" falsecount="0"/>
@@ -36,6 +36,11 @@
       <line num="4" count="1" type="stmt"/>
     </file>
     <file name="bitwiseXOR.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\bitwiseXOR.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+    </file>
+    <file name="calculateExponent.js" path="C:\Users\majoh\Documents\devCodeCamp\AA-Whiteboard\WhiteboardJavaScript\calculateExponent.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="3" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
